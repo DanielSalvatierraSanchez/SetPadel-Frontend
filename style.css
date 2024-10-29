@@ -1,0 +1,22 @@
+:root {
+  --app-color-primary: #86fb88;
+  --app-color-secondary: #ffff94;
+  --app-color-tertiary:  #75b3ff;
+  --app-color-body: #d6d6d6;
+  --app-color-button: #ffffff;
+  --app-color-header: #5d5d5d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  background-color: var(--app-color-body);
+  min-height: 100%;
+}

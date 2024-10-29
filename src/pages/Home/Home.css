@@ -1,0 +1,30 @@
+#Home {
+    min-height: 92svh;
+    background-color: var(--app-color-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#Home > h1 {
+    font-size: 50px;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-container > p {
+    max-width: 300px;
+    line-height: 2;
+}
+
+.btn-home-login {
+    background-color: var(--app-color-primary);
+}

@@ -1,0 +1,11 @@
+#CreatePadelMatch {
+    min-height: 92svh;
+    background-color: var(--app-color-tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#CreatePadelMatch > h1 {
+    font-size: 50px;
+}
