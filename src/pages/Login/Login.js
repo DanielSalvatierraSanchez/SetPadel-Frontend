@@ -1,7 +1,7 @@
 import { Button } from "../../components/Button/Button";
 import { LoginForm } from "../../components/LoginForm/LoginForm";
 import { RegisterForm } from "../../components/RegisterForm/RegisterForm";
-import { createPage } from "../../functions/createPage";
+import { createPage } from "../../functions/CreatePage";
 import "./Login.css";
 
 let showForm = true;
@@ -19,9 +19,10 @@ export const Login = () => {
                 showForm ? LoginForm(form) : RegisterForm(form);
             },
             className: "btn-login"
-        })
+        }),
+        form
     );
 
-    div.append(form);
+    // div.append(form);
     LoginForm(form);
 };

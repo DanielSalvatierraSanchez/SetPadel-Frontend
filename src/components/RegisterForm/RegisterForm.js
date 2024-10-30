@@ -10,7 +10,7 @@ export const RegisterForm = (form) => {
     ${FieldForm({ labelText: "Email:", inputType: "email", inputPlaceholder: "email@email.email" })}
     ${FieldForm({ labelText: "Contraseña:", inputType: "password", inputPlaceholder: "********" })}
     ${FieldForm({ labelText: "Teléfono:", inputType: "tel", inputPlaceholder: "123456789" })}
-    ${FieldForm({ labelText: "Imagen de perfil:", inputType: "file", inputPlaceholder: "123456789" })}
+    ${FieldForm({ labelText: "Imagen de perfil:", inputType: "file" })}
     `;
 
     form.append(Button({ text: "Crear Cuenta", fnc: async () => {}, className: "btn-registerForm" }));

@@ -1,19 +1,18 @@
-import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
-
-const url = "http://localhost:3000/api/v1/appadel/";
+const URL = "http://localhost:3000/api/v1/appadel";
 
 export const API = async ({ endpoint, method, body, isJSON, token }) => {
     const headers = { Authorization: `Bearer ${token}` };
 
     isJSON ? (headers["Content-Type"] = "application/json") : null;
 
-    const res = await fetch(url + endpoint, {
+    const res = await fetch(URL + endpoint, {
         body: isJSON ? JSON.stringify(body) : body,
         method,
         headers
     });
-    
+
     const response = await res.json();
+
     return response;
 };
 
