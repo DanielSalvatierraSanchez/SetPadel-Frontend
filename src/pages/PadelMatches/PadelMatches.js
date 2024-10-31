@@ -3,9 +3,28 @@ import { createPage } from "../../functions/CreatePage";
 import { getPadelMatches } from "../../utils/API/GetPadelMatches";
 import "./PadelMatches.css";
 
-export const PadelMatches = () => {
+export const PadelMatches = async () => {
     const div = createPage("PadelMatches");
-    div.innerHTML = "<h1>Partidos creados</h1>";
+    div.innerHTML = `<h1>Partidos creados</h1>`;
 
-    getPadelMatches();
+    const allPadelMatches = await getPadelMatches();
+    console.log(allPadelMatches.allPadelMatches);
+    const padelMatchContainer = document.createElement("div");
+    padelMatchContainer.classList.add("padel-match-container");
+
+    allPadelMatches.allPadelMatches.forEach((padelMatch) => {
+        console.log(padelMatch);
+        const padelMatchCard = document.createElement("div");
+        padelMatchCard.classList.add("padel-match-card");
+        padelMatchCard.innerHTML = `
+            <h2>${padelMatch.name}</h2>
+            <img src=${padelMatch.image}>
+            <p>Fecha: ${padelMatch.day} de ${padelMatch.month}</p>
+            <p>Hora: ${padelMatch.hour}</p>
+            <p>Lugar: ${padelMatch.location} Pista: ${padelMatch.place}</p>
+            `;
+        padelMatchContainer.append(padelMatchCard);
+        div.append(padelMatchContainer);
+    });
+    return div;
 };
