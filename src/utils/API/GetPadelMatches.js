@@ -3,11 +3,13 @@ import { API } from "./API";
 const URL = "http://localhost:3000/api/v1/appadel";
 
 export const getPadelMatches = async () => {
-    const res = await fetch(URL + "/matches")
-    console.log("response: ", res);
-    
-    const allPadelMatches = await res.json();
-    console.log("allPadelMatches: ", allPadelMatches);
+    try {
+        const res = await fetch(URL + "/matches");
 
-    // API({ endpoint: "/matches", method: "GET" });
+        const allPadelMatches = await res.json();
+        return allPadelMatches;
+    } catch (error) {
+        console.error("❌ Error fetch getPadelMatches", error);
+        return [];
+    }
 };
