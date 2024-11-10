@@ -8,7 +8,6 @@ export const Home = () => {
     const homeContainer = document.createElement("div");
 
     homeContainer.classList.add("home-container");
-
     homeContainer.innerHTML = `
     <h1>Bienvenido a APPADEL</h1>
     <br/>
