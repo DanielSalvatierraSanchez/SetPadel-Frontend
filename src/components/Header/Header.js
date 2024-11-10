@@ -1,5 +1,6 @@
 import { navigate } from "../../functions/navigate";
 import { routes } from "../../routes/routes";
+
 import "./Header.css";
 
 export const Header = () => {
