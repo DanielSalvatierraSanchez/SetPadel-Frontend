@@ -8,7 +8,7 @@ export const API = async ({ endpoint, method, body, isJSON, token }) => {
     const res = await fetch(URL + endpoint, {
         body: isJSON ? JSON.stringify(body) : body,
         method,
-        headers
+        headers,
     });
 
     const response = await res.json();

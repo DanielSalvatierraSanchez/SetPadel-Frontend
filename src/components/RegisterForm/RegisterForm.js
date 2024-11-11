@@ -20,7 +20,7 @@ export const RegisterForm = (form) => {
     form.append(
         Button({
             text: "Crear Cuenta",
-            fnc: async () => {registerUser()},
+            fnc: () => {registerUser},
             className: "btn-registerForm"
         })
     );
@@ -28,12 +28,14 @@ export const RegisterForm = (form) => {
 
 const registerUser = async (e) => {
     e.preventDefault();
+
     const formData = new FormData();
     formData.append("name", e.target[0].value);
     formData.append("email", e.target[1].value);
     formData.append("password", e.target[2].value);
     formData.append("phone", e.target[3].value);
     formData.append("image", e.target[4].files[0]);
+
     try {
         // const URL = "http://localhost:3000/api/v1/appadel/users";
         // const user = { name: e.target[0].value, email: e.target[1].value, password: e.target[2].value, phone: e.target[3].value };
@@ -41,20 +43,20 @@ const registerUser = async (e) => {
         // console.log("User Data =>", user);
         // const userJSON = JSON.stringify(user);
 
-        const response = await fetch("http://localhost:3000/api/v1/appadel/users/register", {
+        const res = await fetch("http://localhost:3000/api/v1/appadel/users/register", {
             // headers: { "Content-Type": "application/json", },
             method: "POST",
             // body: userJSON,
             body: formData,
         });
-        console.log("response fetch =>", response);
+        console.log("res fetch =>", res);
 
-        const res = await response.json();
+        const postUser = await res.json();
         // e.preventDefault();
-        console.log("res FINAL =>", res);
+        console.log("res FINAL =>", postUser);
         console.log("Usuario registrado correctamente.");
 
-        return res;
+        return postUser;
     } catch (error) {
         console.error("Error en el registro del usuario:", error);
         alert(`Error en el registro: ${error.message}`);
