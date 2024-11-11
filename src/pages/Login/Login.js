@@ -24,5 +24,5 @@ export const Login = () => {
     );
     // div.append(form); // AÑADIR SOLO FORMULARIO SIN BUTTON
 
-    LoginForm(form);
+    //LoginForm(form);
 };
