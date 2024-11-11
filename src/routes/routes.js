@@ -1,7 +1,7 @@
-import { CreatePadelMatch } from "../pages/CreatePadelMatch/createPadelMatch";
-import { Home } from "../pages/Home/home";
-import { Login } from "../pages/Login/login";
-import { PadelMatches } from "../pages/PadelMatches/padelMatches";
+import { CreatePadelMatch } from "../pages/CreatePadelMatch/CreatePadelMatch";
+import { Home } from "../pages/Home/Home";
+import { Login } from "../pages/Login/Login";
+import { PadelMatches } from "../pages/PadelMatches/PadelMatches";
 
 export const routes = [
     {

@@ -5,8 +5,8 @@ import "./Home.css";
 
 export const Home = () => {
     const div = createPage("Home");
-    const homeContainer = document.createElement("div");
 
+    const homeContainer = document.createElement("div");
     homeContainer.classList.add("home-container");
     homeContainer.innerHTML = `
     <h1>Bienvenido a APPADEL</h1>
