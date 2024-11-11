@@ -1,11 +1,40 @@
 #PadelMatches {
-    min-height: 92svh;
-    background-color: var(--app-color-tertiary);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 92svh;
+    background-color: var(--app-color-tertiary);
 }
 
 #PadelMatches > h1 {
-    font-size: 50px;
+    margin: 50px;
+}
+
+.padel-match-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.padel-match-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellow;
+    margin: 20px;
+    padding: 30px;
+    gap: 20px;
+}
+
+.padel-match-card > img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid green;
 }

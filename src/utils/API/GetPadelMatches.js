@@ -7,6 +7,4 @@ export const getPadelMatches = async () => {
 
     const allPadelMatches = await res.json();
     console.log("allPadelMatches: ", allPadelMatches);
-
-    // API({ endpoint: "/matches", method: "GET" });
 };
