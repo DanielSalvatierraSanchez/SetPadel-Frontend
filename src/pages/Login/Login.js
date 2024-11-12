@@ -7,7 +7,7 @@ import "./Login.css";
 export const Login = () => {
     const div = createPage("Login");
     const form = document.createElement("form");
-    
+
     let showForm = true;
     const toggleForm = () => {
         showForm = !showForm;
@@ -24,5 +24,5 @@ export const Login = () => {
     );
     // div.append(form); // AÑADIR SOLO FORMULARIO SIN BUTTON
 
-    //LoginForm(form);
+    LoginForm(form);
 };
