@@ -1,6 +1,8 @@
 import { Button } from "../../components/Button/Button";
+import { RegisterForm } from "../../components/RegisterForm/RegisterForm";
 import { createPage } from "../../functions/CreatePage";
 import { Login } from "../Login/Login";
+import { Register } from "../Register/Register";
 import "./Home.css";
 
 export const Home = () => {
@@ -17,12 +19,20 @@ export const Home = () => {
     div.append(
         homeContainer,
         Button({
-            text: "Registrate o Haz Login",
+            text: "Login",
             fnc: () => {
                 window.history.pushState("", "", "/login");
                 Login();
             },
             className: "btn-home-login"
+        }),
+        Button({
+            text: "Registrate en Appadel",
+            fnc: () => {
+                window.history.pushState("", "", "/register");
+                Register();
+            },
+            className: "btn-home-register"
         })
     );
 };

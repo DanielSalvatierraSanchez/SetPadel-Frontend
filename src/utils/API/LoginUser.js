@@ -1,3 +1,5 @@
+import { URL } from "./API";
+
 export const loginUser = async (e) => {
     e.preventDefault();
 
@@ -11,8 +13,7 @@ export const loginUser = async (e) => {
     try {
         const userJSON = JSON.stringify(user);
 
-        const URL = "http://localhost:3000/api/v1/appadel/users";
-        const res = await fetch(URL + "/login", {
+        const res = await fetch(URL + "/users/login", {
             headers: { "Content-Type": "application/json" },
             method: "POST",
             body: userJSON

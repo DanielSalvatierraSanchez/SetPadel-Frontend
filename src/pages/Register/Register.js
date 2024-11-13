@@ -1,8 +1,19 @@
-import "./RegisterForm.css";
-import { FieldForm } from "../FieldForm/FieldForm";
+import "./Register.css";
+import { createPage } from "../../functions/CreatePage";
+import { FieldForm } from "../../components/FieldForm/FieldForm";
+import { Button } from "../../components/Button/Button";
 import { registerUser } from "../../utils/API/CreateUser";
 
-export const RegisterForm = (form) => {
+export const Register = () => {
+    const div = createPage("Register");
+    const form = document.createElement("form");
+
+    div.append(form);
+
+    RegisterForm(form);
+};
+
+const RegisterForm = (form) => {
     form.className = "register-form";
     form.innerHTML = `
     <h2>Registro de Usuarios</h2>
@@ -11,18 +22,12 @@ export const RegisterForm = (form) => {
     ${FieldForm({ inputLabel: "Contraseña:", inputType: "password", inputPlaceholder: "********" })}
     ${FieldForm({ inputLabel: "Teléfono:", inputType: "tel", inputPlaceholder: "123456789" })}
     ${FieldForm({ inputLabel: "Imagen de perfil:", inputType: "file" })}
+    <button class='btn-register-form' type='submit'>
+        Crear Cuenta
+    </button>
     `;
-    // <button class="btn-register-form" type="submit">Crear Cuenta</button>
-    form.append(
-        Button({
-            text: "Crear Cuenta",
-            fnc: () => registerUser,
-            className: "btn-registerForm"
-        })
-    );
-    // form.addEventListener("submit", registerUser);
+    form.addEventListener("submit", registerUser);
 };
-
 // form.append(
 //     Button({
 //         text: "Crear Cuenta",

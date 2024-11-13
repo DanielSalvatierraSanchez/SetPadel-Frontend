@@ -8,7 +8,7 @@ export const LoginForm = (form) => {
     <h2>Login</h2>
         ${FieldForm({ inputLabel: "Email", inputType: "string", inputPlaceholder: "email@email.email" })}
         ${FieldForm({ inputLabel: "Contraseña", inputType: "password", inputPlaceholder: "********" })}
-    <button type="submit">Acceder</button>
+    <button class="btn-login-form" type="submit">Acceder</button>
     `;
     form.addEventListener("submit", loginUser);
 };

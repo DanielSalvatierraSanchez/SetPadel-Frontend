@@ -1,3 +1,5 @@
+import { URL } from "./API";
+
 export const registerUser = async (e) => {
     e.preventDefault();
 
@@ -9,14 +11,16 @@ export const registerUser = async (e) => {
     formData.append("image", e.target[4].files[0]);
 
     try {
-        const URL = "http://localhost:3000/api/v1/appadel/users";
-        const res = await fetch(URL + "/register", {
+        const res = await fetch(URL + "/users/register", {
             method: "POST",
             body: formData
         });
 
         const postUser = await res.json();
         console.log("FINAL FELIZ!!! =>", postUser);
+        if (res.status !== 201) {
+            alert(postUser.message);
+        }
 
         return postUser;
     } catch (error) {

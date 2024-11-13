@@ -1,4 +1,4 @@
-const URL = "http://localhost:3000/api/v1/appadel";
+export const URL = "http://localhost:3000/api/v1/appadel";
 
 export const API = async ({ endpoint, method, body, isJSON, token }) => {
     const headers = { Authorization: `Bearer ${token}` };
