@@ -12,12 +12,10 @@ export const loginUser = async (e) => {
     console.log("User Data =>", user);
 
     try {
-        const userJSON = JSON.stringify(user);
-
         const res = await fetch(URL + "/users/login", {
             headers: { "Content-Type": "application/json" },
             method: "POST",
-            body: userJSON
+            body: JSON.stringify(user),
         });
         console.log(res);
 

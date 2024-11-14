@@ -1,3 +1,5 @@
+import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
+import { Register } from "../../pages/Register/Register";
 import { URL } from "./API";
 
 export const registerUser = async (e) => {
@@ -13,13 +15,44 @@ export const registerUser = async (e) => {
     try {
         const res = await fetch(URL + "/users/register", {
             method: "POST",
-            body: formData
+            body: formData,
         });
+        console.log(res);
 
         const postUser = await res.json();
         console.log("FINAL FELIZ!!! =>", postUser);
+
+        localStorage.setItem("token", postUser.token);
+
         if (res.status !== 201) {
-            alert(postUser.message);
+            const form = document.querySelector("form");
+            let removeError = form.querySelector(".message-error");
+            if (removeError) {
+                removeError.remove();
+            }
+            const messageError = document.createElement("p");
+            messageError.classList.add("message-error");
+            messageError.textContent = postUser.message;
+            form.append(messageError);
+            setTimeout(() => {
+                Register();
+            }, 2000);
+        } else {
+            const form = document.querySelector("form");
+            let removeError = form.querySelector(".message-error");
+            if (removeError) {
+                removeError.remove();
+            }
+            const messageError = document.createElement("p");
+            messageError.classList.add("message-error");
+            messageError.textContent = postUser.message;
+            form.append(messageError);
+            const p = document.createElement("p")
+            p.textContent = "CARGANDO PARTIDOS..."
+            form.append(p);
+            setTimeout(() => {
+                PadelMatches();
+            }, 3000);
         }
 
         return postUser;
