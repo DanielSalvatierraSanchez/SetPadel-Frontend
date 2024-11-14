@@ -7,3 +7,8 @@
     gap: 10px;
     background-color: var(--app-color-secondary);
 }
+
+.login-form > p {
+    margin-top: 20px;
+    color: red;
+}
