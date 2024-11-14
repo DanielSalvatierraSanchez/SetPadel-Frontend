@@ -24,5 +24,6 @@ export const PadelMatches = async () => {
         padelMatchContainer.append(padelMatchCard);
         div.append(padelMatchContainer);
     });
+
     return div;
 };
