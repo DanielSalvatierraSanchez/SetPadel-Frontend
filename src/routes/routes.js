@@ -19,9 +19,9 @@ export const routes = [
         title: "Crea un partido",
         page: CreatePadelMatch
     },
-    {
-        path: "/login",
-        title: "Login",
-        page: Login
-    }
+    // {
+    //     path: "/login",
+    //     title: "Login",
+    //     page: Login
+    // }
 ];
