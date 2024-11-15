@@ -30,6 +30,13 @@
     margin: 20px;
     padding: 30px;
     gap: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.padel-match-card:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 .padel-match-card > img {
@@ -37,4 +44,9 @@
     height: 150px;
     object-fit: cover;
     border: 2px solid green;
+    filter: grayscale();
+}
+
+.padel-match-card:hover > img {
+    filter: none;
 }

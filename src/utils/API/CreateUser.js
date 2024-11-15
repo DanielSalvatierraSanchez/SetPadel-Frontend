@@ -1,5 +1,4 @@
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
-import { Register } from "../../pages/Register/Register";
 import { URL } from "./API";
 
 export const registerUser = async (e) => {
@@ -15,47 +14,53 @@ export const registerUser = async (e) => {
     try {
         const res = await fetch(URL + "/users/register", {
             method: "POST",
-            body: formData,
+            body: formData
         });
-        console.log(res);
+        console.log("res FETCH =>", res);
 
-        const postUser = await res.json();
-        console.log("FINAL FELIZ!!! =>", postUser);
+        const data = await res.json();
+        console.log("FINAL FELIZ data !!!", data);
 
-        localStorage.setItem("token", postUser.token);
+        if (res.ok) {
+            localStorage.setItem("token", data.token);
 
-        if (res.status !== 201) {
             const form = document.querySelector("form");
-            let removeError = form.querySelector(".message-error");
+
+            let removeError = form.querySelector(".success-message");
             if (removeError) {
                 removeError.remove();
             }
-            const messageError = document.createElement("p");
-            messageError.classList.add("message-error");
-            messageError.textContent = postUser.message;
-            form.append(messageError);
+
+            const successMessage = document.createElement("p");
+            successMessage.classList.add("success-message");
+            successMessage.textContent = data.message;
+
+            const p = document.createElement("p");
+            p.textContent = "CARGANDO PARTIDOS...";
+            form.append(successMessage, p);
+
             setTimeout(() => {
-                Register();
+                PadelMatches();
             }, 2000);
         } else {
             const form = document.querySelector("form");
-            let removeError = form.querySelector(".message-error");
+
+            let removeError = form.querySelector(".error-message");
             if (removeError) {
                 removeError.remove();
             }
-            const messageError = document.createElement("p");
-            messageError.classList.add("message-error");
-            messageError.textContent = postUser.message;
-            form.append(messageError);
-            const p = document.createElement("p")
-            p.textContent = "CARGANDO PARTIDOS..."
-            form.append(p);
-            setTimeout(() => {
-                PadelMatches();
-            }, 3000);
+
+            const errorMessage = document.createElement("p");
+            errorMessage.classList.add("error-message");
+            errorMessage.textContent = data.message;
+            form.append(errorMessage);
+
+            // setTimeout(() => {
+            //     Register();
+            // }, 2000);
         }
 
-        return postUser;
+        // return data;
     } catch (error) {
         console.log("Error en el registro del usuario: ", error);
         alert(`Error en el registro: ${error.message}`);
