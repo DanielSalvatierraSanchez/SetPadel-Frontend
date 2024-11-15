@@ -1,3 +1,4 @@
+import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 import { URL } from "./API";
 
 export const registerUser = async (e) => {
@@ -15,14 +16,51 @@ export const registerUser = async (e) => {
             method: "POST",
             body: formData
         });
+        console.log("res FETCH =>", res);
 
-        const postUser = await res.json();
-        console.log("FINAL FELIZ!!! =>", postUser);
-        if (res.status !== 201) {
-            alert(postUser.message);
+        const data = await res.json();
+        console.log("FINAL FELIZ data !!!", data);
+
+        if (res.ok) {
+            localStorage.setItem("token", data.token);
+
+            const form = document.querySelector("form");
+
+            let removeError = form.querySelector(".success-message");
+            if (removeError) {
+                removeError.remove();
+            }
+
+            const successMessage = document.createElement("p");
+            successMessage.classList.add("success-message");
+            successMessage.textContent = data.message;
+
+            const p = document.createElement("p");
+            p.textContent = "CARGANDO PARTIDOS...";
+            form.append(successMessage, p);
+
+            setTimeout(() => {
+                PadelMatches();
+            }, 2000);
+        } else {
+            const form = document.querySelector("form");
+
+            let removeError = form.querySelector(".error-message");
+            if (removeError) {
+                removeError.remove();
+            }
+
+            const errorMessage = document.createElement("p");
+            errorMessage.classList.add("error-message");
+            errorMessage.textContent = data.message;
+            form.append(errorMessage);
+
+            // setTimeout(() => {
+            //     Register();
+            // }, 2000);
         }
 
-        return postUser;
+        // return data;
     } catch (error) {
         console.log("Error en el registro del usuario: ", error);
         alert(`Error en el registro: ${error.message}`);

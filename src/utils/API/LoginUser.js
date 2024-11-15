@@ -9,56 +9,58 @@ export const loginUser = async (e) => {
         email: e.target[0].value,
         password: e.target[1].value
     };
-    console.log("User Data =>", user);
+    console.log("user data =>", user);
 
     try {
-        const userJSON = JSON.stringify(user);
-
         const res = await fetch(URL + "/users/login", {
             headers: { "Content-Type": "application/json" },
             method: "POST",
-            body: userJSON
+            body: JSON.stringify(user)
         });
-        console.log(res);
+        console.log("res FETCH =>", res);
 
-        const postLogin = await res.json();
-        console.log("FINAL FELIZ =>", postLogin);
+        const data = await res.json();
+        console.log("FINAL FELIZ data !!!", data);
 
-        localStorage.setItem("token", postLogin.token);
-        // window.location.href = "/home";
+        if (res.ok) {
+            localStorage.setItem("token", data.token);
 
-        if (res.status !== 200) {
             const form = document.querySelector("form");
-            let removeError = form.querySelector(".message-error");
+
+            let removeError = form.querySelector(".success-message");
             if (removeError) {
                 removeError.remove();
             }
-            const messageError = document.createElement("p");
-            messageError.classList.add("message-error");
-            messageError.textContent = postLogin.message;
-            form.append(messageError);
+
+            const successMessage = document.createElement("p");
+            successMessage.classList.add("success-message");
+            successMessage.textContent = data.message;
+
+            const p = document.createElement("p");
+            p.textContent = "CARGANDO PARTIDOS...";
+            form.append(successMessage, p);
+
             setTimeout(() => {
-                Login();
+                PadelMatches();
             }, 2000);
         } else {
             const form = document.querySelector("form");
-            let removeError = form.querySelector(".message-error");
+
+            let removeError = form.querySelector(".error-message");
             if (removeError) {
                 removeError.remove();
             }
-            const messageError = document.createElement("p");
-            messageError.classList.add("message-error");
-            messageError.textContent = postLogin.message;
-            form.append(messageError);
-            const p = document.createElement("p")
-            p.textContent = "CARGANDO PARTIDOS..."
-            form.append(p);
-            setTimeout(() => {
-                PadelMatches();
-            }, 3000);
+            const errorMessage = document.createElement("p");
+            errorMessage.classList.add("error-message");
+            errorMessage.textContent = data.message;
+            form.append(errorMessage);
+
+            // setTimeout(() => {
+            //     PadelMatches();
+            // }, 3000);
         }
 
-        return postLogin;
+        // return data;
     } catch (error) {
         console.log("Error en el login del usuario: ", error);
         alert(`Error en el login: ${error.message}`);
