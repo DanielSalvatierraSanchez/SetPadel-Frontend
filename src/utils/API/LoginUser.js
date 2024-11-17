@@ -12,13 +12,17 @@ export const loginUser = async (e) => {
     console.log("user data =>", user);
 
     try {
+        //todo proceso carga
+
         const res = await fetch(URL + "/users/login", {
             headers: { "Content-Type": "application/json" },
             method: "POST",
             body: JSON.stringify(user)
         });
         console.log("res FETCH =>", res);
-
+        
+        //todo quito pelota
+        
         const data = await res.json();
         console.log("FINAL FELIZ data !!!", data);
 

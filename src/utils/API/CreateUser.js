@@ -1,66 +1,46 @@
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
-import { URL } from "./API";
+import { API } from "./API";
 
 export const registerUser = async (e) => {
     e.preventDefault();
+    const [name, email, password, phone, image] = e.target;
 
     const formData = new FormData();
-    formData.append("name", e.target[0].value);
-    formData.append("email", e.target[1].value);
-    formData.append("password", e.target[2].value);
-    formData.append("phone", e.target[3].value);
-    formData.append("image", e.target[4].files[0]);
+    formData.append("name", name.value);
+    formData.append("email", email.value);
+    formData.append("password", password.value);
+    formData.append("phone", phone.value);
+    formData.append("image", image?.files[0]);
 
     try {
-        const res = await fetch(URL + "/users/register", {
-            method: "POST",
-            body: formData
-        });
-        console.log("res FETCH =>", res);
+        //todo pelota
+        const res = await API({ endpoint: "/users/register", method: "POST", isJSON: false, body: formData });
 
-        const data = await res.json();
-        console.log("FINAL FELIZ data !!!", data);
-
-        if (res.ok) {
-            localStorage.setItem("token", data.token);
-
-            const form = document.querySelector("form");
-
-            let removeError = form.querySelector(".success-message");
-            if (removeError) {
-                removeError.remove();
-            }
-
-            const successMessage = document.createElement("p");
-            successMessage.classList.add("success-message");
-            successMessage.textContent = data.message;
-
-            const p = document.createElement("p");
-            p.textContent = "CARGANDO PARTIDOS...";
-            form.append(successMessage, p);
-
-            setTimeout(() => {
+        //todo quito pelota
+        if (res) {
+            localStorage.setItem("token", res.token);
                 PadelMatches();
-            }, 2000);
-        } else {
-            const form = document.querySelector("form");
-
-            let removeError = form.querySelector(".error-message");
-            if (removeError) {
-                removeError.remove();
+                return res;
             }
+        // else {
+        //     const form = document.querySelector("form");
 
-            const errorMessage = document.createElement("p");
-            errorMessage.classList.add("error-message");
-            errorMessage.textContent = data.message;
-            form.append(errorMessage);
+        //     let removeError = form.querySelector(".error-message");
+        //     if (removeError) {
+        //         removeError.remove();
+        //     }
 
-            // setTimeout(() => {
-            //     Register();
-            // }, 2000);
-        }
+        //     const errorMessage = document.createElement("p");
+        //     errorMessage.classList.add("error-message");
+        //     errorMessage.textContent = res.message;
+        //     form.append(errorMessage);
 
-        // return data;
+        //     // setTimeout(() => {
+        //     //     Register();
+        //     // }, 2000);
+        // }
+
+        // return res;
     } catch (error) {
         console.log("Error en el registro del usuario: ", error);
         alert(`Error en el registro: ${error.message}`);

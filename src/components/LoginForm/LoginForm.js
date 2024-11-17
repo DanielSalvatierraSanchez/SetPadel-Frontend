@@ -2,7 +2,6 @@ import "./LoginForm.css";
 import { loginUser } from "../../utils/API/LoginUser";
 import { FieldForm } from "../FieldForm/FieldForm";
 
-// CREAR FORMULARIO DEL LOGIN => PASANDO POR PARAMS EL FORM DEL LOGIN
 export const LoginForm = (form) => {
     form.className = "login-form";
     form.innerHTML = `
