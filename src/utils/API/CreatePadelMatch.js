@@ -11,6 +11,8 @@ export const createPadelMatch = async (e) => {
     formData.append("date", `${date.value}-${month.value}-${day.value}T${hour.value}:00`);
     formData.append("place", place.value);
     formData.append("image", image?.files[0]);
+    console.log(formData);
+    
 
     try {
         const res = await API({ endpoint: "/matches/register", method: "POST", isJSON: false, body: formData });

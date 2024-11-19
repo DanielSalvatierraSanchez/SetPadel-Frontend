@@ -1,6 +1,6 @@
-import { Login } from "../../pages/Login/Login";
+import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
-import { URL } from "./API";
+import { API, URL } from "./API";
 
 export const loginUser = async (e) => {
     e.preventDefault();
@@ -9,25 +9,28 @@ export const loginUser = async (e) => {
         email: e.target[0].value,
         password: e.target[1].value
     };
-    console.log("user data =>", user);
+    console.log("DATOS DEL USER =>", user);
 
     try {
         //todo proceso carga
 
-        const res = await fetch(URL + "/users/login", {
-            headers: { "Content-Type": "application/json" },
-            method: "POST",
-            body: JSON.stringify(user)
-        });
+        const res = await API({ endpoint: "/users/login", method: "POST" })
+        
+        // const res = await fetch(URL + "/users/login", {
+        //     headers: { "Content-Type": "application/json" },
+        //     method: "POST",
+        //     body: JSON.stringify(user)
+        // });
         console.log("res FETCH =>", res);
-        
-        //todo quito pelota
-        
-        const data = await res.json();
-        console.log("FINAL FELIZ data !!!", data);
+        //         const res = await API({ endpoint: "/users/register", method: "POST", isJSON: false, body: formData });
 
-        if (res.ok) {
-            localStorage.setItem("token", data.token);
+        //todo quito pelota
+
+        // const response = await res.json();
+        // console.log("FINAL FELIZ response !!!", response);
+
+        if (res) {
+            localStorage.setItem("token", res.token);
 
             const form = document.querySelector("form");
 
@@ -38,7 +41,7 @@ export const loginUser = async (e) => {
 
             const successMessage = document.createElement("p");
             successMessage.classList.add("success-message");
-            successMessage.textContent = data.message;
+            successMessage.textContent = res.message;
 
             const p = document.createElement("p");
             p.textContent = "CARGANDO PARTIDOS...";
@@ -48,23 +51,24 @@ export const loginUser = async (e) => {
                 PadelMatches();
             }, 2000);
         } else {
-            const form = document.querySelector("form");
+            errorMessage(res);
+            // const form = document.querySelector("form");
 
-            let removeError = form.querySelector(".error-message");
-            if (removeError) {
-                removeError.remove();
-            }
-            const errorMessage = document.createElement("p");
-            errorMessage.classList.add("error-message");
-            errorMessage.textContent = data.message;
-            form.append(errorMessage);
+            // let removeError = form.querySelector(".error-message");
+            // if (removeError) {
+            //     removeError.remove();
+            // }
+            // const errorMessage = document.createElement("p");
+            // errorMessage.classList.add("error-message");
+            // errorMessage.textContent = response.message;
+            // form.append(errorMessage);
 
             // setTimeout(() => {
             //     PadelMatches();
             // }, 3000);
         }
 
-        // return data;
+        // return response;
     } catch (error) {
         console.log("Error en el login del usuario: ", error);
         alert(`Error en el login: ${error.message}`);

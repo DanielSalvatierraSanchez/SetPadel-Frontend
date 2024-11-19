@@ -1,3 +1,5 @@
+import { Loader } from "../../components/Loader/Loader";
+import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 import { API } from "./API";
 
@@ -14,13 +16,17 @@ export const registerUser = async (e) => {
 
     try {
         //todo pelota
+        Loader()
         const res = await API({ endpoint: "/users/register", method: "POST", isJSON: false, body: formData });
 
         //todo quito pelota
+        Loader()
         if (res) {
             localStorage.setItem("token", res.token);
                 PadelMatches();
                 return res;
+            } else {
+                errorMessage(res)
             }
         // else {
         //     const form = document.querySelector("form");
