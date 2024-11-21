@@ -1,6 +1,6 @@
 import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
-import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
+import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { API } from "./API";
 
 export const registerUser = async (e) => {
@@ -16,36 +16,23 @@ export const registerUser = async (e) => {
 
     try {
         //todo pelota
-        Loader()
+        // Loader()
         const res = await API({ endpoint: "/users/register", method: "POST", isJSON: false, body: formData });
 
         //todo quito pelota
-        Loader()
-        if (res) {
+        //Loader();
+        if (res.ok) {
             localStorage.setItem("token", res.token);
-                PadelMatches();
-                return res;
-            } else {
-                errorMessage(res)
-            }
-        // else {
-        //     const form = document.querySelector("form");
-
-        //     let removeError = form.querySelector(".error-message");
-        //     if (removeError) {
-        //         removeError.remove();
-        //     }
-
-        //     const errorMessage = document.createElement("p");
-        //     errorMessage.classList.add("error-message");
-        //     errorMessage.textContent = res.message;
-        //     form.append(errorMessage);
-
-        //     // setTimeout(() => {
-        //     //     Register();
-        //     // }, 2000);
+            //PadelMatches();
+            //return res;
+            successMessage(res);
+        } else {
+            errorMessage(res);
+        }
+        // setTimeout(() => {
+        // Register();
+        // }, 2000);
         // }
-
         // return res;
     } catch (error) {
         console.log("Error en el registro del usuario: ", error);

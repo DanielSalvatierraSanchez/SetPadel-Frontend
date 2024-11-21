@@ -1,9 +1,8 @@
 export const URL = "http://localhost:3000/api/v1/appadel";
 
 export const API = async ({ endpoint, method, body, isJSON = true, token }) => {
-    console.log(isJSON);
-    console.log(body);
-    console.log(token);
+    console.log("BODY", body);
+    console.log("TOKEN", token);
 
     const headers = { Authorization: `Bearer ${token}` };
 
@@ -14,12 +13,14 @@ export const API = async ({ endpoint, method, body, isJSON = true, token }) => {
         method,
         headers
     });
-    console.log(res);
 
-    await new Promise((resolve) => setTimeout(resolve, 3000)); //todo ELIMINAR ESTA LINEA ANTES DE FINALIZAR EL PROYECTO
+    console.log("RES", res);
+
+    // await new Promise((resolve) => setTimeout(resolve, 3000)); //todo ELIMINAR ESTA LINEA ANTES DE FINALIZAR EL PROYECTO
 
     const response = await res.json();
-    if (response.status === 400 || response.status === 401) {
+    if (response.status !== 201) {
+    // (response.status === 400 || response.status === 401) {
         const form = document.querySelector("form");
         if (form) {
             let removeError = form.querySelector(".error-message");

@@ -6,9 +6,9 @@ import { createPadelMatch } from "../../utils/API/CreatePadelMatch";
 export const PostPadelMatch = (form) => {
     form.className = "postPadelMatch-form";
     form.innerHTML = `
-    ${FieldForm({ inputLabel: "Título del Partido", inputType: "text", inputPlaceholder: "Título" })}
+    ${FieldForm({ inputLabel: "Título", inputType: "text", inputPlaceholder: "Título" })}
     ${FieldForm({ inputLabel: "Ubicación", inputType: "text", inputPlaceholder: "Ubicación" })}
-    ${FieldForm({ inputLabel: "Hora del Partido", inputType: "datetime-local", inputPlaceholder: "DD / MM / YYYY - HH : MM" })}
+    ${FieldForm({ inputLabel: "Fecha y Hora", inputType: "datetime-local", inputPlaceholder: "DD / MM / YYYY - HH : MM" })}
     <label>Tipo de Pista</label>
     <select>
     <option value="indoor">Indoor</option>
