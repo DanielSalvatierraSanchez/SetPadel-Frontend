@@ -1,6 +1,6 @@
-import "./RegisterForm.css"
+import "./RegisterForm.css";
 import { FieldForm } from "../FieldForm/FieldForm";
-import { registerUser } from "../../utils/API/CreateUser";
+import { registerUser } from "../../utils/API/RegisterUser";
 
 export const RegisterForm = (form) => {
     form.className = "register-form";
@@ -14,5 +14,4 @@ export const RegisterForm = (form) => {
     <button class="btn-register-form" type="submit">Crear Cuenta</button>
     `;
     form.addEventListener("submit", registerUser);
-    // form.append(Button({ text: "Crear Cuenta", fnc: () => registerUser, className: "btn-registerForm" }));
 };

@@ -4,7 +4,7 @@ export const FieldForm = ({ inputLabel, inputType, inputPlaceholder }) => {
     return `
     <div class="field-form">
         <label>${inputLabel}</label>
-        <input type="${inputType}" placeholder="${inputPlaceholder}" required>
+        <input type="${inputType}" placeholder="${inputPlaceholder}">
     </div>
     `;
 };

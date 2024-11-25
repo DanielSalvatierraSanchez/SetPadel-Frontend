@@ -1,8 +1,7 @@
 import "./LoginForm.css";
-import { loginUser } from "../../utils/API/LoginUser";
 import { FieldForm } from "../FieldForm/FieldForm";
+import { loginUser } from "../../utils/API/LoginUser";
 
-// CREAR FORMULARIO DEL LOGIN => PASANDO POR PARAMS EL FORM DEL LOGIN
 export const LoginForm = (form) => {
     form.className = "login-form";
     form.innerHTML = `
@@ -12,5 +11,4 @@ export const LoginForm = (form) => {
         <button class="btn-loginForm" type="submit">Acceder</button>
         `;
     form.addEventListener("submit", loginUser);
-    // form.append(Button({ text: "Login", fnc: () => loginUser, className: "btn-loginForm" }));
 };

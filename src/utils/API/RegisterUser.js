@@ -5,17 +5,20 @@ import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 import { setUserDataToLocalStore } from "../SetUserData";
 import { API } from "./API";
 
-export const loginUser = async (e) => {
+export const registerUser = async (e) => {
     e.preventDefault();
-    const [email, password] = e.target;
-    const user = {
-        email: email.value,
-        password: password.value
-    };
+    const [name, email, password, phone, image] = e.target;
+
+    const formData = new FormData();
+    formData.append("name", name.value);
+    formData.append("email", email.value);
+    formData.append("password", password.value);
+    formData.append("phone", phone.value);
+    formData.append("image", image?.files[0]);
 
     try {
-        //todo proceso carga
-        const res = await API({ endpoint: "/users/login", method: "POST", body: user });
+        //todo pelota
+        const res = await API({ endpoint: "/users/register", method: "POST", body: formData, isJSON: false });
         console.log("res FETCH =>", res);
         //todo quito pelota
         if (res) {
@@ -26,6 +29,6 @@ export const loginUser = async (e) => {
             errorMessage(res);
         }
     } catch (error) {
-        console.log("Error en el login del usuario: ", error.message);
+        console.log("Error en el registro del usuario: ", error.message);
     }
 };
