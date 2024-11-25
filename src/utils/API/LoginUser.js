@@ -1,36 +1,31 @@
+import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
-import { API, URL } from "./API";
+import { setUserDataToLocalStore } from "../SetUserData";
+import { API } from "./API";
 
 export const loginUser = async (e) => {
     e.preventDefault();
-
+    const [email, password] = e.target;
     const user = {
-        email: e.target[0].value,
-        password: e.target[1].value
+        email: email.value,
+        password: password.value
     };
-
-    console.log("DATOS DEL USER =>", user);
 
     try {
         //todo proceso carga
-
-        const res = await API({ endpoint: "/users/login", method: "POST" });
+        const res = await API({ endpoint: "/users/login", method: "POST", body: user });
         console.log("res FETCH =>", res);
-
         //todo quito pelota
-
-        if (res.ok) {
-            localStorage.setItem("token", res.token);
+        if (res) {
+            setUserDataToLocalStore(res);
             successMessage(res);
             PadelMatches();
         } else {
             errorMessage(res);
         }
-        // return res;
     } catch (error) {
-        console.log("Error en el login del usuario: ", error);
-        alert(`Error en el login: ${error.message}`);
+        console.log("Error en el login del usuario: ", error.message);
     }
 };

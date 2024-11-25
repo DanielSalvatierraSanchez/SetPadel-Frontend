@@ -1,6 +1,8 @@
 import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
+import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
+import { setUserDataToLocalStore } from "../SetUserData";
 import { API } from "./API";
 
 export const registerUser = async (e) => {
@@ -16,26 +18,17 @@ export const registerUser = async (e) => {
 
     try {
         //todo pelota
-        // Loader()
-        const res = await API({ endpoint: "/users/register", method: "POST", isJSON: false, body: formData });
-
+        const res = await API({ endpoint: "/users/register", method: "POST", body: formData, isJSON: false });
+        console.log("res FETCH =>", res);
         //todo quito pelota
-        //Loader();
-        if (res.ok) {
-            localStorage.setItem("token", res.token);
-            //PadelMatches();
-            //return res;
+        if (res) {
+            setUserDataToLocalStore(res);
             successMessage(res);
+            PadelMatches();
         } else {
             errorMessage(res);
         }
-        // setTimeout(() => {
-        // Register();
-        // }, 2000);
-        // }
-        // return res;
     } catch (error) {
-        console.log("Error en el registro del usuario: ", error);
-        alert(`Error en el registro: ${error.message}`);
+        console.log("Error en el registro del usuario: ", error.message);
     }
 };

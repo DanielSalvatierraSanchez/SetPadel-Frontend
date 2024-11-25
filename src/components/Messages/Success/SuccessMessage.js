@@ -12,9 +12,10 @@ export const successMessage = (response) => {
         successMessage.classList.add("success-message");
         successMessage.textContent = response.message;
 
-        const p = document.createElement("p");
-        p.textContent = "CARGANDO PARTIDOS...";
-        form.append(successMessage, p);
+        // const p = document.createElement("p");
+        // p.textContent = "CARGANDO PARTIDOS...";
+        // form.append(successMessage, p);
+        form.append(successMessage);
         return;
     }
 };

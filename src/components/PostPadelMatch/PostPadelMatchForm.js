@@ -1,9 +1,9 @@
 import "./PostPadelMatchForm.css";
 import { Button } from "../Button/Button";
 import { FieldForm } from "../FieldForm/FieldForm";
-import { createPadelMatch } from "../../utils/API/CreatePadelMatch";
+import { postPadelMatch } from "../../utils/API/PostPadelMatch";
 
-export const PostPadelMatch = (form) => {
+export const PostPadelMatchForm = (form) => {
     form.className = "postPadelMatch-form";
     form.innerHTML = `
     ${FieldForm({ inputLabel: "Título", inputType: "text", inputPlaceholder: "Título" })}
@@ -17,8 +17,7 @@ export const PostPadelMatch = (form) => {
     ${FieldForm({ inputLabel: "Imagen", inputType: "file" })}
     <button class="btn-postPadelMatchForm" type="submit">Crear Partido</button>
     `;
-    form.addEventListener("submit", createPadelMatch, console.log(form));
-    console.log(form);
+    form.addEventListener("submit", postPadelMatch);
 };
 
 // form.append(Button({ text: "Crear Partido", fnc: async () => {}, className: "btn-postPadelMatchForm" }));

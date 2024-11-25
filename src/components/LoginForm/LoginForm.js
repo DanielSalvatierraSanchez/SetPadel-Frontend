@@ -1,7 +1,6 @@
 import "./LoginForm.css";
-import { loginUser } from "../../utils/API/LoginUser";
 import { FieldForm } from "../FieldForm/FieldForm";
-import { Logout } from "../Logout/Logout";
+import { loginUser } from "../../utils/API/LoginUser";
 
 export const LoginForm = (form) => {
     form.className = "login-form";
@@ -12,6 +11,4 @@ export const LoginForm = (form) => {
         <button class="btn-loginForm" type="submit">Acceder</button>
         `;
     form.addEventListener("submit", loginUser);
-    // form.append(Button({ text: "Login", fnc: () => loginUser, className: "btn-loginForm" }));
-    Logout()
 };
