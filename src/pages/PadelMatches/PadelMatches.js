@@ -5,7 +5,7 @@ import { getPadelMatches } from "../../utils/API/GetPadelMatches";
 
 export const PadelMatches = async () => {
     const div = createPage("PadelMatches");
-    div.innerHTML = `<h1>Partidos creados</h1>`;
+    div.innerHTML = `<h1>Partidos de Padel</h1>`;
 
     const allPadelMatches = await getPadelMatches();
     const padelMatchContainer = document.createElement("div");

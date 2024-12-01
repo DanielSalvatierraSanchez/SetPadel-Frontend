@@ -1,5 +1,4 @@
 import "./PostPadelMatchForm.css";
-import { Button } from "../Button/Button";
 import { FieldForm } from "../FieldForm/FieldForm";
 import { postPadelMatch } from "../../utils/API/PostPadelMatch";
 
@@ -11,8 +10,8 @@ export const PostPadelMatchForm = (form) => {
     ${FieldForm({ inputLabel: "Fecha y Hora", inputType: "datetime-local", inputPlaceholder: "DD / MM / YYYY - HH : MM" })}
     <label>Tipo de Pista</label>
     <select>
-    <option value="indoor">Indoor</option>
-    <option value="outdoor">Outdoor</option>
+    <option value="Indoor">Indoor</option>
+    <option value="Outdoor">Outdoor</option>
     </select>
     ${FieldForm({ inputLabel: "Imagen", inputType: "file" })}
     <button class="btn-postPadelMatchForm" type="submit">Crear Partido</button>

@@ -1,4 +1,4 @@
-import "./ErrorMessage.css"
+import "./ErrorMessage.css";
 
 export const errorMessage = (response) => {
     const form = document.querySelector("form");
@@ -6,7 +6,7 @@ export const errorMessage = (response) => {
         let removeError = form.querySelector(".error-message");
         if (removeError) {
             removeError.remove();
-        };
+        }
 
         const errorMessage = document.createElement("p");
         errorMessage.classList.add("error-message");
@@ -14,4 +14,4 @@ export const errorMessage = (response) => {
         form.append(errorMessage);
         return;
     }
-}
+};

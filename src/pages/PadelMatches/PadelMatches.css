@@ -9,6 +9,7 @@
 
 #PadelMatches > h1 {
     margin: 50px;
+    text-align: center;
 }
 
 .padel-match-container {

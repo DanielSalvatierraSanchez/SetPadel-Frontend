@@ -8,21 +8,31 @@ export const routes = [
     {
         path: "/home",
         title: "Home",
-        page: Home
+        page: Home,
+        id: "home",
     },
     {
         path: "/padel-matches",
         title: "Partidos de Padel",
-        page: PadelMatches
+        page: PadelMatches,
+        id: "padel-matches",
     },
     {
         path: "/create-padel-match",
         title: "Crea un partido",
-        page: CreatePadelMatch
+        page: CreatePadelMatch,
+        id: "create-padel-match",
     },
     // {
     //     path: "/login",
     //     title: "Login",
-    //     page: Login
-    // }
+    //     page: Login,
+    //     id: "login",
+    // },
+    // {
+    //     path: "/logout",
+    //     title: "Logout",
+    //     page: Logout,
+    //     id: "logout",
+    // },
 ];
