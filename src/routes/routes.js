@@ -11,13 +11,13 @@ export const routes = [
         id: "home"
     },
     {
-        path: "/padel-matches",
+        path: "/padel_matches",
         title: "Partidos de Padel",
         page: PadelMatches,
         id: "padel-matches"
     },
     {
-        path: "/create-padel-match",
+        path: "/create_padel_match",
         title: "Crea un partido",
         page: CreatePadelMatch,
         id: "create-padel-match"

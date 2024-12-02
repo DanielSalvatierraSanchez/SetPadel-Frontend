@@ -8,10 +8,18 @@
     gap: 50px;
 }
 
-#Logout > .button {
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+/* .logout-container > button {
     display: flex;
     flex-direction: row;
-}
+} */
 
 .btn-logout {
     background-color: var(--app-color-body);

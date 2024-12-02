@@ -1,5 +1,4 @@
 import { createPage } from "../../functions/CreatePage";
-import { Home } from "../../pages/Home/Home";
 import { Button } from "../Button/Button";
 import { Loader } from "../Loader/Loader";
 import "./Logout.css";
@@ -11,8 +10,7 @@ export const Logout = () => {
     profileContainer.classList.add("logout-container");
     profileContainer.innerHTML = `<h1>Perfíl de Usuario</h1>`;
 
-    div.append(
-        profileContainer,
+    profileContainer.append(
         Button({
             text: "Actualizar Perfíl",
             fnc: () => {
@@ -25,16 +23,16 @@ export const Logout = () => {
             text: "Cerrar Sesión",
             fnc: () => {
                 Loader(profileContainer);
-                // window.history.pushState("", "", "/home");
                 // e.preventDefault();
                 setTimeout(() => {
+                    window.history.pushState("", "", "/home");
                     localStorage.clear();
                     window.location.reload();
-                }, 1500);
-                //localStorage.removeItem("user");
+                }, 1000);
             },
             className: "btn-logout"
         })
     );
+    div.append(profileContainer);
     return div;
 };

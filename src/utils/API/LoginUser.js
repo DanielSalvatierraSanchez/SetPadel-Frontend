@@ -15,22 +15,22 @@ export const loginUser = async (e) => {
     };
 
     try {
-        //todo duplica la pelota IF todos los datos estan bien poner proceso de carga
         const form = document.querySelector("form");
-        Loader(form);
         const res = await API({ endpoint: "/users/login", method: "POST", body: user });
         console.log("res FETCH =>", res);
-        //todo quito pelota
-        if (res) {
-            setUserDataToLocalStore(res);
-            successMessage(res);
-            Header();
-            setTimeout(() => {
-                PadelMatches();
-            }, 1000);
-        } else {
-            errorMessage(res);
+
+        if (!res || !res.user) {
+            errorMessage(res, form);
         }
+
+        setUserDataToLocalStore(res);
+        Loader(form);
+        successMessage(res, form);
+        Header();
+        setTimeout(() => {
+            window.history.pushState("", "", "/padel_matches");
+            PadelMatches();
+        }, 500);
     } catch (error) {
         console.log("Error en el login del usuario: ", error.message);
     }
