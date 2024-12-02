@@ -1,3 +1,5 @@
+import { Header } from "../../components/Header/Header";
+import { Loader, LoaderOff } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
@@ -14,13 +16,18 @@ export const loginUser = async (e) => {
 
     try {
         //todo proceso carga
+        Loader();
         const res = await API({ endpoint: "/users/login", method: "POST", body: user });
         console.log("res FETCH =>", res);
+        // LoaderOff()
         //todo quito pelota
         if (res) {
             setUserDataToLocalStore(res);
             successMessage(res);
-            PadelMatches();
+            Header()
+            setTimeout(() => {
+                PadelMatches();
+            }, 2000);
         } else {
             errorMessage(res);
         }

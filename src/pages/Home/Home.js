@@ -18,7 +18,7 @@ export const Home = () => {
     div.append(
         homeContainer,
         Button({
-            text: "Login",
+            text: "Iniciar Sesión",
             fnc: () => {
                 window.history.pushState("", "", "/login");
                 Login();

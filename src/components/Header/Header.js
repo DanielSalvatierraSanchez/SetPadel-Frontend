@@ -1,27 +1,38 @@
 import "./Header.css";
 import { navigate } from "../../functions/navigate";
-import { Home } from "../../pages/Home/Home";
 import { routes } from "../../routes/routes";
 
 export const Header = () => {
+    const existingHeader = document.querySelector("header");
+    if (existingHeader) {
+        existingHeader.remove();
+    }
+
     const header = document.createElement("header");
     const nav = document.createElement("nav");
+    const ul = document.createElement("ul");
+    const li = document.createElement("li");
 
-    if (localStorage.getItem("token")) {
-        Home();
-    } else {
-        for (const route of routes) {
-            const a = document.createElement("a");
-            a.textContent = route.title;
-            a.href = route.path;
-            a.addEventListener("click", (e) => {
-                navigate(e, route);
-            });
-            nav.append(a);
-            // CREAREMOS UN LOGOUT
-        }
+    //todo crear filtro de rutas con condicional y despues hacer el bucle del filtro
+    const isAuth = !!localStorage.getItem("token");
+    const filterRoutes = isAuth ? routes.filter((route) => route.id !== "home") : routes.filter((route) => route.id !== "logout");
 
-        header.append(nav);
-        document.body.append(header);
+    for (const route of filterRoutes) {
+        const a = document.createElement("a");
+        a.textContent = route.title;
+        a.href = route.path;
+        a.addEventListener("click", (e) => {
+            e.preventDefault();
+            navigate(e, route);
+        });
+        nav.append(ul);
+        ul.append(li);
+        li.append(a);
     }
+    // if (isAuth) {
+    //     createLinkLogout(nav);
+    // }
+
+    header.append(nav);
+    document.body.prepend(header);
 };

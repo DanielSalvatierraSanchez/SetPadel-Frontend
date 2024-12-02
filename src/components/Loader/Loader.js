@@ -15,10 +15,13 @@ export const Loader = () => {
 export const LoaderOff = () => {
     const container = document.querySelector("form");
     const loaderContainer = document.querySelector(".loader-container");
-    const loader = document.querySelector(".loader");
-    loaderContainer.classList.remove("loader-container");
-    loader.classList.remove("loader");
-    loaderContainer.append(loader);
-    container.append(loaderContainer);
-    return;
+    if (loaderContainer) {
+        loaderContainer.classList.remove("loader-container");
+    }
+    // const loader = document.querySelector(".loader");
+    // loaderContainer.classList.remove("loader-container");
+    // loader.classList.remove("loader");
+    // loaderContainer.append(loader);
+    // container.append(loaderContainer);
+    // return;
 };

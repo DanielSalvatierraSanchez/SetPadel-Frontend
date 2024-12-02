@@ -1,0 +1,20 @@
+#Logout {
+    min-height: 92svh;
+    background-color: var(--app-color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#Logout > .button {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-logout {
+    background-color: var(--app-color-body);
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}

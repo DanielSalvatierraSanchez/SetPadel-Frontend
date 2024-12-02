@@ -12,7 +12,7 @@ a {
     color: var(--app-color-button);
 }
 
-nav {
+li {
     display: flex;
     justify-content: space-evenly;
     align-items: center;

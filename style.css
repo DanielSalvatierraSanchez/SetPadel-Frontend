@@ -5,6 +5,11 @@
   --app-color-body: #d6d6d6;
   --app-color-button: #ffffff;
   --app-color-header: #5d5d5d;
+  --app-color-firstOne: #1DB954;
+  --app-color-firstTwo: #007BFF;
+  --app-color-secondOne: #F5F5F5;
+  --app-color-secondTwo: #333333;
+  --app-color-secondThree: #FFC107;
 }
 
 * {
