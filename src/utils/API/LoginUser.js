@@ -1,5 +1,5 @@
 import { Header } from "../../components/Header/Header";
-import { Loader, LoaderOff } from "../../components/Loader/Loader";
+import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
@@ -15,19 +15,19 @@ export const loginUser = async (e) => {
     };
 
     try {
-        //todo proceso carga
-        Loader();
+        //todo duplica la pelota IF todos los datos estan bien poner proceso de carga
+        const form = document.querySelector("form");
+        Loader(form);
         const res = await API({ endpoint: "/users/login", method: "POST", body: user });
         console.log("res FETCH =>", res);
-        // LoaderOff()
         //todo quito pelota
         if (res) {
             setUserDataToLocalStore(res);
             successMessage(res);
-            Header()
+            Header();
             setTimeout(() => {
                 PadelMatches();
-            }, 2000);
+            }, 1000);
         } else {
             errorMessage(res);
         }

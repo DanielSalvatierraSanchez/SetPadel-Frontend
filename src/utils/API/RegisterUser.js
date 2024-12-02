@@ -17,14 +17,18 @@ export const registerUser = async (e) => {
     formData.append("image", image?.files[0]);
 
     try {
-        //todo pelota
+        //todo duplica la pelota IF todos los datos estan bien poner proceso de carga
+        const form = document.querySelector("form");
+        Loader(form);
         const res = await API({ endpoint: "/users/register", method: "POST", body: formData, isJSON: false });
         console.log("res FETCH =>", res);
         //todo quito pelota
         if (res) {
             setUserDataToLocalStore(res);
             successMessage(res);
-            PadelMatches();
+            setTimeout(() => {
+                PadelMatches();
+            }, 2000);
         } else {
             errorMessage(res);
         }
