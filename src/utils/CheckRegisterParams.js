@@ -1,8 +1,8 @@
-import { messageInput } from "../components/Messages/Error/MessageInput";
+import { messageInputError } from "../components/Messages/MessageInputError";
 
 export const checkRegisterParams = (params, parentElement, message) => {
     if (isNaN(params.value)) {
-        messageInput(parentElement, message);
+        messageInputError(parentElement, message);
         return;
     }
 };

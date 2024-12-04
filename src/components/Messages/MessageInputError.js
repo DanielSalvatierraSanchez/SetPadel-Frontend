@@ -1,6 +1,6 @@
-import "./ErrorMessage.css";
+import "../Messages/Error/ErrorMessage.css";
 
-export const messageInput = (parentElement, message) => {
+export const messageInputError = (parentElement, message) => {
     if (parentElement) {
         let removeError = parentElement.querySelector(".error-message");
         if (removeError) {
