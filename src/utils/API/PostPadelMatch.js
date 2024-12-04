@@ -18,7 +18,7 @@ export const postPadelMatch = async (e) => {
         const res = await API({ endpoint: "/matches/register", method: "POST", isJSON: false, body: formData, token });
         console.log("res post PM API =>", res);
         if (!token) {
-            errorMessage(res);
+            errorMessage(div);
         }
     } catch (error) {
         console.log("Error en la creación de un partido:", error.message);

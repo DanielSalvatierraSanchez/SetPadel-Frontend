@@ -1,3 +1,5 @@
+import { Loader } from "../../components/Loader/Loader";
+
 export const URL = "http://localhost:3000/api/v1/appadel";
 
 export const API = async ({ endpoint, method, body, isJSON = true, token }) => {

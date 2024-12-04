@@ -5,7 +5,7 @@
     align-items: center;
     background-color: var(--app-color-tertiary);
     min-height: 92svh;
-    padding: 50px;
+    /* padding: 50px; */
 }
 
 #CreatePadelMatch > h1 {

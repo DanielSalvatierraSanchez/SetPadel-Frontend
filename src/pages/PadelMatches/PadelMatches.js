@@ -1,7 +1,7 @@
 import "./PadelMatches.css";
 import { createPage } from "../../functions/CreatePage";
 import { getPadelMatches } from "../../utils/API/GetPadelMatches";
-
+import { Loader } from "../../components/Loader/Loader";
 
 export const PadelMatches = async () => {
     const div = createPage("PadelMatches");

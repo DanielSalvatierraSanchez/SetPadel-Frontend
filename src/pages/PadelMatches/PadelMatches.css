@@ -51,3 +51,8 @@
 .padel-match-card:hover > img {
     filter: none;
 }
+
+.error-message {
+    margin-top: 20px;
+    color: red;
+}
