@@ -9,13 +9,14 @@ export const Loader = (parentElement) => {
     loader.alt = "pelota de padel";
     loaderContainer.append(loader);
     parentElement.append(loaderContainer);
+    // setTimeout(() => {LoaderOff()}, 1000)
     return;
 };
 
-// export const LoaderOff = () => {
-//     const loaderContainer = document.querySelector(".loader-container");
-//     if (loaderContainer) {
-//         loaderContainer.classList.remove("loader-container");
-//     }
-//     return;
-// };
+export const LoaderOff = () => {
+    const loaderContainer = document.querySelector(".loader-container");
+    if (loaderContainer) {
+        loaderContainer.remove();
+    }
+    return;
+};

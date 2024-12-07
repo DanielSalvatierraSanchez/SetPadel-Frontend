@@ -1,15 +1,21 @@
 import "./PadelMatches.css";
 import { createPage } from "../../functions/CreatePage";
 import { getPadelMatches } from "../../utils/API/GetPadelMatches";
-import { Loader } from "../../components/Loader/Loader";
+import { getToken, isAuth } from "../../utils/isAuth";
 
 export const PadelMatches = async () => {
     const div = createPage("PadelMatches");
     div.innerHTML = `<h1>Partidos de Padel</h1>`;
 
+    getToken()
     const allPadelMatches = await getPadelMatches();
     const padelMatchContainer = document.createElement("div");
     padelMatchContainer.classList.add("padel-match-container");
+
+    if (!getToken()) {
+        isAuth(div)
+        return;
+    }
 
     allPadelMatches.allPadelMatches.forEach((padelMatch) => {
         const padelMatchCard = document.createElement("div");

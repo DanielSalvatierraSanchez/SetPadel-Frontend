@@ -3,12 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 92svh;
     background-color: var(--app-color-tertiary);
+    min-height: 92svh;
 }
 
 #PadelMatches > h1 {
-    margin: 50px;
+    padding: 30px;
     text-align: center;
 }
 

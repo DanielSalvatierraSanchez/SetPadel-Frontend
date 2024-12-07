@@ -1,7 +1,7 @@
 #CreatePadelMatch {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-color: var(--app-color-tertiary);
     min-height: 92svh;
@@ -15,4 +15,19 @@
 
 #CreatePadelMatch > button {
     margin-top: 20px;
+}
+
+.create-padel-match-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.error-message {
+    margin-top: 20px;
+    color: red;
 }
