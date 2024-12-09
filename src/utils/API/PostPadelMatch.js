@@ -1,12 +1,10 @@
+import { Loader } from "../../components/Loader/Loader";
 import { randomMessageError } from "../RandomMessageError";
-import { isAuth } from "../isAuth";
 import { API } from "./API";
 
 export const postPadelMatch = async (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     const [title, location, date, place, image, author] = e.target;
-    console.log(date.value);
-    console.log(place.value);
 
     const formData = new FormData();
     formData.append("title", title.value);
@@ -22,14 +20,16 @@ export const postPadelMatch = async (e) => {
     try {
         const div = document.querySelector("#CreatePadelMatch");
 
-        const token = localStorage.getItem("token");
+        //const token = localStorage.getItem("token");
+        //getToken()
+        Loader(div);
         const res = await API({ endpoint: "/matches/register", method: "POST", isJSON: false, body: formData, token });
         console.log("res post PM API =>", res);
         // if (!token) {
         //     errorMessage(res, div);
         //     return;
         // }
-        isAuth(div);
+        // isAuth(div);
         return res;
     } catch (error) {
         console.log("Error en la creación de un partido:", error.message);
