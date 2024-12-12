@@ -2,7 +2,7 @@ import "./CreatePadelMatch.css";
 import { PostPadelMatchForm } from "../../components/PostPadelMatch/PostPadelMatchForm";
 import { createPage } from "../../functions/CreatePage";
 import { getToken, isAuth } from "../../utils/isAuth";
-import { Loader } from "../../components/Loader/Loader";
+import { Loader, LoaderOff } from "../../components/Loader/Loader";
 
 export const CreatePadelMatch = async () => {
     const div = createPage("CreatePadelMatch");
@@ -16,6 +16,8 @@ export const CreatePadelMatch = async () => {
     if (!getToken()) {
         isAuth(div);
         return;
+    } else {
+        LoaderOff();
     }
 
     const form = document.createElement("form");

@@ -30,7 +30,7 @@ export const registerUser = async (e) => {
 
         setUserDataToLocalStore(res);
         Loader(form);
-        successMessage(res);
+        //successMessage(res);
         Header();
         setTimeout(() => {
             PadelMatches();
