@@ -1,4 +1,3 @@
-import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { isAuth } from "../isAuth";
 import { API } from "./API";
@@ -11,9 +10,9 @@ export const getPadelMatches = async () => {
             errorMessage(res, div);
             return;
         }
-        isAuth(div);
 
-        //Loader(div);
+        isAuth(div);
+        
         const res = await API({ endpoint: "/matches", method: "GET", token });
         return res;
     } catch (error) {

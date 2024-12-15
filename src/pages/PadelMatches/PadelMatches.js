@@ -2,7 +2,7 @@ import "./PadelMatches.css";
 import { createPage } from "../../functions/CreatePage";
 import { getPadelMatches } from "../../utils/API/GetPadelMatches";
 import { getToken, isAuth } from "../../utils/isAuth";
-import { Loader, LoaderOff } from "../../components/Loader/Loader";
+import { Loader } from "../../components/Loader/Loader";
 import { joinPadelMatch } from "../../utils/API/JoinPadelMatch";
 
 export const PadelMatches = async () => {
@@ -11,6 +11,7 @@ export const PadelMatches = async () => {
 
     getToken();
     const allPadelMatches = await getPadelMatches();
+
     const padelMatchContainer = document.createElement("div");
     padelMatchContainer.classList.add("padel-match-container");
 
@@ -23,6 +24,7 @@ export const PadelMatches = async () => {
     allPadelMatches.allPadelMatches.forEach((padelMatch) => {
         const padelMatchCard = document.createElement("div");
         padelMatchCard.classList.add("padel-match-card");
+        localStorage.setItem("allPadelMatches", JSON.stringify(allPadelMatches.allPadelMatches));
 
         // if (padelMatch.players.length >= 4) {
         //     console.log("padelMatch.players.length =>",padelMatch.players.length);
@@ -38,7 +40,9 @@ export const PadelMatches = async () => {
             <p>${padelMatch.date}</p>
             <p>Lugar: ${padelMatch.location}</p>
             <p>Pista: ${padelMatch.place}</p>
+            <p>Creador: ${padelMatch.author?.name}</p>
             <button class="join-btn" data-id="${padelMatch._id}" ${isFull ? "disable" : ""}><img src="/assets/player.png">${isFull ? "PARTIDO COMPLETO" : "UNIRSE"}</button>
+            <p>Asistentes: ${padelMatch.players}</p>
             `;
 
         padelMatchContainer.append(padelMatchCard);
@@ -48,13 +52,17 @@ export const PadelMatches = async () => {
     const joinBtn = document.querySelectorAll(".join-btn");
     joinBtn.forEach((button) => {
         button.addEventListener("click", (e) => {
-            const userData = localStorage.getItem("user")
-            const user = JSON.parse(userData)
-            console.log(userData);
-            console.log(user._id);
+            const userData = JSON.parse(localStorage.getItem("user"));
+            const padelMatchData = JSON.parse(localStorage.getItem("allPadelMatches"));
+            console.log("padelMatchData =>",padelMatchData);
             
+            console.log("userData =>", userData);
+            console.log("NAME userData =>", userData.name);
+
+            
+
             // eliminar join btn o poner otro src
-            joinPadelMatch(user._id)
+            // joinPadelMatch(padelMatchId);
         });
     });
 
