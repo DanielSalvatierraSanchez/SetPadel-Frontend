@@ -7,6 +7,7 @@ import { API } from "./API";
 export const postPadelMatch = async (e) => {
     e.preventDefault();
     const [title, location, date, place, image, author] = e.target;
+    console.log("postPM e =>", e);
 
     const formData = new FormData();
     formData.append("title", title.value);
@@ -24,12 +25,11 @@ export const postPadelMatch = async (e) => {
         const div = document.querySelector("#CreatePadelMatch");
         const token = localStorage.getItem("token");
 
-        
         const res = await API({ endpoint: "/matches/register", method: "POST", isJSON: false, body: formData, token });
         console.log("res post PM API =>", res);
-        
+
         Loader(div);
-        successMessage(res, form)
+        successMessage(res, form);
         setTimeout(() => {
             LoaderOff();
         }, 1000);
