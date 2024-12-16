@@ -5,6 +5,7 @@ import { getToken, isAuth } from "../../utils/isAuth";
 import { Loader } from "../../components/Loader/Loader";
 import { joinPadelMatch } from "../../utils/API/JoinPadelMatch";
 import { randomMessageError } from "../../utils/RandomMessageError";
+import { dateFormat } from "../../utils/DateFormatted";
 
 export const PadelMatches = async () => {
     const div = createPage("PadelMatches");
@@ -32,14 +33,15 @@ export const PadelMatches = async () => {
     allPadelMatches.forEach((padelMatch) => {
         const padelMatchCard = document.createElement("div");
         padelMatchCard.classList.add("padel-match-card");
-        localStorage.setItem("allPadelMatches", allPadelMatches);
+        localStorage.setItem("allPadelMatches", JSON.stringify(allPadelMatches));
 
         const isFull = padelMatch.isComplete;
+        const dateFormatted = dateFormat(padelMatch.date)
 
         padelMatchCard.innerHTML = `
             <h3>${padelMatch.title}</h3>
             <img class="padel-match-card-image" src=${padelMatch.image}>
-            <p>${padelMatch.date}</p>
+            <p>${dateFormatted}</p>
             <p>Lugar: ${padelMatch.location}</p>
             <p>Pista: ${padelMatch.place}</p>
             <p>Creador: ${padelMatch.author?.name}</p>
