@@ -57,6 +57,11 @@
     color: red;
 }
 
+.success-message {
+    margin-top: 20px;
+    color: red;
+}
+
 .player-padel-match {
     border: none;
     object-fit: cover;

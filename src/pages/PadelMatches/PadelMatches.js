@@ -36,7 +36,7 @@ export const PadelMatches = async () => {
         localStorage.setItem("allPadelMatches", JSON.stringify(allPadelMatches));
 
         const isFull = padelMatch.isComplete;
-        const dateFormatted = dateFormat(padelMatch.date)
+        const dateFormatted = dateFormat(padelMatch.date);
 
         padelMatchCard.innerHTML = `
             <h3>${padelMatch.title}</h3>
@@ -45,27 +45,26 @@ export const PadelMatches = async () => {
             <p>Lugar: ${padelMatch.location}</p>
             <p>Pista: ${padelMatch.place}</p>
             <p>Creador: ${padelMatch.author?.name}</p>
-            <button class="join-btn" data-id="${padelMatch._id}" ${isFull ? "disable" : ""}><img src="/assets/player.png">${isFull ? "PARTIDO COMPLETO" : "UNIRSE"}</button>
+            <button class="join-btn" padelMatch-id="${padelMatch._id}" ${isFull ? "disable" : ""}><img src="/assets/player.png">${isFull ? "PARTIDO COMPLETO" : "UNIRSE"}</button>
             <p>Asistentes: ${padelMatch.players.length}</p>
             `;
 
         padelMatchContainer.append(padelMatchCard);
         div.append(padelMatchContainer);
-        padelMatchCard.addEventListener("click", () => console.log("HOLA"));
+        padelMatchCard.addEventListener("click", () => console.log("HOLA soy evento click de la card padelMatch"));
     });
 
     const joinBtn = document.querySelectorAll(".join-btn");
     joinBtn.forEach((button) => {
-        button.addEventListener("click", (e) => {
-            const userData = JSON.parse(localStorage.getItem("user"));
-            console.log("userData PARSE=>", userData);
-            const userId = userData._id;
-            console.log("NAME userId =>", userId);
-            const padelMatchId = e.target.getAttribute("data-id");
-            console.log("padelMatch ID =>", padelMatchId);
+        button.addEventListener("click", async (e) => {
+            e.preventDefault();
+            console.log("e.target", e.target);
+            const padelMatchId = e.target.getAttribute("padelMatch-id");
 
+            const userData = JSON.parse(localStorage.getItem("user"));
+            const userId = userData._id;
             const padelMatchData = JSON.parse(localStorage.getItem("allPadelMatches"));
-            console.log("padelMatchData - allPadelMatches PARSE =>", padelMatchData);
+
             // eliminar join btn o poner otro src
             joinPadelMatch(padelMatchId);
         });
