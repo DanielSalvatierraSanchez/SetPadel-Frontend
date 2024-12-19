@@ -1,4 +1,4 @@
-import { Logout } from "../components/Logout/Logout";
+import { Logout } from "../pages/Logout/Logout";
 import { CreatePadelMatch } from "../pages/CreatePadelMatch/CreatePadelMatch";
 import { Home } from "../pages/Home/Home";
 import { PadelMatches } from "../pages/PadelMatches/PadelMatches";

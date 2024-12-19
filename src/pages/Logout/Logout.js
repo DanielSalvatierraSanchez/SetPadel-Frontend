@@ -1,6 +1,6 @@
 import { createPage } from "../../functions/CreatePage";
-import { Button } from "../Button/Button";
-import { Loader } from "../Loader/Loader";
+import { Button } from "../../components/Button/Button";
+import { Loader } from "../../components/Loader/Loader";
 import "./Logout.css";
 
 export const Logout = () => {
@@ -14,7 +14,9 @@ export const Logout = () => {
         Button({
             text: "Actualizar Perfíl",
             fnc: () => {
-                window.history.pushState("", "", "/update_profile");
+                window.history.pushState("", "", "/profile");
+                console.log("Actualizar Perfíl");
+                
                 //todo ejecutar formulario para actualizar user
             },
             className: "btn-update-profile"
@@ -23,10 +25,9 @@ export const Logout = () => {
             text: "Cerrar Sesión",
             fnc: () => {
                 Loader(profileContainer);
-                // e.preventDefault();
                 setTimeout(() => {
                     window.history.pushState("", "", "/home");
-                    localStorage.clear();
+                    // localStorage.clear(); // USO EL CLEAR DESDE EL MAIN.JS
                     window.location.reload();
                 }, 1000);
             },

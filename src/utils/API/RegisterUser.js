@@ -33,6 +33,7 @@ export const registerUser = async (e) => {
         //successMessage(res);
         Header();
         setTimeout(() => {
+            window.history.pushState("", "", "/padel_matches");
             PadelMatches();
         }, 2000);
     } catch (error) {

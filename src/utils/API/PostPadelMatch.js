@@ -34,6 +34,7 @@ export const postPadelMatch = async (e) => {
             LoaderOff();
         }, 1000);
         setTimeout(() => {
+            window.history.pushState("", "", "/padel_matches");
             PadelMatches();
         }, 1000);
 
