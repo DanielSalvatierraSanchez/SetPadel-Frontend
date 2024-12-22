@@ -3,12 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 92svh;
     background-color: var(--app-color-tertiary);
+    min-height: 92svh;
 }
 
 #PadelMatches > h1 {
-    margin: 50px;
+    padding: 30px;
+    text-align: center;
 }
 
 .padel-match-container {
@@ -39,7 +40,7 @@
     transition: all 0.5s;
 }
 
-.padel-match-card > img {
+.padel-match-card-image {
     width: 200px;
     height: 150px;
     object-fit: cover;
@@ -47,6 +48,44 @@
     filter: grayscale();
 }
 
-.padel-match-card:hover > img {
+.padel-match-card-image:hover {
     filter: none;
+}
+
+.error-message {
+    margin-top: 20px;
+    color: red;
+}
+
+.success-message {
+    margin-top: 20px;
+    color: red;
+}
+
+.player-padel-match {
+    border: none;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+
+.player-padel-match:hover {
+    transform: scale(1.1);
+}
+
+.disable {
+    cursor: not-allowed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.join-btn:hover {
+    transition: all 0.5s;
+}
+
+.join-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 2px 2px;
+    transform: scale(1.1);
 }

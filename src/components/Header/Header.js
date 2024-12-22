@@ -1,42 +1,34 @@
+import "./Header.css";
 import { navigate } from "../../functions/navigate";
-import { Home } from "../../pages/Home/Home";
 import { routes } from "../../routes/routes";
 
-import "./Header.css";
-
 export const Header = () => {
+    const duplicateHeader = document.querySelector("header");
+    if (duplicateHeader) {
+        duplicateHeader.remove();
+    }
+
     const header = document.createElement("header");
     const nav = document.createElement("nav");
-    // const ul = document.createElement("ul");
+    const ul = document.createElement("ul");
 
-    if (localStorage.getItem("token") === undefined && localStorage.getItem("token") === null) {
-        Home();
-    } else {
-        for (const route of routes) {
-            // const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.textContent = route.title;
-            a.href = route.path;
-            a.addEventListener("click", (e) => {
-                navigate(e, route);
-            });
-            nav.append(a);
-            // li.append(a);
-            // ul.append(li);
-            // CREAREMOS UN LOGOUT
-            // if (localStorage.getItem("token")) {
-            //     const a = document.createElement("a");
-            //     a.textContent = "Logout";
-            //     a.href = "/logout";
-            //     a.addEventListener("click", () => {
-            //         localStorage.removeItem("token");
-            //         window.location.reload();
-            //     });
-            //     nav.append(a);
-            // }
-        }
-        // nav.append(ul);
-        header.append(nav);
-        document.body.append(header);
+    const isAuth = !!localStorage.getItem("token");
+    const filterRoutes = isAuth ? routes.filter((route) => route.id !== "home") : routes.filter((route) => route.id !== "logout");
+
+    for (const route of filterRoutes) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.textContent = route.title;
+        a.href = route.path;
+        a.addEventListener("click", (e) => {
+            e.preventDefault();
+            navigate(e, route);
+        });
+        li.append(a);
+        ul.append(li);
+        nav.append(ul);
     }
+
+    header.append(nav);
+    document.body.prepend(header);
 };

@@ -1,6 +1,6 @@
-import "./ErrorMessage.css";
+import "../components/Messages/Error/ErrorMessage.css"
 
-export const errorMessage = (response, parentElement) => {
+export const randomMessageError = (parentElement, message) => {
     if (parentElement) {
         let removeError = parentElement.querySelector(".error-message");
         if (removeError) {
@@ -9,7 +9,7 @@ export const errorMessage = (response, parentElement) => {
 
         const errorMessage = document.createElement("p");
         errorMessage.classList.add("error-message");
-        errorMessage.textContent = response.message;
+        errorMessage.textContent = message;
         parentElement.append(errorMessage);
 
         setTimeout(() => {

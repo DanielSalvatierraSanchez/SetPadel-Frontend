@@ -1,9 +1,9 @@
 import "./SuccessMessage.css";
 
-export const successMessage = (response) => {
-    const form = document.querySelector("form");
-    if (form) {
-        let removeError = form.querySelector(".success-message");
+export const successMessage = (response, parentElement) => {
+    // const form = document.querySelector("form");
+    if (parentElement) {
+        let removeError = parentElement.querySelector(".success-message");
         if (removeError) {
             removeError.remove();
         }
@@ -14,8 +14,8 @@ export const successMessage = (response) => {
 
         // const p = document.createElement("p");
         // p.textContent = "CARGANDO PARTIDOS...";
-        // form.append(successMessage, p);
-        form.append(successMessage);
+        // parentElement.append(successMessage, p);
+        parentElement.append(successMessage);
         return;
     }
 };

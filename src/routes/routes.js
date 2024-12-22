@@ -1,28 +1,31 @@
-import { Logout } from "../components/Logout/Logout";
+import { Logout } from "../pages/Logout/Logout";
 import { CreatePadelMatch } from "../pages/CreatePadelMatch/CreatePadelMatch";
 import { Home } from "../pages/Home/Home";
-import { Login } from "../pages/Login/Login";
 import { PadelMatches } from "../pages/PadelMatches/PadelMatches";
 
 export const routes = [
     {
         path: "/home",
         title: "Home",
-        page: Home
+        page: Home,
+        id: "home"
     },
     {
-        path: "/padel-matches",
+        path: "/padel_matches",
         title: "Partidos de Padel",
-        page: PadelMatches
+        page: PadelMatches,
+        id: "padel-matches"
     },
     {
-        path: "/create-padel-match",
+        path: "/create_padel_match",
         title: "Crea un partido",
-        page: CreatePadelMatch
+        page: CreatePadelMatch,
+        id: "create-padel-match"
     },
-    // {
-    //     path: "/login",
-    //     title: "Login",
-    //     page: Login
-    // }
+    {
+        path: "/logout",
+        title: "Cerrar Sesión",
+        page: Logout,
+        id: "logout"
+    }
 ];

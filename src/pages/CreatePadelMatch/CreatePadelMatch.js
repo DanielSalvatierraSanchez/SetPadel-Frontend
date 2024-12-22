@@ -1,20 +1,26 @@
-import { Button } from "../../components/Button/Button";
+import "./CreatePadelMatch.css";
 import { PostPadelMatchForm } from "../../components/PostPadelMatch/PostPadelMatchForm";
 import { createPage } from "../../functions/CreatePage";
-import "./CreatePadelMatch.css";
+import { getToken, isAuth } from "../../utils/isAuth";
+import { Loader, LoaderOff } from "../../components/Loader/Loader";
 
-export const CreatePadelMatch = () => {
+export const CreatePadelMatch = async () => {
     const div = createPage("CreatePadelMatch");
+    div.innerHTML = `<h1>Crea un Partido de Padel</h1>`;
+
+    getToken();
+    const createPadelMatchContainer = document.createElement("div");
+    createPadelMatchContainer.classList.add("create-padel-match-container");
+
+    Loader(div);
+    if (!getToken()) {
+        isAuth(div);
+        return;
+    } else {
+        LoaderOff();
+    }
 
     const form = document.createElement("form");
-    const title = document.createElement("h1");
-    title.textContent = "Crea un Partido de Padel";
-
+    div.append(form);
     PostPadelMatchForm(form);
-
-    div.append(
-        title,
-        form
-        // Button({ text: "Crear Partido", fnc: async () => {}, className: "btn-postPadelMatchForm" })
-    );
 };
