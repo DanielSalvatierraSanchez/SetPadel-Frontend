@@ -9,6 +9,7 @@ import { dateFormat } from "../../utils/DateFormatted";
 
 export const PadelMatches = async () => {
     const div = createPage("PadelMatches");
+    div.classList.add("padel-matches");
     div.innerHTML = `<h1>Partidos de Padel</h1>`;
 
     getToken();
@@ -35,7 +36,7 @@ export const PadelMatches = async () => {
         padelMatchCard.classList.add("padel-match-card");
         localStorage.setItem("allPadelMatches", JSON.stringify(allPadelMatches));
 
-        const isFull = padelMatch.isComplete;
+        const isFull = padelMatch.players.length == 4;
         const dateFormatted = dateFormat(padelMatch.date);
 
         padelMatchCard.innerHTML = `
@@ -58,7 +59,7 @@ export const PadelMatches = async () => {
     joinBtn.forEach((button) => {
         button.addEventListener("click", async (e) => {
             e.preventDefault();
-            console.log("e.target", e.target);
+
             const padelMatchId = e.target.getAttribute("padelMatch-id");
 
             const userData = JSON.parse(localStorage.getItem("user"));
@@ -66,7 +67,8 @@ export const PadelMatches = async () => {
             const padelMatchData = JSON.parse(localStorage.getItem("allPadelMatches"));
 
             // eliminar join btn o poner otro src
-            joinPadelMatch(padelMatchId);
+            const res = await joinPadelMatch(padelMatchId);
+
         });
     });
 

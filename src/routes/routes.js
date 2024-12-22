@@ -24,7 +24,7 @@ export const routes = [
     },
     {
         path: "/logout",
-        title: "Cerrar Sesión",
+        title: "Perfíl / Cerrar Sesión",
         page: Logout,
         id: "logout"
     }
