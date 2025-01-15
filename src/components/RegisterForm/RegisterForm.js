@@ -9,9 +9,11 @@ export const RegisterForm = (form) => {
     ${FieldForm({ inputLabel: "Nombre de Usuario", inputType: "text", inputPlaceholder: "Nombre de Usuario" })}
     ${FieldForm({ inputLabel: "Email", inputType: "email", inputPlaceholder: "email@email.email" })}
     ${FieldForm({ inputLabel: "Contraseña", inputType: "password", inputPlaceholder: "********" })}
-    ${FieldForm({ inputLabel: "Teléfono", inputType: "number", inputPlaceholder: "123456789", max: 999999999 })}
+    ${FieldForm({ inputLabel: "Teléfono", inputType: "number", inputPlaceholder: "123456789" })}
     ${FieldForm({ inputLabel: "Imagen de perfil", inputType: "file" })}
     <button class="btn-register-form" type="submit">Crear Cuenta</button>
     `;
     form.addEventListener("submit", registerUser);
 };
+
+// ${FieldForm({ inputLabel: "Teléfono", inputType: "number", inputPlaceholder: "123456789", max: 999999999 })}

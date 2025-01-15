@@ -6,13 +6,19 @@ import { Loader } from "../../components/Loader/Loader";
 import { joinPadelMatch } from "../../utils/API/JoinPadelMatch";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { dateFormat } from "../../utils/DateFormatted";
+import { Button } from "../../components/Button/Button";
 
 export const PadelMatches = async () => {
     const div = createPage("PadelMatches");
     div.classList.add("padel-matches");
     div.innerHTML = `<h1>Partidos de Padel</h1>`;
 
-    getToken();
+    const token = getToken();
+    if (!token) {
+        isAuth(div);
+        return;
+    }
+
     const allPadelMatch = await getPadelMatches();
     const { allPadelMatches } = allPadelMatch;
 
@@ -20,47 +26,34 @@ export const PadelMatches = async () => {
     padelMatchContainer.classList.add("padel-match-container");
 
     Loader(div);
-    if (!allPadelMatches) {
+    if (!allPadelMatches || allPadelMatches.length === 0) {
         randomMessageError(div, "❌ No hay ningún partido programado.");
-        return;
-    }
-    if (!getToken()) {
-        isAuth(div);
         return;
     }
 
     allPadelMatches.forEach((padelMatch) => {
         const padelMatchCard = document.createElement("div");
         padelMatchCard.classList.add("padel-match-card");
+
         localStorage.setItem("allPadelMatches", JSON.stringify(allPadelMatches));
 
         const isFull = padelMatch.players.length === 4;
         const dateFormatted = dateFormat(padelMatch.date);
 
-        // padelMatchCard.innerHTML = `
-        //     <h3>${padelMatch.title}</h3>
-        //     <img class="padel-match-card-image" src=${padelMatch.image}>
-        //     <p>${dateFormatted}</p>
-        //     <p>Lugar: ${padelMatch.location}</p>
-        //     <p>Pista: ${padelMatch.place}</p>
-        //     <p>Creador: ${padelMatch.author?.name}</p>
-        //     <button class="join-btn" padelMatch-id="${padelMatch._id}" ${isFull ? "disable" : ""}><img src="/assets/player.png">${isFull ? "PARTIDO COMPLETO" : "UNIRSE"}</button>
-        //     <p>Asistentes: ${padelMatch.players.length}</p>
-        //     `;
-
         // Vista inicial de la carta
         padelMatchCard.innerHTML = `
         <p>Fecha: ${dateFormatted}</p>
         <p>Asistentes: ${padelMatch.players.length}</p>
-    `;
+        `;
 
         padelMatchContainer.append(padelMatchCard);
         div.append(padelMatchContainer);
 
         padelMatchCard.addEventListener("click", () => {
-            console.log("HOLA soy evento click de la card padelMatch");
-            // Cambiar contenido al hacer clic
-            padelMatchCard.innerHTML = `
+            const padelMatchFull = document.createElement("div");
+            padelMatchFull.classList.add("padel-match-full");
+
+            padelMatchFull.innerHTML = `
         <h3>${padelMatch.title}</h3>
         <img class="padel-match-card-image" src=${padelMatch.image}>
         <p>Fecha: ${dateFormatted}</p>
@@ -68,33 +61,80 @@ export const PadelMatches = async () => {
         <p>Pista: ${padelMatch.place}</p>
         <p>Creador: ${padelMatch.author?.name}</p>
         <button class="join-btn" padelMatch-id="${padelMatch._id}" ${isFull ? "disabled" : ""}>
-            <img src="/assets/player.png">
-            ${isFull ? "PARTIDO COMPLETO" : "UNIRSE"}
+        <img src="/assets/player.png">
+        ${isFull ? "PARTIDO COMPLETO" : "UNIRSE"}
         </button>
-        <p>Asistentes: ${padelMatch.players.length || "Ninguno"}</p>
+        <p data-type="assistants">Asistentes: ${padelMatch.players.length || "Ninguno"}</p>
+        <img class="close-btn" src="./assets/cerrar.png" />
         `;
-        console.log(padelMatch.players);
-    });
-    });
 
-    const joinBtn = document.querySelectorAll(".join-btn");
-    joinBtn.forEach((button) => {
-        button.addEventListener("click", async (e) => {
-            e.preventDefault();
+            padelMatchCard.replaceWith(padelMatchFull);
 
-            const padelMatchId = e.target.getAttribute("padelMatch-id");
+            const closeBtn = padelMatchFull.querySelector(".close-btn");
+            closeBtn.addEventListener("click", () => {
+                padelMatchFull.replaceWith(padelMatchCard);
+            });
 
-            const userData = JSON.parse(localStorage.getItem("user"));
-            const userId = userData._id;
-            const padelMatchData = JSON.parse(localStorage.getItem("allPadelMatches"));
+            const joinBtn = padelMatchFull.querySelector(".join-btn");
+            joinBtn.addEventListener("click", async (e) => {
+                e.stopPropagation();
+                e.preventDefault();
 
-            // eliminar join btn o poner otro src
-            const res = await joinPadelMatch(padelMatchId);
+                const padelMatchId = e.target.getAttribute("padelMatch-id");
+                const userData = JSON.parse(localStorage.getItem("user"));
+
+                padelMatch.players.push({ name: userData.name, _id: userData._id });
+
+                await joinPadelMatch(padelMatchId);
+            });
         });
     });
 
     return div;
 };
+
+/*
+            const joinBtn = padelMatchFull.querySelector(".join-btn");
+            joinBtn.addEventListener("click", async (e) => {
+                e.stopPropagation();
+                e.preventDefault();
+
+                const padelMatchId = e.target.getAttribute("padelMatch-id");
+
+                // const userData = JSON.parse(localStorage.getItem("user"));
+                // const userId = userData._id;
+                // const padelMatchData = JSON.parse(localStorage.getItem("allPadelMatches"));
+
+                // eliminar join btn o poner otro src
+
+                await joinPadelMatch(padelMatchId);
+            });
+
+
+                        const joinBtn = padelMatchFull.querySelector(".join-btn");
+            joinBtn.addEventListener("click", async (e) => {
+                e.stopPropagation();
+                e.preventDefault();
+
+                const padelMatchId = e.target.getAttribute("padelMatch-id");
+                const userData = JSON.parse(localStorage.getItem("user"));
+
+                padelMatch.players.push({ name: userData.name, _id: userData._id });
+
+                const assistants = padelMatchFull.querySelector("p[data-type='assistants']");
+                const updatePlayers = padelMatch.players.map((player) => player.name || "Sin nombre").join(", ");
+                assistants.innerHTML = `
+                        <strong>Asistentes:</strong> ${updatePlayers || "Ninguno"}
+                        `;
+
+                if (padelMatch.players.length === 4) {
+                    joinBtn.disabled = true;
+                    joinBtn.innerHTML = `<img src="/assets/player.png"> PARTIDO COMPLETO`;
+                }
+
+                await joinPadelMatch(padelMatchId);
+            });
+*/
 
 /*
 <p>Fecha: ${padelMatch.day} de ${padelMatch.month}</p>
