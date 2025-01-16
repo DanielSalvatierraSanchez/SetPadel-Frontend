@@ -15,3 +15,5 @@ export const RegisterForm = (form) => {
     `;
     form.addEventListener("submit", registerUser);
 };
+
+// ${FieldForm({ inputLabel: "Teléfono", inputType: "number", inputPlaceholder: "123456789", max: 999999999 })}

@@ -27,7 +27,7 @@ export const Logout = () => {
                 Loader(profileContainer);
                 setTimeout(() => {
                     window.history.pushState("", "", "/home");
-                    // localStorage.clear(); // USO EL CLEAR DESDE EL MAIN.JS
+                    localStorage.clear(); // USO EL CLEAR DESDE EL MAIN.JS
                     window.location.reload();
                 }, 1000);
             },

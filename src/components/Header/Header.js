@@ -13,7 +13,8 @@ export const Header = () => {
     const ul = document.createElement("ul");
 
     const isAuth = !!localStorage.getItem("token");
-    const filterRoutes = isAuth ? routes.filter((route) => route.id !== "home") : routes.filter((route) => route.id !== "logout");
+
+    const filterRoutes = isAuth ? routes.filter((route) => route.id !== "home") : routes.filter((route) => route.id === "home");
 
     for (const route of filterRoutes) {
         const li = document.createElement("li");

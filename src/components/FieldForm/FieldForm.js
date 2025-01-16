@@ -1,10 +1,10 @@
 import "./FieldForm.css";
 
-export const FieldForm = ({ inputLabel, inputType, inputPlaceholder }) => {
+export const FieldForm = ({ inputLabel, inputType, inputPlaceholder, max=Infinity }) => {
     return `
     <div class="field-form">
         <label>${inputLabel}</label>
-        <input type="${inputType}" placeholder="${inputPlaceholder}">
+        <input type="${inputType}" placeholder="${inputPlaceholder}" max="${max}">
     </div>
     `;
 };
