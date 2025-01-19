@@ -16,9 +16,7 @@ export const Logout = () => {
             text: "Actualizar Perfíl",
             fnc: () => {
                 window.history.pushState("", "", "/profile");
-                console.log("Actualizar Perfíl");
-                Profile()
-                //todo ejecutar formulario para actualizar user
+                Profile();
             },
             className: "btn-update-profile"
         }),
