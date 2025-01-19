@@ -9,7 +9,6 @@ export const API = async ({ endpoint, method, body, isJSON = true, token }) => {
         headers
     });
     console.log("res API =>", res);
-    // await new Promise((resolve) => setTimeout(resolve, 3000)); //todo ELIMINAR ESTA LINEA ANTES DE FINALIZAR EL PROYECTO
     const response = await res.json();
     console.log("response API =>", response);
     return response;
