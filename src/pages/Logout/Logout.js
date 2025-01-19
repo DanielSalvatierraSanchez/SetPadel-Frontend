@@ -2,6 +2,7 @@ import { createPage } from "../../functions/CreatePage";
 import { Button } from "../../components/Button/Button";
 import { Loader } from "../../components/Loader/Loader";
 import "./Logout.css";
+import { Profile } from "../../components/Profile/Profile";
 
 export const Logout = () => {
     const div = createPage("Logout");
@@ -15,9 +16,7 @@ export const Logout = () => {
             text: "Actualizar Perfíl",
             fnc: () => {
                 window.history.pushState("", "", "/profile");
-                console.log("Actualizar Perfíl");
-                
-                //todo ejecutar formulario para actualizar user
+                Profile();
             },
             className: "btn-update-profile"
         }),

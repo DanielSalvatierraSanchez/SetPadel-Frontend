@@ -73,6 +73,7 @@ export const PadelMatches = async () => {
             const closeBtn = padelMatchFull.querySelector(".close-btn");
             closeBtn.addEventListener("click", () => {
                 padelMatchFull.replaceWith(padelMatchCard);
+                PadelMatches();
             });
 
             const joinBtn = padelMatchFull.querySelector(".join-btn");
