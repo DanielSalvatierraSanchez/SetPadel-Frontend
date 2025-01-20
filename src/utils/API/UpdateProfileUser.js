@@ -1,11 +1,10 @@
-import { Header } from "../../components/Header/Header";
 import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { Profile } from "../../components/Profile/Profile";
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 
-export const profileUser = async (e) => {
+export const updateProfileUser = async (e) => {
     e.preventDefault();
     const form = document.querySelector("form");
     const [name, password, phone, image] = e.target;

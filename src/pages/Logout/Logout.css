@@ -16,13 +16,26 @@
     gap: 50px;
 }
 
-/* .logout-container > button {
-    display: flex;
-    flex-direction: row;
-} */
+.logout-container > button {
+    width: 175px;
+}
 
 .btn-logout {
     background-color: var(--app-color-body);
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}
+
+.btn-logout-yes {
+    background-color: var(--app-color-body);
+    color: black;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}
+
+.btn-logout-yes:hover {
+    background-color: #ff4646;
+    color: black;
     border: 2px solid black;
     box-shadow: 2px 2px black;
 }

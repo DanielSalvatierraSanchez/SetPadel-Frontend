@@ -1,6 +1,6 @@
 import "./ProfileForm..css";
 import { FieldForm } from "../FieldForm/FieldForm";
-import { profileUser } from "../../utils/API/ProfileUser";
+import { updateProfileUser } from "../../utils/API/UpdateProfileUser";
 
 export const ProfileForm = (form) => {
     form.className = "profile-form";
@@ -12,5 +12,5 @@ export const ProfileForm = (form) => {
     ${FieldForm({ inputLabel: "Nueva imagen de perfil", inputType: "file" })}
     <button class="btn-profile-form" type="submit">Actualizar</button>
 `;
-    form.addEventListener("submit", profileUser);
+    form.addEventListener("submit", updateProfileUser);
 };

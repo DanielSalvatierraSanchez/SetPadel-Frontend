@@ -16,7 +16,9 @@ IN PROGRESS     * Permite a los usuarios explorar la lista de asistentes
 DONE    * Implementa manejo de errores adecuado en el frontend y el backend.
 DONE    * Todos los formularios del frontend tienen control de errores que pase lo que pase se informa al usuario de lo que ha pasado.
 DONE    * Todos los procesos asíncronos le muestran un loading de alguna manera al usuario, para que este tenga una respuesta inmediata ante su acción.
+
 IN PROGRESS    * Mucho cariño a la componentización, no se repite código en ningún momento.
+
 DONE    * Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
 CONTINUAR CON:
