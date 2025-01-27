@@ -2,6 +2,7 @@ import "./LoginForm.css";
 import { FieldForm } from "../FieldForm/FieldForm";
 import { loginUser } from "../../utils/API/LoginUser";
 import { showPassword } from "../../utils/showPassword";
+import { Home } from "../../pages/Home/Home";
 
 export const LoginForm = (form) => {
     form.className = "login-form";
@@ -13,7 +14,9 @@ export const LoginForm = (form) => {
             <i class="bx bx-show"></i>
         </div>
         <button class="btn-loginForm" type="submit">Acceder</button>
+        <button class="btn-back" type="button">Volver</button>
         `;
     showPassword();
     form.addEventListener("submit", loginUser);
+    form.querySelector(".btn-back").addEventListener("click", () => Home());
 };

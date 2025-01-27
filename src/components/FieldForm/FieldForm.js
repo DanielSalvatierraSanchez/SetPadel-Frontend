@@ -9,7 +9,7 @@ export const FieldForm = ({ inputLabel, inputType, inputPlaceholder, inputClass,
     `;
 };
 
-export const FieldSelect = ({ inputLabel, inputOption1, inputOption2 }) => {
+export const FieldSelect = ({ inputLabel, inputClass, inputOption1, inputOption2 }) => {
     return `
     <div class="field-select">
         <label>${inputLabel}</label>

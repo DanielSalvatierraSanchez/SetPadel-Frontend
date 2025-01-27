@@ -1,5 +1,5 @@
 header {
-    background-color: var(--app-color-header);
+    background-color: var(--app-bgcolor-secondary);
     position: sticky;
     top: 0;
     left: 0;
@@ -9,7 +9,8 @@ header {
 }
 
 a {
-    color: var(--app-color-button);
+    color: var(--app-color-letterTwo);
+    font-weight: 700;
 }
 
 ul {

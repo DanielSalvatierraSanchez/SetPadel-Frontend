@@ -5,6 +5,6 @@
     align-items: center;
     padding: 50px;
     gap: 20px;
-    background-color: var(--app-color-primary);
+    background-color: var(--app-bgcolor-primary);
     min-height: 92svh;
 }

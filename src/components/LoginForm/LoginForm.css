@@ -5,29 +5,12 @@
     border-radius: 8px;
     padding: 30px;
     gap: 10px;
-    background-color: var(--app-color-secondary);
+    background-color: var(--app-bgcolor-tertiary);
 }
 
 .login-form > p {
     margin-top: 20px;
-    color: red;
-}
-
-button {
-    border-radius: 8px;
-    padding: 12px 16px;
-    font-size: 18px;
-    background-color: var(--app-color-button);
-    cursor: pointer;
-    border: 2px solid black;
-    box-shadow: 2px 2px;
-}
-
-button:hover {
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-    box-shadow: 2px 2px;
+    color: var(--app-color-message);
 }
 
 .div-password {

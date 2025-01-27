@@ -1,16 +1,31 @@
-.button {
+button {
     border-radius: 8px;
     padding: 12px 16px;
     font-size: 18px;
-    background-color: var(--app-color-button);
+    background-color: var(--app-bgcolor-button);
     cursor: pointer;
-    border: 2px solid black;
+    border: 2px solid var(--app-color-letterTwo);
     box-shadow: 2px 2px;
+    transition: all 0.5s;
 }
 
-.button:hover {
-    background-color: black;
-    color: white;
-    border: 2px solid white;
+button:hover {
+    background-color: var(--app-bgcolor-secondary);
+    color: var(--app-color-letterTwo);
+    border: 2px solid var(--app-color-letterTwo);
     box-shadow: 2px 2px;
+    transform: scale(1.07);
+}
+
+.btn-back {
+    background-color: var(--app-bgcolor-buttonBack);
+    color: var(--app-color-letterTwo);
+    box-shadow: 2px 2px var(--app-color-letterTwo);
+}
+
+.btn-back:hover {
+    background-color: var(--app-color-letterTwo);
+    color: var(--app-color-letterOne);
+    border: 2px solid var(--app-color-letterOne);
+    box-shadow: 2px 2px var(--app-color-letterOne);
 }

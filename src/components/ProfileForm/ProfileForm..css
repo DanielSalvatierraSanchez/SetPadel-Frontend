@@ -4,12 +4,12 @@
     align-items: center;
     border-radius: 8px;
     padding: 30px;
-    background-color: var(--app-color-tertiary);
+    background-color: var(--app-bgcolor-secondary);
 }
 
 .profile-form > p {
     margin-top: 20px;
-    color: red;
+    color: var(--app-color-message);
 }
 
 .div-password {

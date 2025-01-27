@@ -1,6 +1,6 @@
 #Logout {
     min-height: 92svh;
-    background-color: var(--app-color-primary);
+    background-color: var(--app-bgcolor-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,22 +20,10 @@
     width: 175px;
 }
 
-.btn-logout {
-    background-color: var(--app-color-body);
-    border: 2px solid black;
-    box-shadow: 2px 2px black;
-}
-
-.btn-logout-yes {
-    background-color: var(--app-color-body);
-    color: black;
-    border: 2px solid black;
-    box-shadow: 2px 2px black;
-}
-
+.btn-logout:hover,
 .btn-logout-yes:hover {
-    background-color: #ff4646;
-    color: black;
-    border: 2px solid black;
-    box-shadow: 2px 2px black;
+    background-color: var(--app-color-letterTwo);
+    color: var(--app-color-letterOne);
+    border: 2px solid var(--app-color-letterOne);
+    box-shadow: 2px 2px var(--app-color-letterOne);
 }

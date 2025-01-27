@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--app-color-tertiary);
+    background-color: var(--app-bgcolor-tertiary);
     min-height: 92svh;
     /* padding: 50px; */
 }
@@ -22,12 +22,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    border: 2px solid var(--app-color-letterTwo);
     margin: 20px;
     padding: 20px;
 }
 
 .error-message {
     margin-top: 20px;
-    color: red;
+    color: var(--app-color-message);
 }

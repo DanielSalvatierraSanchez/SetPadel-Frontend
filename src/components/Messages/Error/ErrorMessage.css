@@ -1,4 +1,4 @@
 .error-message > p {
     margin-top: 20px;
-    color: red;
+    color: var(--app-color-message);
 }

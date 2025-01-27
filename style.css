@@ -1,28 +1,35 @@
 :root {
-  --app-color-primary: #86fb88;
-  --app-color-secondary: #ffff94;
-  --app-color-tertiary:  #75b3ff;
-  --app-color-body: #d6d6d6;
-  --app-color-button: #ffffff;
-  --app-color-header: #5d5d5d;
-  --app-color-firstOne: #1DB954;
-  --app-color-firstTwo: #007BFF;
-  --app-color-secondOne: #F5F5F5;
-  --app-color-secondTwo: #333333;
-  --app-color-secondThree: #FFC107;
+    --app-bgcolor-primary: #4C93C1;
+    /* --app-bgcolor-primary: #01497e; */
+    --app-bgcolor-secondary: #FFF976;
+    /* --app-bgcolor-secondary: #eae030; */
+    --app-bgcolor-tertiary: #86fb88; 
+    /* --app-bgcolor-tertiary: #7de938; */
+    /* --app-bgcolor-secondary: #ffff94; */
+    /* --app-bgcolor-tertiary: #75b3ff; */
+    --app-bgcolor-body: #d6d6d6;
+    --app-bgcolor-button: #ffffff;
+    --app-bgcolor-buttonBack: #bdbdbd;
+    --app-color-message: #ff0000;
+    --app-color-messageOk: #008000;
+    /* --app-bgcolor-header: #5d5d5d; */
+    /* --app-color-firstOne: #1db954; */
+    /* --app-color-firstTwo: #007bff; */
+    --app-color-letterOne: #ffffff;
+    --app-color-letterTwo: #000000;
+    /* --app-color-secondThree: #ffc107; */
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 body {
-  /* background-color: var(--app-color-body); */
-  min-height: 100%;
-  background-image: "/assets/1.png";
+    background-color: var(--app-bgcolor-body);
+    min-height: 100%;
 }

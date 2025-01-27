@@ -5,6 +5,10 @@
     align-items: center;
     padding: 50px;
     gap: 20px;
-    background-color: var(--app-color-tertiary);
+    background-color: var(--app-bgcolor-primary);
     min-height: 92svh;
+}
+
+.btn-profile-form:hover {
+    background-color: var(--app-bgcolor-tertiary);
 }
