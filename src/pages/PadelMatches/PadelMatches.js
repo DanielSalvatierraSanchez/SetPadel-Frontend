@@ -18,6 +18,8 @@ export const PadelMatches = async () => {
         isAuth(div);
         return;
     }
+    
+    Loader(div);
 
     const allPadelMatch = await getPadelMatches();
     const { allPadelMatches } = allPadelMatch;
@@ -25,7 +27,6 @@ export const PadelMatches = async () => {
     const padelMatchContainer = document.createElement("div");
     padelMatchContainer.classList.add("padel-match-container");
 
-    Loader(div);
     if (!allPadelMatches || allPadelMatches.length === 0) {
         randomMessageError(div, "❌ No hay ningún partido programado.");
         return;
@@ -40,7 +41,6 @@ export const PadelMatches = async () => {
         const isFull = padelMatch.players.length === 4;
         const dateFormatted = dateFormat(padelMatch.date);
 
-        // Vista inicial de la carta
         padelMatchCard.innerHTML = `
         <p>Fecha: ${dateFormatted}</p>
         <p>Asistentes: ${padelMatch.players.length}</p>
