@@ -11,3 +11,24 @@
     margin-top: 20px;
     color: red;
 }
+
+.div-password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(5px);
+}
+
+.bx {
+    width: 15px;
+    height: 15px;
+    transform: translate(-35px, 75%);
+    cursor: pointer;
+}
+
+.bx-show .bx-show {
+    width: 15px;
+    height: 15px;
+    transform: translate(-35px, 75%);
+    cursor: pointer;
+}

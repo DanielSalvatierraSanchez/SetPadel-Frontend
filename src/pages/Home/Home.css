@@ -1,6 +1,8 @@
 #Home {
     min-height: 92svh;
-    background-color: var(--app-color-secondary);
+    background-image: url("/assets/1.png");
+    background-size: cover;
+    /* background-color: var(--app-color-secondary); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,6 +20,8 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    color: #ffffff;
+    text-shadow: #000000 3px 3px 3px;
 }
 
 .home-container > p {
