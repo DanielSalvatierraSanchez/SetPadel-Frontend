@@ -4,6 +4,7 @@
     align-items: center;
     border-radius: 8px;
     padding: 30px;
+    gap: 10px;
     background-color: var(--app-bgcolor-secondary);
 }
 
@@ -31,4 +32,13 @@
     height: 15px;
     transform: translate(-35px, 75%);
     cursor: pointer;
+}
+
+.div-btn-update-profile {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-delete:hover {
+    background-color: var(--app-color-message);
 }

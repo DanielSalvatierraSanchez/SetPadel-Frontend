@@ -21,5 +21,5 @@ export const RegisterForm = (form) => {
     `;
     showPassword();
     form.addEventListener("submit", registerUser);
-        form.querySelector(".btn-back").addEventListener("click", () => Home());
+    form.querySelector(".btn-back").addEventListener("click", () => Home());
 };

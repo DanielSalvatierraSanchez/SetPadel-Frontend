@@ -1,10 +1,8 @@
 import { createPage } from "../../functions/CreatePage";
 import { Button } from "../../components/Button/Button";
-import { Loader } from "../../components/Loader/Loader";
 import "./Logout.css";
 import { Profile } from "../../components/Profile/Profile";
-import { PadelMatches } from "../PadelMatches/PadelMatches";
-import { randomMessageError } from "../../utils/RandomMessageError";
+import { confirmationOfLogout } from "../../utils/ConfirmationOfLogout";
 
 export const Logout = () => {
     const div = createPage("Logout");
@@ -25,29 +23,10 @@ export const Logout = () => {
         Button({
             text: "Cerrar Sesión",
             fnc: () => {
-                profileContainer.innerHTML = `
-                <h2>¿Seguro que quieres cerrar sesión?</h2>
-                <button class='btn-logout-yes'>Sí</button>
-                <button class='btn-logout-no'>No</button>`;
-                const yes = profileContainer.querySelector(".btn-logout-yes")
-                const no = profileContainer.querySelector(".btn-logout-no")
-                yes.addEventListener("click", () => {
-                    Loader(profileContainer);
-                    randomMessageError(profileContainer, "Cerrando Sesión...");
-                    setTimeout(() => {
-                        window.history.pushState("", "", "/home");
-                        localStorage.clear(); // USO EL CLEAR DESDE EL MAIN.JS
-                        window.location.reload();
-                    }, 1000);
-                })
-                no.addEventListener("click", () => {
-                    Loader(profileContainer);
-                    randomMessageError(profileContainer, "Cargando partidos...");
-                    setTimeout(() => {
-                        window.history.pushState("", "", "/padel_matches");
-                        PadelMatches();
-                    }, 1000);
-                })
+                confirmationOfLogout({
+                    parentElement: profileContainer,
+                    message: "cerrar sesión"
+                });
             },
             className: "btn-logout"
         })

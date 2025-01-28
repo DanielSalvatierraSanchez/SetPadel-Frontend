@@ -9,6 +9,10 @@
     color: var(--app-color-letterOne);
 }
 
+i {
+    color: var(--app-color-letterTwo);
+}
+
 .register-form > p {
     margin-top: 20px;
     color: var(--app-color-message);
