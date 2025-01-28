@@ -21,6 +21,7 @@ export const postPadelMatch = async (e) => {
         randomMessageError(form, "Todos los campos son obligatorios");
         return;
     }
+    
     try {
         const div = document.querySelector("#CreatePadelMatch");
         const token = localStorage.getItem("token");

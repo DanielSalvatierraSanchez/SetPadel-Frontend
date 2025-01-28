@@ -22,7 +22,7 @@ IN PROGRESS    * Mucho cariño a la componentización, no se repite código en n
 DONE    * Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
 CONTINUAR CON:
-eliminar cuenta
+repasar actualizacion user (phone con menos de 8 digitos)
 Continuar con joinPadelMatch...
 Mostrar la lista de asistentes al ver evento
 Implementar la opción de que si el user quiere se pueda quitar del partido dentro del detalle del partido

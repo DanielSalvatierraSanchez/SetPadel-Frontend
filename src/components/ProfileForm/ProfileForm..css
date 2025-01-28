@@ -5,7 +5,12 @@
     border-radius: 8px;
     padding: 30px;
     gap: 10px;
-    background-color: var(--app-bgcolor-secondary);
+    background-color: var(--app-bgcolor-tertiary);
+}
+
+.profile-form > button {
+    margin-top: 10px;
+    width: 175px;
 }
 
 .profile-form > p {

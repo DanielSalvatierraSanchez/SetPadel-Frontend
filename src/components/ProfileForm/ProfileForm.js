@@ -4,9 +4,8 @@ import { updateProfileUser } from "../../utils/API/UpdateProfileUser";
 import { showPassword } from "../../utils/showPassword";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 import { confirmationOfLogout } from "../../utils/ConfirmationOfLogout";
-import { Profile } from "../Profile/Profile";
+import { deleteUser } from "../../utils/API/DeleteUser";
 
-// const profileContainer = document.querySelector(".profile-container");
 export const ProfileForm = (form) => {
     form.className = "profile-form";
     form.innerHTML = `
@@ -26,6 +25,6 @@ export const ProfileForm = (form) => {
 `;
     showPassword();
     form.addEventListener("submit", updateProfileUser);
-    form.querySelector(".btn-delete").addEventListener("click", () => confirmationOfLogout({ parentElement: form, message: "eliminar cuenta" }));
+    form.querySelector(".btn-delete").addEventListener("click", () => confirmationOfLogout({ parentElement: form, message: "eliminar cuenta" }), deleteUser());
     form.querySelector(".btn-back").addEventListener("click", () => PadelMatches());
 };

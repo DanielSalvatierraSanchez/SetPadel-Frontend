@@ -1,6 +1,6 @@
 #Home {
     min-height: 92svh;
-    background-image: url("/assets/screenLaptop.png");
+    /* background-image: url("/assets/screenLaptop.png"); */
     background-size: cover;
     /* background-color: var(--app-bgcolor-secondary); */
     display: flex;

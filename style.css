@@ -1,23 +1,15 @@
 :root {
-    --app-bgcolor-primary: #4C93C1;
-    /* --app-bgcolor-primary: #01497e; */
-    --app-bgcolor-secondary: #FFF976;
-    /* --app-bgcolor-secondary: #eae030; */
-    --app-bgcolor-tertiary: #86fb88; 
-    /* --app-bgcolor-tertiary: #7de938; */
-    /* --app-bgcolor-secondary: #ffff94; */
-    /* --app-bgcolor-tertiary: #75b3ff; */
+    --app-bgcolor-primary: #4c93c1;
+    --app-bgcolor-secondary: #fff976;
+    --app-bgcolor-tertiary: #86fb88;
     --app-bgcolor-body: #d6d6d6;
     --app-bgcolor-button: #ffffff;
     --app-bgcolor-buttonBack: #bdbdbd;
+
     --app-color-message: #ff0000;
     --app-color-messageOk: #008000;
-    /* --app-bgcolor-header: #5d5d5d; */
-    /* --app-color-firstOne: #1db954; */
-    /* --app-color-firstTwo: #007bff; */
     --app-color-letterOne: #ffffff;
     --app-color-letterTwo: #000000;
-    /* --app-color-secondThree: #ffc107; */
 }
 
 * {
@@ -30,6 +22,14 @@
 }
 
 body {
-    background-color: var(--app-bgcolor-body);
+    background-image: url("assets/screenLaptop.png");
+    /* background-color: var(--app-bgcolor-body); */
+    background-size: cover;
     min-height: 100%;
+}
+
+@media (width <= 768px) {
+    body {
+        background-image: url("assets/screenMobile.png");
+    }
 }

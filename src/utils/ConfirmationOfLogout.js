@@ -7,8 +7,10 @@ export const confirmationOfLogout = ({ parentElement, message }) => {
                     <h2>¿Seguro que quieres ${message}?</h2>
                     <button class='btn-logout-yes'>Sí</button>
                     <button class='btn-logout-no'>No</button>`;
+
     const yes = parentElement.querySelector(".btn-logout-yes");
     const no = parentElement.querySelector(".btn-logout-no");
+
     yes.addEventListener("click", () => {
         Loader(parentElement);
         randomMessageError(parentElement, "Cerrando Sesión...");
@@ -18,6 +20,7 @@ export const confirmationOfLogout = ({ parentElement, message }) => {
             window.location.reload();
         }, 1000);
     });
+
     no.addEventListener("click", () => {
         Loader(parentElement);
         randomMessageError(parentElement, "Cargando partidos...");

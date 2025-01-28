@@ -41,7 +41,7 @@ export const updateProfileUser = async (e) => {
         if (res.status !== 200) {
             errorMessage(res, form);
         }
-
+        
         Loader(form);
         setTimeout(() => {
             Profile();
