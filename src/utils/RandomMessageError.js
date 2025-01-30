@@ -1,4 +1,4 @@
-import "../components/Messages/Error/ErrorMessage.css"
+import "../components/Messages/Error/ErrorMessage.css";
 
 export const randomMessageError = (parentElement, message) => {
     if (parentElement) {
@@ -7,7 +7,7 @@ export const randomMessageError = (parentElement, message) => {
             removeError.remove();
         }
 
-        const errorMessage = document.createElement("p");
+        const errorMessage = document.createElement("h2");
         errorMessage.classList.add("error-message");
         errorMessage.textContent = message;
         parentElement.append(errorMessage);

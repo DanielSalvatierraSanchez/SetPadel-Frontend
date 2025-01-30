@@ -7,7 +7,6 @@ import { joinPadelMatch } from "../../utils/API/JoinPadelMatch";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { dateFormat } from "../../utils/DateFormatted";
 import { Button } from "../../components/Button/Button";
-import { modalPadelMatch } from "../../components/ModalPadelMatch/ModalPadelMatch";
 import { modal } from "../../components/ModalPadelMatch/Modal";
 
 export const PadelMatches = async () => {
@@ -30,7 +29,7 @@ export const PadelMatches = async () => {
     padelMatchContainer.classList.add("padel-match-container");
 
     if (!allPadelMatches || allPadelMatches.length === 0) {
-        randomMessageError(div, "❌ No hay ningún partido programado.");
+        randomMessageError(div, "No hay ningún partido programado.");
         return;
     }
 
@@ -38,7 +37,10 @@ export const PadelMatches = async () => {
         const padelMatchCard = document.createElement("div");
         padelMatchCard.classList.add("padel-match-card");
 
-        localStorage.setItem("allPadelMatches", JSON.stringify(allPadelMatches));
+        localStorage.setItem(
+            "allPadelMatches",
+            JSON.stringify(allPadelMatches)
+        );
 
         // const isFull = padelMatch.players.length === 4;
         const dateFormatted = dateFormat(padelMatch.date);
@@ -81,19 +83,22 @@ export const PadelMatches = async () => {
             const closeBtn = padelMatchModal.querySelector(".close-btn");
             closeBtn.addEventListener("click", () => {
                 padelMatchModal.classList.remove("modal-show");
-                //padelMatchModal.replaceWith(padelMatchCard);
+                padelMatchModal.replaceWith(padelMatchCard);
                 //PadelMatches();
             });
 
             const joinBtn = padelMatchModal.querySelector(".join-btn");
             joinBtn.addEventListener("click", async (e) => {
-                e.stopPropagation();
                 e.preventDefault();
+                e.stopPropagation();
 
                 const padelMatchId = e.target.getAttribute("padelMatch-id");
                 const userData = JSON.parse(localStorage.getItem("user"));
 
-                padelMatch.players.push({ name: userData.name, _id: userData._id });
+                padelMatch.players.push({
+                    name: userData.name,
+                    _id: userData._id
+                });
 
                 await joinPadelMatch(padelMatchId);
             });
