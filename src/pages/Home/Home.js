@@ -12,7 +12,7 @@ export const Home = () => {
     homeContainer.innerHTML = `
     <h1>Bienvenido a APPADEL</h1>
     <br/>
-    <h3>La App donde podrás gestionar tus partidos de padel.</h3>
+    <h2>La App donde podrás gestionar tus partidos de padel.</h2>
     `;
     // <h3>La APP de gestión de partidos de padel, donde podrás crear y encontrar partidos donde poder apuntarte a ellos.</h3>
 

@@ -7,6 +7,8 @@ import { joinPadelMatch } from "../../utils/API/JoinPadelMatch";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { dateFormat } from "../../utils/DateFormatted";
 import { Button } from "../../components/Button/Button";
+import { modalPadelMatch } from "../../components/ModalPadelMatch/ModalPadelMatch";
+import { modal } from "../../components/ModalPadelMatch/Modal";
 
 export const PadelMatches = async () => {
     const div = createPage("PadelMatches");
@@ -18,7 +20,7 @@ export const PadelMatches = async () => {
         isAuth(div);
         return;
     }
-    
+
     Loader(div);
 
     const allPadelMatch = await getPadelMatches();
@@ -38,7 +40,7 @@ export const PadelMatches = async () => {
 
         localStorage.setItem("allPadelMatches", JSON.stringify(allPadelMatches));
 
-        const isFull = padelMatch.players.length === 4;
+        // const isFull = padelMatch.players.length === 4;
         const dateFormatted = dateFormat(padelMatch.date);
 
         padelMatchCard.innerHTML = `
@@ -49,34 +51,41 @@ export const PadelMatches = async () => {
         padelMatchContainer.append(padelMatchCard);
         div.append(padelMatchContainer);
 
-        padelMatchCard.addEventListener("click", () => {
-            const padelMatchFull = document.createElement("div");
-            padelMatchFull.classList.add("padel-match-full");
+        padelMatchCard.addEventListener("click", (e) => {
+            e.preventDefault();
+            // const padelMatchModal = document.getElementsByClassName(".modal")
+            // modalPadelMatch(padelMatchCard, padelMatch)
+            const padelMatchModal = document.createElement("section");
+            padelMatchModal.classList.add("modal");
+            padelMatchModal.classList.add("modal-show");
+            modal(padelMatchModal, padelMatch);
+            // padelMatchModal.innerHTML = `
+            //     <div class="modal__container">
+            //     <h3 class="modal__title">${padelMatch.title}</h3>
+            //     <img class="modal__img" src=${padelMatch.image}>
+            //     <p class="modal__date">Fecha: ${dateFormatted}</p>
+            //     <p class="modal__location">Lugar: ${padelMatch.location}</p>
+            //     <p class="modal__place">Pista: ${padelMatch.place}</p>
+            //     <p class="modal__author">Creador: ${padelMatch.author?.name}</p>
+            //     <button class="join-btn" padelMatch-id="${padelMatch._id}" ${isFull ? "disabled" : ""}>
+            //     <img class="join-btn-img" src="/assets/player.png">
+            //     ${isFull ? "PARTIDO COMPLETO" : "UNIRSE"}
+            //     </button>
+            //     <p class="modal__players" data-type="assistants">Asistentes: ${padelMatch.players.length || "Ninguno"}</p>
+            //     <img class="close-btn" src="./assets/cerrar.png" />
+            //     </div>
+            //     `;
 
-            padelMatchFull.innerHTML = `
-        <h3>${padelMatch.title}</h3>
-        <img class="padel-match-card-image" src=${padelMatch.image}>
-        <p>Fecha: ${dateFormatted}</p>
-        <p>Lugar: ${padelMatch.location}</p>
-        <p>Pista: ${padelMatch.place}</p>
-        <p>Creador: ${padelMatch.author?.name}</p>
-        <button class="join-btn" padelMatch-id="${padelMatch._id}" ${isFull ? "disabled" : ""}>
-        <img src="/assets/player.png">
-        ${isFull ? "PARTIDO COMPLETO" : "UNIRSE"}
-        </button>
-        <p data-type="assistants">Asistentes: ${padelMatch.players.length || "Ninguno"}</p>
-        <img class="close-btn" src="./assets/cerrar.png" />
-        `;
+            padelMatchCard.replaceWith(padelMatchModal);
 
-            padelMatchCard.replaceWith(padelMatchFull);
-
-            const closeBtn = padelMatchFull.querySelector(".close-btn");
+            const closeBtn = padelMatchModal.querySelector(".close-btn");
             closeBtn.addEventListener("click", () => {
-                padelMatchFull.replaceWith(padelMatchCard);
-                PadelMatches();
+                padelMatchModal.classList.remove("modal-show");
+                //padelMatchModal.replaceWith(padelMatchCard);
+                //PadelMatches();
             });
 
-            const joinBtn = padelMatchFull.querySelector(".join-btn");
+            const joinBtn = padelMatchModal.querySelector(".join-btn");
             joinBtn.addEventListener("click", async (e) => {
                 e.stopPropagation();
                 e.preventDefault();

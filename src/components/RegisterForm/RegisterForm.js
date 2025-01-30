@@ -14,7 +14,7 @@ export const RegisterForm = (form) => {
         ${FieldForm({ inputLabel: "Contraseña", inputType: "password", inputClass: "input-password", inputPlaceholder: "********" })}
         <i class="bx bx-show"></i>
     </div>
-    ${FieldForm({ inputLabel: "Teléfono", inputType: "number", inputClass: "input-phone", inputPlaceholder: "123456789", max: 999999999 })}
+    ${FieldForm({ inputLabel: "Teléfono", inputType: "number", inputClass: "input-phone", inputPlaceholder: "123456789" })}
     ${FieldForm({ inputLabel: "Imagen de perfil", inputType: "file", inputClass: "input-image" })}
     <button class="btn-register-form" type="submit">Crear Cuenta</button>
     <button class="btn-back" type="button">Volver</button>

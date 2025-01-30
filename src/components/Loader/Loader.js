@@ -5,7 +5,7 @@ export const Loader = (parentElement) => {
     const loader = document.createElement("img");
     loaderContainer.classList.add("loader-container");
     loader.classList.add("loader");
-    loader.src = "/assets/pelota.png";
+    loader.src = "/assets/pelota.webp";
     loader.alt = "pelota de padel";
     loaderContainer.append(loader);
     parentElement.append(loaderContainer);

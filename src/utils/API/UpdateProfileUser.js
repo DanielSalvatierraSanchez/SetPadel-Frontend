@@ -38,10 +38,11 @@ export const updateProfileUser = async (e) => {
 
         const res = await API({ endpoint: `/users/update/${userId}`, method: "PUT", body: formData, isJSON: false, token });
         console.log("res FETCH =>", res);
+
         if (res.status !== 200) {
             errorMessage(res, form);
         }
-        
+
         Loader(form);
         setTimeout(() => {
             Profile();

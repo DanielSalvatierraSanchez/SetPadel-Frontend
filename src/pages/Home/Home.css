@@ -20,11 +20,11 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    color: var(--app-color-letterOne);
-    text-shadow: var(--app-color-letterTwo) 3px 3px 3px;
+    color: var(--app-color-letterTwo);
+    /* text-shadow: var(--app-color-letterTwo) 3px 3px 3px; */
 }
 
-.home-container > h3 {
+.home-container > h2 {
     max-width: 275px;
     line-height: 1.5;
 }

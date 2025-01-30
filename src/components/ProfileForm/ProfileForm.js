@@ -15,7 +15,7 @@ export const ProfileForm = (form) => {
         ${FieldForm({ inputLabel: "Nueva contraseña", inputType: "password", inputClass: "input-password", inputPlaceholder: "********" })}
         <i class="bx bx-show"></i>
     </div>
-    ${FieldForm({ inputLabel: "Nuevo teléfono", inputType: "number", inputClass: "input-phone", inputPlaceholder: "123456789", max: 999999999 })}
+    ${FieldForm({ inputLabel: "Nuevo teléfono", inputType: "number", inputClass: "input-phone", inputPlaceholder: "123456789" })}
     ${FieldForm({ inputLabel: "Nueva imagen de perfil", inputClass: "input-image", inputType: "file" })}
     <div class="div-btn-update-profile">
     <button class="btn-update-profile" type="submit">Actualizar</button>

@@ -22,7 +22,7 @@
 }
 
 body {
-    background-image: url("assets/screenLaptop.png");
+    background-image: url("assets/screenLaptop.webp");
     /* background-color: var(--app-bgcolor-body); */
     background-size: cover;
     min-height: 100%;
@@ -30,6 +30,6 @@ body {
 
 @media (width <= 768px) {
     body {
-        background-image: url("assets/screenMobile.png");
+        background-image: url("assets/screenMobile.webp");
     }
 }

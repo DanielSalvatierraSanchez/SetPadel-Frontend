@@ -20,7 +20,7 @@ export const registerUser = async (e) => {
     formData.append("image", image?.files[0]);
 
     try {
-        checkRegisterParams(phone, form, "El teléfono debe de tener 9 dígitos.");
+        // checkRegisterParams(phone, form, "El teléfono debe de tener 9 dígitos.");
 
         const res = await API({ endpoint: "/users/register", method: "POST", body: formData, isJSON: false });
         console.log("res FETCH =>", res);
