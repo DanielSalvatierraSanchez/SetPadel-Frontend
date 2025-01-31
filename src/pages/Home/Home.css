@@ -20,8 +20,8 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    color: var(--app-color-letterTwo);
-    /* text-shadow: var(--app-color-letterTwo) 3px 3px 3px; */
+    color: var(--app-bgcolor-secondary);
+    text-shadow: var(--app-color-letterTwo) 3px 3px 3px;
 }
 
 .home-container > h2 {
@@ -29,6 +29,29 @@
     line-height: 1.5;
 }
 
-/* .btn-home-login {
+.btn-home-login,
+.btn-home-register {
     background-color: var(--app-bgcolor-secondary);
-} */
+}
+
+.btn-home-login:hover,
+.btn-home-register:hover {
+    background-color: var(--app-bgcolor-button);
+}
+
+@media (width <= 768px) {
+    .home-container {
+        color: var(--app-color-letterOne);
+        text-shadow: var(--app-color-letterTwo) 3px 3px 3px;
+    }
+
+    .btn-home-login,
+.btn-home-register {
+    background-color: var(--app-bgcolor-button);
+}
+
+.btn-home-login:hover,
+.btn-home-register:hover {
+    background-color: var(--app-bgcolor-secondary);
+}
+}
