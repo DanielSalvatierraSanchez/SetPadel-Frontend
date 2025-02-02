@@ -1,10 +1,13 @@
 #Logout {
-    min-height: 92svh;
-    background-color: var(--app-bgcolor-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: var(--app-bgcolor-primary); */
+    background-image: url('assets/fondo2BN.webp');
+    background-position: center;
+    background-size: cover;
+    min-height: 92svh;
     gap: 50px;
 }
 
@@ -14,6 +17,13 @@
     justify-content: space-evenly;
     align-items: center;
     gap: 50px;
+    /* border: 2px solid var(--app-color-letterTwo); */
+    /* margin: 20px; */
+    padding: 20px;
+    /* width: 75%; */
+    background-color: #d6d6d6dd;
+    color: var(--app-color-letterTwo);
+    border-radius: 8px;
 }
 
 .logout-container > button {

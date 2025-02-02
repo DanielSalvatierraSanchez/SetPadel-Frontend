@@ -3,7 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--app-bgcolor-tertiary);
+    /* background-color: var(--app-bgcolor-tertiary); */
+    background-image: url('assets/pista.webp');
+    background-position: center;
+    background-size: cover;
     min-height: 92svh;
     /* padding: 50px; */
 }
@@ -11,6 +14,10 @@
 #CreatePadelMatch > h1 {
     padding: 30px;
     text-align: center;
+    /* color: var(--app-color-letterOne);
+    text-shadow: var(--app-color-letterTwo) 3px 3px 3px; */
+    color: var(--app-bgcolor-secondary);
+    text-shadow: var(--app-color-letterTwo) 3px 3px 3px;
 }
 
 #CreatePadelMatch > button {
@@ -23,7 +30,7 @@
     justify-content: center;
     align-items: center;
     border: 2px solid var(--app-color-letterTwo);
-    margin: 20px;
+    /* margin: 20px; */
     padding: 20px;
 }
 

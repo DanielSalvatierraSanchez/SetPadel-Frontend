@@ -5,7 +5,10 @@
     border-radius: 8px;
     padding: 30px;
     gap: 10px;
-    background-color: var(--app-bgcolor-tertiary);
+    /* background-color: var(--app-bgcolor-tertiary); */
+    background-color: #d6d6d6dd;
+    color: var(--app-color-letterTwo);
+    border-radius: 8px;
 }
 
 .login-form > p {

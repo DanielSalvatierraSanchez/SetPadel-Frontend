@@ -1,6 +1,7 @@
-import { Loader } from "../components/Loader/Loader";
-import { PadelMatches } from "../pages/PadelMatches/PadelMatches";
-import { randomMessageError } from "./RandomMessageError";
+import { Loader } from '../components/Loader/Loader';
+import { Logout } from '../pages/Logout/Logout';
+import { PadelMatches } from '../pages/PadelMatches/PadelMatches';
+import { randomMessageError } from './RandomMessageError';
 
 export const confirmationOfLogout = ({ parentElement, message }) => {
     parentElement.innerHTML = `
@@ -8,25 +9,26 @@ export const confirmationOfLogout = ({ parentElement, message }) => {
                     <button class='btn-logout-yes'>Sí</button>
                     <button class='btn-logout-no'>No</button>`;
 
-    const yes = parentElement.querySelector(".btn-logout-yes");
-    const no = parentElement.querySelector(".btn-logout-no");
+    const yes = parentElement.querySelector('.btn-logout-yes');
+    const no = parentElement.querySelector('.btn-logout-no');
 
-    yes.addEventListener("click", () => {
+    yes.addEventListener('click', () => {
         Loader(parentElement);
-        randomMessageError(parentElement, "Cerrando Sesión...");
+        randomMessageError(parentElement, 'Cerrando Sesión...');
         setTimeout(() => {
-            window.history.pushState("", "", "/home");
+            window.history.pushState('', '', '/home');
             localStorage.clear(); // USO EL CLEAR DESDE EL MAIN.JS
             window.location.reload();
         }, 1000);
     });
 
-    no.addEventListener("click", () => {
-        Loader(parentElement);
-        randomMessageError(parentElement, "Cargando partidos...");
-        setTimeout(() => {
-            window.history.pushState("", "", "/padel_matches");
-            PadelMatches();
-        }, 2000);
+    no.addEventListener('click', () => {
+        // Loader(parentElement);
+        // randomMessageError(parentElement, "Cargando partidos...");
+        // setTimeout(() => {
+        //     window.history.pushState("", "", "/padel_matches");
+        //     PadelMatches();
+        // }, 2000);
+        Logout();
     });
 };

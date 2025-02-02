@@ -3,13 +3,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--app-bgcolor-primary);
+    /* background-color: var(--app-bgcolor-primary); */
+    background-image: url('assets/partidoMadrid.webp');
+    background-position: center;
+    background-size: cover;
     min-height: 92svh;
+    /* min-height: 100%; */
 }
 
 #PadelMatches > h1 {
     padding: 30px;
     text-align: center;
+    /* color: var(--app-color-letterTwo);
+    text-shadow: var(--app-color-letterOne) 3px 3px 3px; */
+    color: var(--app-bgcolor-secondary);
+    text-shadow: var(--app-color-letterTwo) 3px 3px 3px;
 }
 
 .padel-match-container {
@@ -17,10 +25,13 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--app-color-letterTwo);
-    margin: 20px;
+    /* border: 2px solid var(--app-color-letterTwo); */
+    /* margin: 20px; */
     padding: 20px;
     width: 75%;
+    background-color: #d6d6d6dd;
+    color: var(--app-color-letterTwo);
+    border-radius: 8px;
 }
 
 .padel-match-card {
@@ -56,6 +67,9 @@
 .error-message {
     margin-top: 20px;
     color: var(--app-color-message);
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .success-message {

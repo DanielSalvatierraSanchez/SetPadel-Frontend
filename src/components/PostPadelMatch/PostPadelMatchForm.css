@@ -6,8 +6,8 @@
     border-radius: 8px;
     padding: 30px;
     gap: 15px;
-    background-color: var(--app-bgcolor-primary);
-    color: var(--app-color-letterOne);
+    background-color: #d6d6d6dd;
+    color: var(--app-color-letterTwo);
 }
 
 .postPadelMatch-form > p {
