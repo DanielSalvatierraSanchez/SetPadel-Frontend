@@ -54,15 +54,44 @@
     pointer-events: none;
 }
 
-.join-btn:hover {
-    transition: all 0.5s;
+.join-btn {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
 }
 
 .join-btn:hover {
-    background-color: var(--app-color-letterOne);
-    color: var(--app-color-letterTwo);
-    border: 2px solid var(--app-color-letterTwo);
-    box-shadow: 2px 2px;
+    background-color: var(--app-bgcolor-secondary);
+    transform: scale(1.07);
+}
+
+.join-btn-img {
+    width: 30px;
+    height: 30px;
+}
+
+.modal__players {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.close-btn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.close-btn:hover {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid #000000;
     transform: scale(1.1);
 }
 
@@ -94,6 +123,7 @@
     gap: 10px;
     place-items: center;
     z-index: 9;
+    cursor: default;
 }
 
 .modal__img {

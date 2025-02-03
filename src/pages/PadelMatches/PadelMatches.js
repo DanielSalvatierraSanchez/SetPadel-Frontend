@@ -6,7 +6,6 @@ import { Loader } from "../../components/Loader/Loader";
 import { joinPadelMatch } from "../../utils/API/JoinPadelMatch";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { dateFormat } from "../../utils/DateFormatted";
-import { Button } from "../../components/Button/Button";
 import { modal } from "../../components/ModalPadelMatch/Modal";
 
 export const PadelMatches = async () => {
@@ -42,7 +41,6 @@ export const PadelMatches = async () => {
             JSON.stringify(allPadelMatches)
         );
 
-        // const isFull = padelMatch.players.length === 4;
         const dateFormatted = dateFormat(padelMatch.date);
 
         padelMatchCard.innerHTML = `
@@ -60,31 +58,18 @@ export const PadelMatches = async () => {
             const padelMatchModal = document.createElement("section");
             padelMatchModal.classList.add("modal");
             padelMatchModal.classList.add("modal-show");
-            modal(padelMatchModal, padelMatch);
-            // padelMatchModal.innerHTML = `
-            //     <div class="modal__container">
-            //     <h3 class="modal__title">${padelMatch.title}</h3>
-            //     <img class="modal__img" src=${padelMatch.image}>
-            //     <p class="modal__date">Fecha: ${dateFormatted}</p>
-            //     <p class="modal__location">Lugar: ${padelMatch.location}</p>
-            //     <p class="modal__place">Pista: ${padelMatch.place}</p>
-            //     <p class="modal__author">Creador: ${padelMatch.author?.name}</p>
-            //     <button class="join-btn" padelMatch-id="${padelMatch._id}" ${isFull ? "disabled" : ""}>
-            //     <img class="join-btn-img" src="/assets/player.png">
-            //     ${isFull ? "PARTIDO COMPLETO" : "UNIRSE"}
-            //     </button>
-            //     <p class="modal__players" data-type="assistants">Asistentes: ${padelMatch.players.length || "Ninguno"}</p>
-            //     <img class="close-btn" src="./assets/cerrar.png" />
-            //     </div>
-            //     `;
 
-            padelMatchCard.replaceWith(padelMatchModal);
+            const userData = JSON.parse(localStorage.getItem("user"));
+            modal(padelMatchModal, padelMatch, userData);
+
+            // padelMatchCard.replaceWith(padelMatchModal);
+            padelMatchCard.append(padelMatchModal);
 
             const closeBtn = padelMatchModal.querySelector(".close-btn");
             closeBtn.addEventListener("click", () => {
                 padelMatchModal.classList.remove("modal-show");
-                padelMatchModal.replaceWith(padelMatchCard);
-                //PadelMatches();
+                padelMatchCard.replaceWith(padelMatchModal);
+                // PadelMatches();
             });
 
             const joinBtn = padelMatchModal.querySelector(".join-btn");
@@ -95,12 +80,33 @@ export const PadelMatches = async () => {
                 const padelMatchId = e.target.getAttribute("padelMatch-id");
                 const userData = JSON.parse(localStorage.getItem("user"));
 
+                if (padelMatch.players.length === 4) {
+                    return;
+                }
+
+                const checkUserJoined = padelMatch.players.some(
+                    (player) => player._id === userData._id
+                );
+                if (checkUserJoined) {
+                    return;
+                }
+
                 padelMatch.players.push({
                     name: userData.name,
                     _id: userData._id
                 });
 
-                await joinPadelMatch(padelMatchId);
+                const response = await joinPadelMatch(padelMatchId);
+                if (response && response.players) {
+                    padelMatch.players = response.players;
+
+                    const assistants =
+                        padelMatchCard.querySelector("p:last-child");
+                    if (assistants) {
+                        assistants.textContent = `Asistentes: ${response.players.length}`;
+                    }
+                }
+                return response;
             });
         });
     });
