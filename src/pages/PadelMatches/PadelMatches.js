@@ -23,6 +23,8 @@ export const PadelMatches = async () => {
 
     const allPadelMatch = await getPadelMatches();
     const { allPadelMatches } = allPadelMatch;
+    localStorage.setItem("allPadelMatches", JSON.stringify(allPadelMatches));
+    const userData = JSON.parse(localStorage.getItem("user"));
 
     const padelMatchContainer = document.createElement("div");
     padelMatchContainer.classList.add("padel-match-container");
@@ -35,11 +37,6 @@ export const PadelMatches = async () => {
     allPadelMatches.forEach((padelMatch) => {
         const padelMatchCard = document.createElement("div");
         padelMatchCard.classList.add("padel-match-card");
-
-        localStorage.setItem(
-            "allPadelMatches",
-            JSON.stringify(allPadelMatches)
-        );
 
         const dateFormatted = dateFormat(padelMatch.date);
 

@@ -1,5 +1,4 @@
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
-import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 

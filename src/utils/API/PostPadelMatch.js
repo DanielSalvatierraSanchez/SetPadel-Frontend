@@ -6,7 +6,7 @@ import { API } from "./API";
 
 export const postPadelMatch = async (e) => {
     e.preventDefault();
-    const [title, location, date, place, image, author] = e.target;
+    const [title, location, date, place, image] = e.target;
     console.log("postPM e =>", e);
 
     const formData = new FormData();
