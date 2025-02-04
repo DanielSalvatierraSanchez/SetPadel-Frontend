@@ -3,14 +3,19 @@ import { API } from "./API";
 
 export const joinPadelMatch = async (padelMatchId) => {
     try {
-        const token = localStorage.getItem("token");
         const div = document.querySelector(".modal__container");
+        const token = localStorage.getItem("token");
 
         const res = await API({
             endpoint: `/matches/join/${padelMatchId}`,
             method: "PUT",
             token
         });
+
+        if (!res) {
+            errorMessage(res, form);
+        }
+
         successMessage(res, div);
         // setTimeout(() => {
         //     PadelMatches();

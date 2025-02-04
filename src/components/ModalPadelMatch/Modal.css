@@ -72,7 +72,7 @@
     height: 30px;
 }
 
-.modal__players {
+.modal-players {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -101,15 +101,15 @@
     opacity: 0;
     pointer-events: none;
     width: 350px;
-}
-
-.modal-show {
     opacity: 1;
     pointer-events: unset;
     z-index: 99999999;
 }
 
-.modal__container {
+.modal-show {
+}
+
+.modal-container {
     display: flex;
     flex-direction: column;
     /* margin: auto; */
@@ -126,7 +126,7 @@
     cursor: default;
 }
 
-.modal__img {
+.modal-img {
     width: 100px;
     height: 100px;
     object-fit: cover;
