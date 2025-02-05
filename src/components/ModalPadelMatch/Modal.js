@@ -3,8 +3,9 @@ import "./Modal.css";
 
 export const modal = (parentElement, data, user) => {
     const isFull = data.players.length === 4;
+    const isUserJoined = data.players.some((player) => player === user.name);
     const dateFormatted = dateFormat(data.date);
-    const isUserJoined = data.players.some((player) => player._id === user._id);
+    console.log("data.players MODAL => ",data.players);
     
     const playersList = data.players.length > 0 ? data.players.map((player) => player).join(", ") : "Ninguno";
 
