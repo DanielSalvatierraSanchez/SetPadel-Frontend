@@ -1,6 +1,7 @@
 import { Header } from "../../components/Header/Header";
 import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
+import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 import { setUserDataInLocalStore } from "../SetUserData";
 import { API } from "./API";
@@ -16,7 +17,6 @@ export const registerUser = async (e) => {
     formData.append("password", password.value.trim());
     formData.append("phone", phone.value.trim());
     formData.append("image", image?.files[0]);
-
     // checkRegisterParams(phone, form, "El teléfono debe de tener 9 dígitos.");
 
     try {
@@ -26,14 +26,14 @@ export const registerUser = async (e) => {
             body: formData,
             isJSON: false
         });
-        console.log("res FETCH =>", res);
-        if (res.status !== 201) {
+
+        if (!res.token) {
             errorMessage(res, form);
         }
 
         setUserDataInLocalStore(res);
+        successMessage(res, form);
         Loader(form);
-        //successMessage(res);
         Header();
         setTimeout(() => {
             window.history.pushState("", "", "/padel_matches");

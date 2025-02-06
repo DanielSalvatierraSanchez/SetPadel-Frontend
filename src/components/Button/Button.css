@@ -7,6 +7,7 @@ button {
     border: 2px solid var(--app-color-letterTwo);
     box-shadow: 2px 2px;
     transition: all 0.5s;
+    margin: 5px;
 }
 
 button:hover {

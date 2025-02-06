@@ -17,20 +17,20 @@ export const loginUser = async (e) => {
     try {
         const form = document.querySelector("form");
         const res = await API({ endpoint: "/users/login", method: "POST", body: user });
-        console.log("res FETCH =>", res);
+        console.log("res LOGIN USER => ", res);
 
         if (!res || !res.user) {
             errorMessage(res, form);
         }
 
         setUserDataInLocalStore(res);
-        Loader(form);
         successMessage(res, form);
+        Loader(form);
         Header();
         setTimeout(() => {
             window.history.pushState("", "", "/padel_matches");
             PadelMatches();
-        }, 500);
+        }, 1000);
     } catch (error) {
         console.log("Error en el login del usuario: ", error.message);
     }

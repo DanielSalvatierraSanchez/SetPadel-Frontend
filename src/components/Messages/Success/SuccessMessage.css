@@ -1,4 +1,5 @@
-.success-message > p {
+.success-message {
     margin-top: 20px;
     color: var(--app-color-messageOk);
 }
+/* remove > p */

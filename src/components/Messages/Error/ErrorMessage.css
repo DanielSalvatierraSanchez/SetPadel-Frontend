@@ -1,4 +1,5 @@
-.error-message > p {
+.error-message {
     margin-top: 20px;
     color: var(--app-color-message);
 }
+/* remove > p */

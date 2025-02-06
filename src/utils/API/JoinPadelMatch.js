@@ -5,6 +5,10 @@ export const joinPadelMatch = async (padelMatchId) => {
     try {
         const div = document.querySelector(".modal__container");
         const token = localStorage.getItem("token");
+        if (!token) {
+            errorMessage(res, div);
+            return;
+        }
 
         const res = await API({
             endpoint: `/matches/join/${padelMatchId}`,
@@ -12,11 +16,7 @@ export const joinPadelMatch = async (padelMatchId) => {
             token
         });
 
-        if (!res) {
-            errorMessage(res, form);
-        }
-
-        successMessage(res, div);
+        !res ? errorMessage(res, form) : successMessage(res, div);
         // setTimeout(() => {
         //     PadelMatches();
         // }, 2000);

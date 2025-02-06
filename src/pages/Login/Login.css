@@ -6,8 +6,8 @@
     padding: 50px;
     gap: 20px;
     /* background-color: var(--app-bgcolor-primary); */
-    background-image: url('assets/fondo2.webp');
-    background-position: center;
+    background-image: url("assets/fondo2.webp");
     background-size: cover;
+    background-position: center;
     min-height: 92svh;
 }

@@ -5,7 +5,6 @@ import { API } from "./API";
 export const getPadelMatches = async () => {
     try {
         const div = document.querySelector("#PadelMatches");
-
         const token = localStorage.getItem("token");
         if (!token) {
             errorMessage(res, div);

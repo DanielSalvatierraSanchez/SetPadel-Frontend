@@ -64,7 +64,7 @@
     filter: none;
 }
 
-.error-message {
+/* .error-message {
     margin-top: 20px;
     color: var(--app-color-message);
     background-color: white;
@@ -75,7 +75,7 @@
 .success-message {
     margin-top: 20px;
     color: var(--app-color-messageOk);
-}
+} */
 
 .player-padel-match {
     border: none;

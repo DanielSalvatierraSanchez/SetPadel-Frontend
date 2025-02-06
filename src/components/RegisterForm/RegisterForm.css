@@ -3,22 +3,12 @@
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
-    padding: 30px;
-    gap: 10px;
+    padding: 20px;
+    /* gap: 10px; */
     /* background-color: var(--app-bgcolor-primary);
     color: var(--app-color-letterOne); */
     background-color: #d6d6d6dd;
     color: var(--app-color-letterTwo);
-    border-radius: 8px;
-}
-
-i {
-    color: var(--app-color-letterTwo);
-}
-
-.register-form > p {
-    margin-top: 20px;
-    color: var(--app-color-message);
 }
 
 .div-password {
