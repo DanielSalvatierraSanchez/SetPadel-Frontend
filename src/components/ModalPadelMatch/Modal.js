@@ -5,9 +5,7 @@ export const modal = (parentElement, data, user) => {
     const isFull = data.players.length === 4;
     const isUserJoined = data.players.some((player) => player === user.name);
     const dateFormatted = dateFormat(data.date);
-    console.log("data.players MODAL => ",data.players);
-    
-    const playersList = data.players.length > 0 ? data.players.map((player) => player).join(", ") : "Ninguno";
+    const playersList = data.players.length > 0 ? data.players.map((player) => player.userName).join(", ") : "Ninguno";
 
     parentElement.innerHTML = `
                 <div class="modal-container">
@@ -22,7 +20,8 @@ export const modal = (parentElement, data, user) => {
                 <img class="join-btn-img" src="/assets/player.png">
                 ${isFull && !isUserJoined ? "PARTIDO COMPLETO" : isUserJoined ? "RETIRARSE" : "UNIRSE"}
                 </button>
-                <p class="modal-players" data-type="assistants">Asistentes ${data.players.length}/4: ${playersList}</p>
+                <p class="modal-players" data-type="assistants">Asistentes ${data.players.length}/4:</p>
+                <p class="modal-players-list" data-type="assistants">${playersList}</p>
                 <img class="close-btn" src="./assets/cerrar.png" />
                 </div>
                 `;

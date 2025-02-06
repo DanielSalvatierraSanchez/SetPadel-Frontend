@@ -95,16 +95,14 @@ export const PadelMatches = async () => {
                 }
 
                 const response = await joinPadelMatch(padelMatchId);
-                console.log("response JOIN BTN PADELMATCHES => ",response);
+                console.log("response JOIN BTN PADELMATCHES => ", response);
                 if (response) {
-                    // padelMatch.players = response.players;
-                    console.log("padelMatch.players JOIN BTN PADELMATCHES => ",padelMatch.players);
+                    console.log("padelMatch.players JOIN BTN PADELMATCHES => ", padelMatch.players);
                     // padelMatch.players.push({
                     //     name: userData.name,
                     //     _id: userData._id
                     // });
-                    console.log("padelMatch.players JOIN BTN PADELMATCHES => ",padelMatch.players);
-                    
+                    console.log("padelMatch.players JOIN BTN PADELMATCHES => ", padelMatch.players);
 
                     // const assistants = padelMatchCard.querySelector("p:last-child");
                     // if (assistants) {

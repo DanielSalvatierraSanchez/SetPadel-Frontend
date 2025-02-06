@@ -4,7 +4,7 @@
     justify-content: top;
     align-items: center;
     /* background-color: var(--app-bgcolor-primary); */
-    background-image: url('assets/partidoMadrid.webp');
+    background-image: url("assets/partidoMadrid.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;
