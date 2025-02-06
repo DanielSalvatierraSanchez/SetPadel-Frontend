@@ -85,8 +85,9 @@ export const PadelMatches = async () => {
                 const padelMatchId = e.target.getAttribute("padelMatch-id");
                 const userData = JSON.parse(localStorage.getItem("user"));
 
-                const checkUserJoined = padelMatch.players.some((player) => player === userData._id);
-                if (checkUserJoined) {
+                const checkAssistants = padelMatch.players.some((player) => player === userData._id);
+                console.log(checkAssistants)
+                if (checkAssistants) {
                     randomMessageError(modal, "Ya estas inscrito en este partido.");
                     return;
                 } else if (padelMatch.players.length === 4) {

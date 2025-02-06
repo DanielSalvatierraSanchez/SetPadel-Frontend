@@ -1,8 +1,8 @@
 import "./CreatePadelMatch.css";
 import { PostPadelMatchForm } from "../../components/PostPadelMatch/PostPadelMatchForm";
 import { createPage } from "../../functions/CreatePage";
-import { getToken, isAuth } from "../../utils/IsAuth";
 import { Loader, LoaderOff } from "../../components/Loader/Loader";
+import { getToken, isAuth } from "../../utils/isAuth";
 
 export const CreatePadelMatch = async () => {
     const div = createPage("CreatePadelMatch");
