@@ -14,7 +14,6 @@ export const getPadelMatches = async () => {
         isAuth(div);
 
         const res = await API({ endpoint: "/matches", method: "GET", token });
-        // successMessage(res, div);
         return res;
     } catch (error) {
         console.log("Error en el GET de los partidos: ", error.message);

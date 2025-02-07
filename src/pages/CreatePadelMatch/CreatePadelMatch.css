@@ -4,7 +4,7 @@
     /* justify-content: center; */
     align-items: center;
     /* background-color: var(--app-bgcolor-tertiary); */
-    background-image: url('assets/pista.webp');
+    background-image: url("assets/pista.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;
@@ -20,21 +20,12 @@
     text-shadow: var(--app-color-letterTwo) 3px 3px 3px;
 }
 
-#CreatePadelMatch > button {
-    margin-top: 20px;
-}
-
 .create-padel-match-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--app-color-letterTwo);
+    /* border: 2px solid var(--app-color-letterTwo); */
     /* margin: 20px; */
     padding: 20px;
 }
-/* 
-.error-message {
-    margin-top: 20px;
-    color: var(--app-color-message);
-} */

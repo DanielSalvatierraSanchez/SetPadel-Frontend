@@ -5,6 +5,7 @@ export const joinPadelMatch = async (padelMatchId) => {
     try {
         const div = document.querySelector(".modal__container");
         const token = localStorage.getItem("token");
+        // NEW
         if (!token) {
             errorMessage(res, div);
             return;
@@ -17,6 +18,11 @@ export const joinPadelMatch = async (padelMatchId) => {
         });
 
         !res ? errorMessage(res, form) : successMessage(res, div);
+        // OLD
+        // if (!res) {
+        //     errorMessage(res, form);
+        // }
+        // successMessage(res, div);
         // setTimeout(() => {
         //     PadelMatches();
         // }, 2000);

@@ -1,18 +1,19 @@
 .loader {
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin-top: 10px;
-    /* box-shadow: calc(1 * var(--d)) calc(0 * var(--d)) 0 0, calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 1px, calc(0 * var(--d)) calc(1 * var(--d)) 0 2px,
-        calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 3px, calc(-1 * var(--d)) calc(0 * var(--d)) 0 4px, calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5px,
-        calc(0 * var(--d)) calc(-1 * var(--d)) 0 6px; */
+    margin: 10px;
     animation: ball 1s infinite steps(100);
 }
+
 @keyframes ball {
     100% {
         transform: rotate(1turn);
     }
 }
+
+/* box-shadow: calc(1 * var(--d)) calc(0 * var(--d)) 0 0, calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 1px, calc(0 * var(--d)) calc(1 * var(--d)) 0 2px,
+    calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 3px, calc(-1 * var(--d)) calc(0 * var(--d)) 0 4px, calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5px,
+    calc(0 * var(--d)) calc(-1 * var(--d)) 0 6px; */
