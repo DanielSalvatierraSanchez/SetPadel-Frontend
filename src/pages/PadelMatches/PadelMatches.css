@@ -49,8 +49,8 @@
 }
 
 .padel-match-card:hover {
-    transform: scale(1.1);
-    transition: all 0.5s;
+    /* transform: scale(1.1);
+    transition: all 0.5s; */
     background-color: var(--app-bgcolor-secondary);
 }
 

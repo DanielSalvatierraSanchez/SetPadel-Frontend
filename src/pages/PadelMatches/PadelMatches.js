@@ -41,8 +41,8 @@ export const PadelMatches = async () => {
         const dateFormatted = dateFormat(padelMatch.date);
 
         padelMatchCard.innerHTML = `
-        <p>Fecha: ${dateFormatted}</p>
-        <p>Asistentes: ${padelMatch.players.length === 4 ? "PARTIDO COMPLETO" : padelMatch.players.length / 1}</p>
+        <p><strong>Fecha:</strong> ${dateFormatted}</p>
+        <p><strong>Asistentes:</strong> ${padelMatch.players.length === 4 ? "PARTIDO COMPLETO" : padelMatch.players.length / 1}</p>
         `;
 
         padelMatchContainer.append(padelMatchCard);
@@ -51,12 +51,11 @@ export const PadelMatches = async () => {
         padelMatchCard.addEventListener("click", (e) => {
             e.preventDefault();
 
-            const userData = JSON.parse(localStorage.getItem("user"));
-
-            const existingModal = padelMatchCard.querySelector(".modal");
+            const existingModal = document.querySelector(".modal");
             if (existingModal) {
                 existingModal.remove();
             }
+            const userData = JSON.parse(localStorage.getItem("user"));
 
             // const padelMatchModal = document.getElementsByClassName(".modal")
             // modalPadelMatch(padelMatchCard, padelMatch)
@@ -65,6 +64,10 @@ export const PadelMatches = async () => {
             // padelMatchModal.classList.add("modal-show");
             modal(padelMatchModal, padelMatch, userData);
             padelMatchCard.append(padelMatchModal);
+
+            padelMatchModal.addEventListener("mouseleave", (e) => {
+                padelMatchModal.remove();
+            });
 
             const closeBtn = padelMatchModal.querySelector(".close-btn");
             closeBtn.addEventListener("click", () => {
@@ -85,8 +88,8 @@ export const PadelMatches = async () => {
                 const padelMatchId = e.target.getAttribute("padelMatch-id");
                 const userData = JSON.parse(localStorage.getItem("user"));
 
-                const checkUserJoined = padelMatch.players.some((player) => player === userData._id);
-                console.log(checkUserJoined)
+                const checkUserJoined = padelMatch.players.some((player) => player.userId === userData._id);
+                console.log(checkUserJoined);
                 if (checkUserJoined) {
                     randomMessageError(modal, "Ya estas inscrito en este partido.");
                     return;

@@ -12,20 +12,27 @@ export const modal = (parentElement, data, user) => {
                 <div class="modal-container">
                 <h3 class="modal-title">${data.title}</h3>
                 <img class="modal-img" src=${data.image}>
-                <p class="modal-date">Fecha: ${dateFormatted}</p>
-                <p class="modal-location">Lugar: ${data.location}</p>
-                <p class="modal-place">Pista: ${data.place}</p>
-                <p class="modal-author">Creador: ${data.author?.name}</p>
+                <div class="modal-description-container">
+                <p class="modal-date"><strong>Fecha:</strong> ${dateFormatted}</p>
+                <p class="modal-location"><strong>Lugar:</strong> ${data.location}</p>
+                <p class="modal-place"><strong>Pista:</strong> ${data.place}</p>
+                <p class="modal-author"><strong>Creador:</strong> ${data.author?.name}</p>
+                </div>
                 <button class="join-btn" 
                 padelMatch-id="${data._id}" ${isFull ? "disabled" : ""}>
                 
                 ${isFull ? `<img class="join-btn-img" src="/assets/cerrar.png">PARTIDO COMPLETADO<img/>` : isUserJoined ? `<img class="join-btn-img" src="/assets/borrar-usuario.png">RETIRARSE<img/>` : `<img class="join-btn-img" src="/assets/agregar-usuario.png">UNIRSE<img/>`}
                 </button>
-                <p class="modal-players" data-type="assistants">Asistentes ${data.players.length}/4:</p>
+                <p class="modal-players" data-type="assistants"><strong>Asistentes ${data.players.length}/4:</strong></p>
                 <p class="modal-players-list" data-type="assistants">${playersList}</p>
                 <img class="close-btn" src="./assets/cerrar.png"></img>
                 </div>
                 `;
+                // parentElement.addEventListener("onmouseout", (e) => {
+                //     if (e.target === parentElement) {
+                //     parentElement.remove();
+                //     }
+                // })
 };
 /*
 <img class="join-btn-img" src="/assets/player.png">
