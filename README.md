@@ -22,8 +22,8 @@ IN PROGRESS \* Mucho cariño a la componentización, no se repite código en nin
 DONE \* Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
 CONTINUAR CON:
-Manejo de usuario repetido al unirse a partido
-Implementar si el user quiere se pueda quitar del partido
+Retirar user del partido en el button del modal - Implementar si el user quiere se pueda quitar del partido
+Manejo de usuario repetido al unirse a partido con modal abierto / actualizacion de modal tras pulsar JOINBTN
 
 FUTURE =>
 

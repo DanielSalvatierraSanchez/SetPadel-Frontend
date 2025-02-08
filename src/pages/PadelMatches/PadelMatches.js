@@ -57,23 +57,14 @@ export const PadelMatches = async () => {
             }
             const userData = JSON.parse(localStorage.getItem("user"));
 
-            // const padelMatchModal = document.getElementsByClassName(".modal")
-            // modalPadelMatch(padelMatchCard, padelMatch)
             const padelMatchModal = document.createElement("div");
             padelMatchModal.classList.add("modal");
             // padelMatchModal.classList.add("modal-show");
             modal(padelMatchModal, padelMatch, userData);
             padelMatchCard.append(padelMatchModal);
 
-            padelMatchModal.addEventListener("mouseleave", (e) => {
-                padelMatchModal.remove();
-            });
-
             const closeBtn = padelMatchModal.querySelector(".close-btn");
             closeBtn.addEventListener("click", () => {
-                // padelMatchModal.classList.remove("modal");
-                // padelMatchModal.classList.remove("modal-show");
-                // padelMatchCard.replaceWith(padelMatchModal);
                 padelMatchModal.remove();
                 PadelMatches();
                 return;
@@ -89,7 +80,6 @@ export const PadelMatches = async () => {
                 const userData = JSON.parse(localStorage.getItem("user"));
 
                 const checkUserJoined = padelMatch.players.some((player) => player.userId === userData._id);
-                console.log(checkUserJoined);
                 if (checkUserJoined) {
                     randomMessageError(modal, "Ya estas inscrito en este partido.");
                     return;
@@ -99,20 +89,16 @@ export const PadelMatches = async () => {
                 }
 
                 const response = await joinPadelMatch(padelMatchId);
-                console.log("response JOIN BTN PADELMATCHES => ", response);
-                if (response) {
-                    console.log("padelMatch.players JOIN BTN PADELMATCHES => ", padelMatch.players);
-                    // padelMatch.players.push({
-                    //     name: userData.name,
-                    //     _id: userData._id
-                    // });
-                    console.log("padelMatch.players JOIN BTN PADELMATCHES => ", padelMatch.players);
-
-                    // const assistants = padelMatchCard.querySelector("p:last-child");
-                    // if (assistants) {
-                    //     assistants.textContent = `Asistentes: ${userData.name}`;
-                    // }
-                }
+                // if (response) {
+                // padelMatch.players.push({
+                //     name: userData.name,
+                //     _id: userData._id
+                // });
+                // const assistants = padelMatchCard.querySelector("p:last-child");
+                // if (assistants) {
+                //     assistants.textContent = `Asistentes: ${userData.name}`;
+                // }
+                // }
                 successMessage(response, modal);
                 return response;
             });

@@ -1,3 +1,4 @@
+import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 import { dateFormat } from "../../utils/DateFormatted";
 import "./Modal.css";
 import { padelMatchCompleted } from "./PadelMatchCompleted";
@@ -21,18 +22,23 @@ export const modal = (parentElement, data, user) => {
                 <button class="join-btn" 
                 padelMatch-id="${data._id}" ${isFull ? "disabled" : ""}>
                 
-                ${isFull ? `<img class="join-btn-img" src="/assets/cerrar.png">PARTIDO COMPLETADO<img/>` : isUserJoined ? `<img class="join-btn-img" src="/assets/borrar-usuario.png">RETIRARSE<img/>` : `<img class="join-btn-img" src="/assets/agregar-usuario.png">UNIRSE<img/>`}
+                ${
+                    isFull
+                        ? `<img class="join-btn-img" src="/assets/cerrar.png">PARTIDO COMPLETADO<img/>`
+                        : isUserJoined
+                        ? `<img class="join-btn-img" src="/assets/borrar-usuario.png">RETIRARSE<img/>`
+                        : `<img class="join-btn-img" src="/assets/agregar-usuario.png">UNIRSE<img/>`
+                }
                 </button>
                 <p class="modal-players" data-type="assistants"><strong>Asistentes ${data.players.length}/4:</strong></p>
                 <p class="modal-players-list" data-type="assistants">${playersList}</p>
                 <img class="close-btn" src="./assets/cerrar.png"></img>
                 </div>
                 `;
-                // parentElement.addEventListener("onmouseout", (e) => {
-                //     if (e.target === parentElement) {
-                //     parentElement.remove();
-                //     }
-                // })
+    parentElement.addEventListener("mouseleave", (e) => {
+        parentElement.remove();
+        // PadelMatches();
+    });
 };
 /*
 <img class="join-btn-img" src="/assets/player.png">
