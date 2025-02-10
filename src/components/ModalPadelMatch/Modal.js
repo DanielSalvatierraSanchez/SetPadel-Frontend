@@ -1,11 +1,13 @@
-import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
-import { dateFormat } from "../../utils/DateFormatted";
 import "./Modal.css";
+import { dateFormat } from "../../utils/DateFormatted";
+import { buttonJoin } from "../../utils/ButtonJoin";
+import { buttonClose } from "../../utils/ButtonClose";
+import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 import { padelMatchCompleted } from "./PadelMatchCompleted";
 
 export const modal = (parentElement, data, user) => {
     const isFull = data.players.length === 4;
-    const isUserJoined = data.players.some((player) => player === user.name);
+    const isUserJoined = data.players.some((player) => player.userId === user._id); // user.id RETIRARSE y user.userId UNIRSE
     const dateFormatted = dateFormat(data.date);
     const playersList = data.players.length > 0 ? data.players.map((player) => player.userName).join(", ") : "Ninguno";
 
@@ -21,9 +23,8 @@ export const modal = (parentElement, data, user) => {
                 </div>
                 <button class="join-btn" 
                 padelMatch-id="${data._id}" ${isFull ? "disabled" : ""}>
-                
                 ${
-                    isFull
+                    isFull && !isUserJoined
                         ? `<img class="join-btn-img" src="/assets/cerrar.png">PARTIDO COMPLETADO<img/>`
                         : isUserJoined
                         ? `<img class="join-btn-img" src="/assets/borrar-usuario.png">RETIRARSE<img/>`
@@ -35,11 +36,11 @@ export const modal = (parentElement, data, user) => {
                 <img class="close-btn" src="./assets/cerrar.png"></img>
                 </div>
                 `;
-    parentElement.addEventListener("mouseleave", (e) => {
-        parentElement.remove();
-        // PadelMatches();
-    });
+
+    buttonJoin(parentElement, data);
+    buttonClose(parentElement);
 };
+
 /*
 <img class="join-btn-img" src="/assets/player.png">
 poner debajo del button para ver imagen
