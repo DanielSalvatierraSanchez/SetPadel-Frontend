@@ -22,8 +22,10 @@ IN PROGRESS \* Mucho cariño a la componentización, no se repite código en nin
 DONE \* Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
 CONTINUAR CON:
-Retirar user del partido en el button del modal - Implementar si el user quiere se pueda quitar del partido
-Manejo de usuario repetido al unirse a partido con modal abierto / actualizacion de modal tras pulsar JOINBTN
+Seguir con la eliminacion del user y crear funcion en el backend
+Revisar implementacion de renderPadelMatch
+Retirar user del partido en el button del modal
+Actualizacion del modal tras JOIN o recarga page para actualizar todos posibles partidos creados por otros users
 
 FUTURE =>
 
