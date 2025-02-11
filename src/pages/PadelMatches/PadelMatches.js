@@ -1,7 +1,7 @@
 import "./PadelMatches.css";
 import { createPage } from "../../functions/CreatePage";
 import { getPadelMatches } from "../../utils/API/GetPadelMatches";
-import { getToken, isAuth } from "../../utils/isAuth";
+import { isAuth } from "../../utils/isAuth";
 import { Loader } from "../../components/Loader/Loader";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { dateFormat } from "../../utils/DateFormatted";

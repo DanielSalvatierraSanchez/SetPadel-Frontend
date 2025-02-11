@@ -1,6 +1,8 @@
 import { Loader, LoaderOff } from "../../components/Loader/Loader";
+import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
+import { isAuth } from "../isAuth";
 import { randomMessageError } from "../RandomMessageError";
 import { API } from "./API";
 
@@ -20,10 +22,12 @@ export const postPadelMatch = async (e) => {
         randomMessageError(form, "Todos los campos son obligatorios");
         return;
     }
-    
+
     try {
         const div = document.querySelector("#CreatePadelMatch");
         const token = localStorage.getItem("token");
+
+        isAuth(div);
 
         const res = await API({ endpoint: "/matches/register", method: "POST", isJSON: false, body: formData, token });
         console.log("res post PM API =>", res);
@@ -40,6 +44,6 @@ export const postPadelMatch = async (e) => {
 
         // return res;
     } catch (error) {
-        console.log("Error en la creación de un partido:", error.message);
+        console.log("Error en el POST de un partido desde el front:", error.message);
     }
 };

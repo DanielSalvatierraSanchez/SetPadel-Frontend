@@ -5,11 +5,8 @@ export const joinPadelMatch = async (padelMatchId) => {
     try {
         const div = document.querySelector(".modal__container");
         const token = localStorage.getItem("token");
-        // NEW
-        if (!token) {
-            errorMessage(res, div);
-            return;
-        }
+
+        isAuth(div);
 
         const res = await API({
             endpoint: `/matches/join/${padelMatchId}`,
@@ -29,6 +26,6 @@ export const joinPadelMatch = async (padelMatchId) => {
 
         return res;
     } catch (error) {
-        console.log("Error en el join de los partidos: ", error.message);
+        console.log("Error en el JOIN de los partidos desde el front: ", error.message);
     }
 };

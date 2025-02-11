@@ -40,6 +40,6 @@ export const registerUser = async (e) => {
             PadelMatches();
         }, 2000);
     } catch (error) {
-        console.log("Error en el registro del usuario: ", error.message);
+        console.log("Error en el REGISTER del usuario desde el front: ", error.message);
     }
 };

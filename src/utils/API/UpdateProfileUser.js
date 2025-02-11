@@ -1,5 +1,4 @@
 import { Loader } from "../../components/Loader/Loader";
-import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { Profile } from "../../components/Profile/Profile";
 import { isAuth } from "../isAuth";
 import { updateUserDataInLocalStorage } from "../SetUserData";
@@ -30,18 +29,11 @@ export const updateProfileUser = async (e) => {
     try {
         const div = document.querySelector("#Profile");
         const token = localStorage.getItem("token");
-        if (!token) {
-            errorMessage(res, div);
-            return;
-        }
-        isAuth(div);
+
+        isAuth(form);
 
         const res = await API({ endpoint: `/users/update/${userId}`, method: "PUT", body: formData, isJSON: false, token });
         console.log("res FETCH =>", res);
-
-        if (res.status !== 200) {
-            errorMessage(res, form);
-        }
 
         const updateData = {};
         if (name.value.trim()) updateData.name = name.value.trim();
@@ -54,6 +46,6 @@ export const updateProfileUser = async (e) => {
             Profile();
         }, 2000);
     } catch (error) {
-        console.log("Error en la actualizacion del usuario: ", error.message);
+        console.log("Error en el UPDATE del usuario desde el front: ", error.message);
     }
 };

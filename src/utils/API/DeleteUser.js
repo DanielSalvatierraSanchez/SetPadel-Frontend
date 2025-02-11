@@ -7,16 +7,12 @@ export const deleteUser = async () => {
 
     try {
         const div = document.querySelector(".delete-user");
-
         const token = localStorage.getItem("token");
-        if (!token) {
-            errorMessage(res, div);
-            return;
-        }
+
         isAuth(div);
 
         const res = await API({ endpoint: `/users/delete/${userId}`, method: "DELETE", token });
-        console.log("res DELETE USER => ", res);
+        console.log("res DELETE => ", res);
         if (res.status !== 200) {
             errorMessage(res, div);
         }
@@ -29,5 +25,7 @@ export const deleteUser = async () => {
         }, 2000);
 
         // return res;
-    } catch (error) {}
+    } catch (error) {
+        console.log("Error en el DELETE del usuario desde el front: ", error.message);
+    }
 };

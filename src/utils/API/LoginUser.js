@@ -32,6 +32,6 @@ export const loginUser = async (e) => {
             PadelMatches();
         }, 1000);
     } catch (error) {
-        console.log("Error en el login del usuario: ", error.message);
+        console.log("Error en el LOGIN del usuario desde el front: ", error.message);
     }
 };

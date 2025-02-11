@@ -28,8 +28,6 @@ Retirar user del partido en el button del modal
 Actualizacion del modal tras JOIN o recarga page para actualizar todos posibles partidos creados por otros users
 
 FUTURE =>
-
--   Matizar la confirmación de asistencia / REFACTORIZAR código
 -   Repasar el manejo de errores, sobre todo darle un setTimeout() a los que no lo tienen (al hacer el PUT del user)
 -   Repasar si hay que implementar el Loader() en algún proceso más
 -   Al hacer UpdateProfileUser / SetUserData cuando guarda una imagen al actualizar usuario la setea en localstorage como objeto sin ser un string
