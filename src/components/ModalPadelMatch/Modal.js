@@ -2,8 +2,6 @@ import "./Modal.css";
 import { dateFormat } from "../../utils/DateFormatted";
 import { buttonJoin } from "../../utils/ButtonJoin";
 import { buttonClose } from "../../utils/ButtonClose";
-import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
-import { padelMatchCompleted } from "./PadelMatchCompleted";
 
 export const modal = (parentElement, data, user) => {
     const isFull = data.players.length === 4;

@@ -22,18 +22,16 @@ export const updateProfileUser = async (e) => {
         formData.append("image", image.files[0]);
     }
 
-    const user = JSON.parse(localStorage.getItem("user"));
-    console.log(user);
-    const userId = user._id;
-    console.log(userId);
     try {
-        const div = document.querySelector("#Profile");
+        // const container = document.querySelector("#Profile"); // uso el form seleccionado mas arriba
+        const user = JSON.parse(localStorage.getItem("user"));
+        const userId = user._id;
         const token = localStorage.getItem("token");
 
         isAuth(form);
 
         const res = await API({ endpoint: `/users/update/${userId}`, method: "PUT", body: formData, isJSON: false, token });
-        console.log("res FETCH =>", res);
+        console.log("res UpdateProfileUser =>", res);
 
         const updateData = {};
         if (name.value.trim()) updateData.name = name.value.trim();

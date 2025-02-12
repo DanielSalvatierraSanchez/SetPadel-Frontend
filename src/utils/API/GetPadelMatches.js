@@ -4,10 +4,10 @@ import { API } from "./API";
 
 export const getPadelMatches = async () => {
     try {
-        const div = document.querySelector("#PadelMatches");
+        const container = document.querySelector("#PadelMatches");
         const token = localStorage.getItem("token");
 
-        isAuth(div);
+        isAuth(container);
 
         const res = await API({ endpoint: "/matches", method: "GET", token });
         return res;

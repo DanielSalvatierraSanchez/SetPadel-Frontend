@@ -1,8 +1,8 @@
 import "./RegisterForm.css";
 import { FieldForm } from "../FieldForm/FieldForm";
-import { registerUser } from "../../utils/API/RegisterUser";
-import { showPassword } from "../../utils/showPassword";
-import { Home } from "../../pages/Home/Home";
+import { registerUser } from "../../../utils/API/RegisterUser";
+import { showPassword } from "../../../utils/showPassword";
+import { Home } from "../../../pages/Home/Home";
 
 export const RegisterForm = (form) => {
     form.className = "register-form";

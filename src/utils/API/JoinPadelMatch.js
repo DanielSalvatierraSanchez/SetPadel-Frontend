@@ -1,12 +1,13 @@
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
+import { isAuth } from "../isAuth";
 import { API } from "./API";
 
 export const joinPadelMatch = async (padelMatchId) => {
     try {
-        const div = document.querySelector(".modal__container");
+        const container = document.querySelector(".modal__container");
         const token = localStorage.getItem("token");
 
-        isAuth(div);
+        isAuth(container);
 
         const res = await API({
             endpoint: `/matches/join/${padelMatchId}`,
@@ -14,12 +15,12 @@ export const joinPadelMatch = async (padelMatchId) => {
             token
         });
 
-        !res ? errorMessage(res, form) : successMessage(res, div);
+        !res ? errorMessage(res, container) : successMessage(res, container);
         // OLD
         // if (!res) {
         //     errorMessage(res, form);
         // }
-        // successMessage(res, div);
+        // successMessage(res, container);
         // setTimeout(() => {
         //     PadelMatches();
         // }, 2000);

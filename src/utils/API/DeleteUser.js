@@ -1,23 +1,24 @@
 import { Loader } from "../../components/Loader/Loader";
+import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
+import { isAuth } from "../isAuth";
 import { API } from "./API";
 
 export const deleteUser = async () => {
+    const container = document.querySelector(".delete-user");
+    const token = localStorage.getItem("token");
     const user = JSON.parse(localStorage.getItem("user"));
     const userId = user._id;
 
+    isAuth(container);
     try {
-        const div = document.querySelector(".delete-user");
-        const token = localStorage.getItem("token");
-
-        isAuth(div);
-
         const res = await API({ endpoint: `/users/delete/${userId}`, method: "DELETE", token });
         console.log("res DELETE => ", res);
+
         if (res.status !== 200) {
-            errorMessage(res, div);
+            errorMessage(res, container);
         }
 
-        Loader(div);
+        Loader(container);
         setTimeout(() => {
             window.history.pushState("", "", "/home");
             localStorage.clear(); // USO EL CLEAR DESDE EL MAIN.JS

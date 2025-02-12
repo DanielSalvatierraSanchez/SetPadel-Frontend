@@ -24,15 +24,15 @@ export const postPadelMatch = async (e) => {
     }
 
     try {
-        const div = document.querySelector("#CreatePadelMatch");
+        const container = document.querySelector("#CreatePadelMatch");
         const token = localStorage.getItem("token");
 
-        isAuth(div);
+        isAuth(container);
 
         const res = await API({ endpoint: "/matches/register", method: "POST", isJSON: false, body: formData, token });
         console.log("res post PM API =>", res);
 
-        Loader(div);
+        Loader(container);
         successMessage(res, form);
         setTimeout(() => {
             LoaderOff();
