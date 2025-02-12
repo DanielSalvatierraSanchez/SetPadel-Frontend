@@ -22,7 +22,7 @@ IN PROGRESS \* Mucho cariño a la componentización, no se repite código en nin
 DONE \* Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
 CONTINUAR CON:
-continuar con buttonjoin => hacer console log para ver si cojo bien los IDs
+continuar con el back => ir al back y seguir en deleteuser. hay que agregar al buttonjoin la funcion paraq ue elimine user y probar ahora... VAMOS!!!!
 \*\*\* Al entrar en profile se elimina el user
 Seguir con la eliminacion del user y crear funcion en el backend - Retirar user del partido en el button del modal
 Actualizacion del modal tras JOIN o recarga page para actualizar todos posibles partidos creados por otros users
