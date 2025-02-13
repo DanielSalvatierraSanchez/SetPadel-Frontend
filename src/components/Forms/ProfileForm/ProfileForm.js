@@ -37,10 +37,10 @@ export const ProfileForm = (form) => {
         inputType: "file"
     })}
     <div class="div-btn-update-profile">
-    <button class="btn-update-profile" type="submit">Actualizar</button>
-    <button class="btn-delete" type="submit">Eliminar</button>
+    <button class="btn-update-profile" type="submit"><img class="update-btn-img" src="/assets/update.png">Actualizar<img/></button>
+    <button class="btn-delete-profile" type="submit"><img class="delete-btn-img" src="/assets/close.png">Eliminar<img/></button>
     </div>
-    <button class="btn-back" type="button">Volver</button>
+    <button class="btn-back-profile" type="button"><img class="back-btn-img" src="/assets/back.png">Volver<img/></button>
 `;
     showPassword();
     form.addEventListener("submit", updateProfileUser);

@@ -1,21 +1,23 @@
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
+import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 
 export const deleteUserOfPadelMatch = async (data) => {
-    
     try {
-        const matchId = data._id;
+        const matchId = data;
         const container = document.querySelector(".modal-container");
         const token = localStorage.getItem("token");
 
         isAuth(container);
 
-        const res = await API({ endpoint: `/matches/deleteUserOfPadelMatch/${matchId}`, method: "DELETE", token });
-        console.log("res DELETE USER => ", res);
-        if (res.status !== 200) {
-            errorMessage(res, container);
-        }
+        const res = await API({ endpoint: `/matches/deleteUserOfPadelMatch/${matchId}`, method: "PUT", token });
+        !res ? errorMessage(container, res) : successMessage(container, res);
+
+        // Loader(container);
+        // setTimeout(() => {
+        //     PadelMatches();
+        // }, 2000);
 
         return res;
     } catch (error) {

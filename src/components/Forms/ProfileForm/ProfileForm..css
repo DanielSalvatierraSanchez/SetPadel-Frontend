@@ -47,6 +47,20 @@
     gap: 10px;
 }
 
-.btn-delete:hover {
+.btn-delete-profile:hover {
     background-color: var(--app-color-message);
+}
+
+.btn-update-profile, .btn-delete-profile, .btn-back-profile {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin: 10px; */
+    /* padding: 10px; */
+    gap: 10px;
+}
+
+.update-btn-img, .delete-btn-img, .back-btn-img {
+    width: 25px;
+    height: 25px;
 }

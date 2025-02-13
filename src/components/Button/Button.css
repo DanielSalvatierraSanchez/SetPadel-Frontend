@@ -18,15 +18,15 @@ button:hover {
     transform: scale(1.07);
 }
 
-.btn-back {
+.btn-back-profile {
     background-color: var(--app-bgcolor-buttonBack);
     color: var(--app-color-letterTwo);
     box-shadow: 2px 2px var(--app-color-letterTwo);
 }
 
-.btn-back:hover {
-    background-color: var(--app-color-letterTwo);
-    color: var(--app-color-letterOne);
+.btn-back-profile:hover {
+    /* background-color: var(--app-color-letterTwo); */
+    color: var(--app-color-letterTwo);
     border: 2px solid var(--app-color-letterOne);
     box-shadow: 2px 2px var(--app-color-letterOne);
 }

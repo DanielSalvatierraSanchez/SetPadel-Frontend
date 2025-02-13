@@ -1,7 +1,6 @@
 #PadelMatches {
     display: flex;
     flex-direction: column;
-    /* justify-content: top; */
     align-items: center;
     /* background-color: var(--app-bgcolor-primary); */
     background-image: url("assets/partidoMadrid.webp");
@@ -39,19 +38,23 @@
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    border: 2px solid var(--app-bgcolor-secondary);
-    border-radius: 8px;
+    width: 270px;
     margin: 20px;
     padding: 20px;
     gap: 10px;
     cursor: pointer;
     transition: all 0.5s;
+    border-radius: 8px;
+    border: 2px solid var(--app-bgcolor-secondary);
+    box-shadow: 2px 2px var(--app-bgcolor-secondary);
 }
 
 .padel-match-card:hover {
-    /* transform: scale(1.1);
+    /* transform: scale(1.03);
     transition: all 0.5s; */
     background-color: var(--app-bgcolor-secondary);
+    border: 2px solid var(--app-color-letterTwo);
+    box-shadow: 2px 2px var(--app-color-letterTwo);
 }
 
 .disable {

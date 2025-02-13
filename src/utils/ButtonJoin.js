@@ -1,3 +1,4 @@
+import { Loader } from "../components/Loader/Loader";
 import { successMessage } from "../components/Messages/Success/SuccessMessage";
 import { PadelMatches } from "../pages/PadelMatches/PadelMatches";
 import { deleteUserOfPadelMatch } from "./API/DeleteUserOfPadelMatch";
@@ -16,43 +17,24 @@ export const buttonJoin = async (parentElement, data) => {
 
         try {
             const checkUserJoined = data.players.some((player) => player.userId === userData._id);
-            if (data.players.length === 4) {
-                randomMessageError(modal, "El partido está completo.");
-                return;
-            } else {
-                const joinUserinPadelMatch = await joinPadelMatch(padelMatchId);
-                successMessage(joinUserinPadelMatch, modal);
-            }
+            console.log("checkUserJoined => ", checkUserJoined);
 
-            //let response;
-            if ("") {
-                // response = await deleteUserOfPadelMatch(data);
-                // if (response) {
-                if ("") {
-                    // successMessage(modal, "Te has retirado del partido correctamente");
-                    // alert("Te has retirado del partido correctamente");
-                    console.log("userData._id del BUTTON JOIN => ", userData._id);
-                    console.log("padelMatchId del BUTTON JOIN => ", padelMatchId);
-                    console.log("data del BUTTON JOIN => ", data);
-                    const playerIndex = data.players.findIndex((player) => player.userId.toString() === userId.toString());
-                    data.players.splice(playerIndex, 1);
-                    // data.players.remove(data.players.find((player) => player.userId === userData._id));
-                    // setTimeout(() => {
-                    //     parentElement.remove();
-                    //     //PadelMatches();
-                    // }, 1500);
-                }
+            // join(joinBtn, parentElement, padelMatchId, checkUserJoined);
+            if (!checkUserJoined) {
+                const joinUserInPadelMatch = await joinPadelMatch(padelMatchId);
+                successMessage(modal, joinUserInPadelMatch);
+                // Loader(modal);
+                // setTimeout(() => PadelMatches(), 2000);
+            } else if (checkUserJoined) {
+                console.log("ESTOY REGISTRADO");
+                const removeUserFromPadelMatch = await deleteUserOfPadelMatch(padelMatchId);
+                successMessage(modal, removeUserFromPadelMatch);
+                // Loader(modal);
+                // setTimeout(() => PadelMatches(), 2000);
             }
-            // else {
-            //     if (data.players.length === 4) {
-            //         randomMessageError(modal, "El partido está completo.");
-            //         return;
-            //     }
-
-            //     const response = await joinPadelMatch(padelMatchId);
-            //     successMessage(response, modal);
-            // }
-        } catch (error) {}
+        } catch (error) {
+            console.log("Error en el ButtonJoin.js de los partidos desde el front: ", error.message);
+        }
         return;
     });
 };

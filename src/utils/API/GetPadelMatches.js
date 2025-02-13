@@ -1,4 +1,3 @@
-import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 

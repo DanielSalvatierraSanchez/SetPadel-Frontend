@@ -1,6 +1,6 @@
 import "./SuccessMessage.css";
 
-export const successMessage = (response, parentElement) => {
+export const successMessage = (parentElement, response) => {
     // const form = document.querySelector("form");
     if (parentElement) {
         let removeError = parentElement.querySelector(".success-message");

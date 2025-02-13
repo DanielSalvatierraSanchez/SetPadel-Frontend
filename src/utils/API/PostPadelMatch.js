@@ -25,6 +25,7 @@ export const postPadelMatch = async (e) => {
 
     try {
         const container = document.querySelector("#CreatePadelMatch");
+        const form = document.querySelector(".postPadelMatch-form");
         const token = localStorage.getItem("token");
 
         isAuth(container);
@@ -32,7 +33,7 @@ export const postPadelMatch = async (e) => {
         const res = await API({ endpoint: "/matches/register", method: "POST", isJSON: false, body: formData, token });
         console.log("res post PM API =>", res);
 
-        Loader(container);
+        Loader(form);
         successMessage(res, form);
         setTimeout(() => {
             LoaderOff();
@@ -42,7 +43,7 @@ export const postPadelMatch = async (e) => {
             PadelMatches();
         }, 1000);
 
-        // return res;
+        return res;
     } catch (error) {
         console.log("Error en el POST de un partido desde el front:", error.message);
     }

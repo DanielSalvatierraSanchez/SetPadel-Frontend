@@ -1,4 +1,6 @@
+import { Loader } from "../../components/Loader/Loader";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
+import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 
@@ -14,13 +16,9 @@ export const joinPadelMatch = async (padelMatchId) => {
             method: "PUT",
             token
         });
+        !res ? errorMessage(container, res) : successMessage(container, res);
 
-        !res ? errorMessage(res, container) : successMessage(res, container);
-        // OLD
-        // if (!res) {
-        //     errorMessage(res, form);
-        // }
-        // successMessage(res, container);
+        // Loader(container);
         // setTimeout(() => {
         //     PadelMatches();
         // }, 2000);
