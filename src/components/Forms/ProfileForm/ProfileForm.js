@@ -2,9 +2,8 @@ import "./ProfileForm..css";
 import { FieldForm } from "../FieldForm/FieldForm";
 import { updateProfileUser } from "../../../utils/API/UpdateProfileUser";
 import { showPassword } from "../../../utils/showPassword";
-import { confirmationOfLogout } from "../../../utils/ConfirmationOfLogout";
-import { deleteUser } from "../../../utils/API/DeleteUser";
 import { Logout } from "../../../pages/Logout/Logout";
+import { confirmationToDeleteUser } from "../../../utils/ConfirmationToDeleteUser";
 
 export const ProfileForm = (form) => {
     form.className = "profile-form";
@@ -44,14 +43,11 @@ export const ProfileForm = (form) => {
 `;
     showPassword();
     form.addEventListener("submit", updateProfileUser);
-    form.querySelector(".btn-delete").addEventListener(
-        "click",
-        () =>
-            confirmationOfLogout({
-                parentElement: form,
-                message: "Eliminar cuenta"
-            }),
-        deleteUser()
+    form.querySelector(".btn-delete-profile").addEventListener("click", () =>
+        confirmationToDeleteUser({
+            parentElement: form,
+            message: "eliminar tu cuenta"
+        })
     );
-    form.querySelector(".btn-back").addEventListener("click", () => Logout());
+    form.querySelector(".btn-back-profile").addEventListener("click", () => Logout());
 };

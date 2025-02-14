@@ -1,4 +1,4 @@
-import { PadelMatches } from "../pages/PadelMatches/PadelMatches";
+import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 
 export const buttonClose = (parentElement) => {
     const closeBtn = parentElement.querySelector(".close-btn");
@@ -11,6 +11,6 @@ export const buttonClose = (parentElement) => {
     // parentElement.addEventListener("mouseleave", (e) => {
     //     e.stopPropagation();
     //     parentElement.remove();
-    //     //PadelMatches();
+    //     PadelMatches();
     // });
 };

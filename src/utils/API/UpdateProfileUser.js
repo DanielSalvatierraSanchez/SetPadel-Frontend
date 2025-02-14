@@ -1,4 +1,6 @@
 import { Loader } from "../../components/Loader/Loader";
+import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
+import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { Profile } from "../../components/Profile/Profile";
 import { isAuth } from "../isAuth";
 import { updateUserDataInLocalStorage } from "../SetUserData";
@@ -6,7 +8,7 @@ import { API } from "./API";
 
 export const updateProfileUser = async (e) => {
     e.preventDefault();
-    const form = document.querySelector("form");
+    const container = document.querySelector("form");
     const [name, password, phone, image] = e.target;
     const formData = new FormData();
     if (name.value.trim()) {
@@ -28,10 +30,10 @@ export const updateProfileUser = async (e) => {
         const userId = user._id;
         const token = localStorage.getItem("token");
 
-        isAuth(form);
+        isAuth(container);
 
         const res = await API({ endpoint: `/users/update/${userId}`, method: "PUT", body: formData, isJSON: false, token });
-        console.log("res UpdateProfileUser =>", res);
+        !res ? errorMessage(container, res) : successMessage(container, res);
 
         const updateData = {};
         if (name.value.trim()) updateData.name = name.value.trim();
@@ -39,10 +41,10 @@ export const updateProfileUser = async (e) => {
 
         updateUserDataInLocalStorage(updateData);
 
-        Loader(form);
+        Loader(container);
         setTimeout(() => {
             Profile();
-        }, 2000);
+        }, 20000000);
     } catch (error) {
         console.log("Error en el UPDATE del usuario desde el front: ", error.message);
     }

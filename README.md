@@ -11,21 +11,15 @@ DONE _ Los usuarios autenticados verán opciones adicionales para crear eventos 
 => Para crear partidos usan la page CreatePadelMatch() y confirmar asistencia en cada evento
 DONE _ Permite a los usuarios explorar detalles de cada evento
 
-IN PROGRESS \* Permite a los usuarios explorar la lista de asistentes
+DONE \* Permite a los usuarios explorar la lista de asistentes
 
 DONE _ Implementa manejo de errores adecuado en el frontend y el backend.
 DONE _ Todos los formularios del frontend tienen control de errores que pase lo que pase se informa al usuario de lo que ha pasado.
 DONE \* Todos los procesos asíncronos le muestran un loading de alguna manera al usuario, para que este tenga una respuesta inmediata ante su acción.
 
-IN PROGRESS \* Mucho cariño a la componentización, no se repite código en ningún momento.
+DONE \* Mucho cariño a la componentización, no se repite código en ningún momento.
 
 DONE \* Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
-
-CONTINUAR CON:
-PROBAR PROFILE
-REPASAR TODO
-Actualizacion del modal tras JOIN y REMOVE
-- Poner en ButtonClose el mouseleave
 
 FUTURE =>
 

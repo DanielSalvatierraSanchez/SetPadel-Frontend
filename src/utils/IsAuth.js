@@ -11,5 +11,5 @@ export const isAuth = (parentElement) => {
 
     setTimeout(() => {
         LoaderOff();
-    }, 1000);
+    }, 2000);
 };

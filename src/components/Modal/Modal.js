@@ -1,11 +1,11 @@
 import "./Modal.css";
 import { dateFormat } from "../../utils/DateFormatted";
-import { buttonJoin } from "../../utils/ButtonJoin";
-import { buttonClose } from "../../utils/ButtonClose";
+import { buttonJoin } from "./ButtonJoin";
+import { buttonClose } from "./ButtonClose";
 
 export const modal = (parentElement, data, user) => {
     const isFull = data.players.length === 4;
-    const isUserJoined = data.players.some((player) => player.userId === user._id); // user.id RETIRARSE y user.userId UNIRSE
+    const isUserJoined = data.players.some((player) => player.userId === user._id);
     const dateFormatted = dateFormat(data.date);
     const playersList = data.players.length > 0 ? data.players.map((player) => player.userName).join(", ") : "Ninguno";
 
@@ -20,7 +20,7 @@ export const modal = (parentElement, data, user) => {
                 <p class="modal-author"><strong>Creador:</strong> ${data.author?.name}</p>
                 </div>
                 <button class="join-btn" 
-                padelMatch-id="${data._id}" ${isFull ? "disabled" : ""}>
+                padelMatch-id="${data._id}">
                 ${
                     isFull && !isUserJoined
                         ? `<img class="completed-btn-img" src="/assets/full.png">PARTIDO COMPLETADO<img/>`

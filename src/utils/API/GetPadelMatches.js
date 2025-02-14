@@ -2,12 +2,10 @@ import { isAuth } from "../isAuth";
 import { API } from "./API";
 
 export const getPadelMatches = async () => {
+    const container = document.querySelector("#PadelMatches");
+    const token = localStorage.getItem("token");
+    isAuth(container);
     try {
-        const container = document.querySelector("#PadelMatches");
-        const token = localStorage.getItem("token");
-
-        isAuth(container);
-
         const res = await API({ endpoint: "/matches", method: "GET", token });
         return res;
     } catch (error) {

@@ -28,11 +28,11 @@ export const registerUser = async (e) => {
         });
 
         if (!res.token) {
-            errorMessage(res, form);
+            errorMessage(form, res);
         }
 
         setUserDataInLocalStore(res);
-        successMessage(res, form);
+        successMessage(form, res);
         Loader(form);
         Header();
         setTimeout(() => {

@@ -13,10 +13,10 @@ export const LoginForm = (form) => {
             ${FieldForm({ inputLabel: "Contraseña", inputType: "password", inputClass: "input-password", inputPlaceholder: "********" })}
             <i class="bx bx-show"></i>
         </div>
-        <button class="btn-loginForm" type="submit">Acceder</button>
-        <button class="btn-back" type="button">Volver</button>
+        <button class="btn-access-login" type="submit">Acceder</button>
+        <button class="btn-back-login" type="button"><img class="back-btn-img" src="/assets/back.png">Volver<img/></button>
         `;
     showPassword();
     form.addEventListener("submit", loginUser);
-    form.querySelector(".btn-back").addEventListener("click", () => Home());
+    form.querySelector(".btn-back-login").addEventListener("click", () => Home());
 };

@@ -5,7 +5,6 @@
     border-radius: 8px;
     padding: 20px;
     /* gap: 10px; */
-    /* background-color: var(--app-bgcolor-tertiary); */
     background-color: #d6d6d6dd;
     color: var(--app-color-letterTwo);
 }
@@ -29,4 +28,33 @@
     height: 15px;
     transform: translate(-35px, 60%);
     cursor: pointer;
+}
+
+.btn-access-login,
+.btn-back-login {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin: 10px; */
+    /* padding: 10px; */
+    gap: 10px;
+}
+
+.btn-back-login {
+    background-color: var(--app-bgcolor-buttonBack);
+    color: var(--app-color-letterTwo);
+    box-shadow: 2px 2px var(--app-color-letterTwo);
+}
+
+.btn-back-login:hover {
+    background-color: var(--app-bgcolor-secondary);
+    color: var(--app-color-letterTwo);
+    border: 2px solid var(--app-color-letterOne);
+    box-shadow: 2px 2px var(--app-color-letterOne);
+}
+
+.access-btn-img,
+.back-btn-img {
+    width: 25px;
+    height: 25px;
 }

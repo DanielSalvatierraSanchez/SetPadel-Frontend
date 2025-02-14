@@ -1,9 +1,8 @@
-import { Loader } from "../components/Loader/Loader";
-import { successMessage } from "../components/Messages/Success/SuccessMessage";
-import { PadelMatches } from "../pages/PadelMatches/PadelMatches";
-import { deleteUserOfPadelMatch } from "./API/DeleteUserOfPadelMatch";
-import { joinPadelMatch } from "./API/JoinPadelMatch";
-import { randomMessageError } from "./RandomMessageError";
+import { Loader } from "../Loader/Loader";
+import { successMessage } from "../Messages/Success/SuccessMessage";
+import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
+import { deleteUserOfPadelMatch } from "../../utils/API/DeleteUserOfPadelMatch";
+import { joinPadelMatch } from "../../utils/API/JoinPadelMatch";
 
 export const buttonJoin = async (parentElement, data) => {
     const joinBtn = parentElement.querySelector(".join-btn");
@@ -17,19 +16,17 @@ export const buttonJoin = async (parentElement, data) => {
 
         try {
             const checkUserJoined = data.players.some((player) => player.userId === userData._id);
-            console.log("checkUserJoined => ", checkUserJoined);
-
-            // join(joinBtn, parentElement, padelMatchId, checkUserJoined);
             if (!checkUserJoined) {
                 const joinUserInPadelMatch = await joinPadelMatch(padelMatchId);
+                joinBtn.disabled = true;
                 successMessage(modal, joinUserInPadelMatch);
-                // Loader(modal);
+                Loader(modal);
                 // setTimeout(() => PadelMatches(), 2000);
             } else if (checkUserJoined) {
-                console.log("ESTOY REGISTRADO");
                 const removeUserFromPadelMatch = await deleteUserOfPadelMatch(padelMatchId);
+                joinBtn.disabled = true;
                 successMessage(modal, removeUserFromPadelMatch);
-                // Loader(modal);
+                Loader(modal);
                 // setTimeout(() => PadelMatches(), 2000);
             }
         } catch (error) {

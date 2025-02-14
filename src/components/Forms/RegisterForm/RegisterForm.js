@@ -17,9 +17,9 @@ export const RegisterForm = (form) => {
     ${FieldForm({ inputLabel: "Teléfono", inputType: "number", inputClass: "input-phone", inputPlaceholder: "123456789" })}
     ${FieldForm({ inputLabel: "Imagen de perfil", inputType: "file", inputClass: "input-image" })}
     <button class="btn-register-form" type="submit">Crear Cuenta</button>
-    <button class="btn-back" type="button">Volver</button>
+    <button class="btn-back-register-form" type="button"><img class="img-back-register-form" src="/assets/back.png">Volver<img/></button>
     `;
     showPassword();
     form.addEventListener("submit", registerUser);
-    form.querySelector(".btn-back").addEventListener("click", () => Home());
+    form.querySelector(".btn-back-register-form").addEventListener("click", () => Home());
 };

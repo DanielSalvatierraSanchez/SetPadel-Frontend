@@ -17,14 +17,12 @@ export const loginUser = async (e) => {
     try {
         const form = document.querySelector("form");
         const res = await API({ endpoint: "/users/login", method: "POST", body: user });
-        console.log("res LOGIN USER => ", res);
-
         if (!res || !res.user) {
-            errorMessage(res, form);
+            errorMessage(form, res);
         }
 
         setUserDataInLocalStore(res);
-        successMessage(res, form);
+        successMessage(form, res);
         Loader(form);
         Header();
         setTimeout(() => {

@@ -5,7 +5,7 @@ import { isAuth } from "../../utils/isAuth";
 import { Loader } from "../../components/Loader/Loader";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { dateFormat } from "../../utils/DateFormatted";
-import { modal } from "../../components/ModalPadelMatch/Modal";
+import { modal } from "../../components/Modal/Modal";
 
 export const PadelMatches = async () => {
     const div = createPage("PadelMatches");

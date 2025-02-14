@@ -24,17 +24,16 @@ export const postPadelMatch = async (e) => {
     }
 
     try {
-        const container = document.querySelector("#CreatePadelMatch");
-        const form = document.querySelector(".postPadelMatch-form");
+        // const container = document.querySelector("#CreatePadelMatch");
+        const container = document.querySelector(".postPadelMatch-form");
         const token = localStorage.getItem("token");
 
         isAuth(container);
 
         const res = await API({ endpoint: "/matches/register", method: "POST", isJSON: false, body: formData, token });
-        console.log("res post PM API =>", res);
-
-        Loader(form);
-        successMessage(res, form);
+        !res ? errorMessage(container, res) : successMessage(container, res);
+        Loader(container);
+        //successMessage(form, res);
         setTimeout(() => {
             LoaderOff();
         }, 1000);

@@ -1,34 +1,34 @@
-import { createPage } from '../../functions/CreatePage';
-import { Button } from '../../components/Button/Button';
-import './Logout.css';
-import { Profile } from '../../components/Profile/Profile';
-import { confirmationOfLogout } from '../../utils/ConfirmationOfLogout';
+import { createPage } from "../../functions/CreatePage";
+import { Button } from "../../components/Button/Button";
+import "./Logout.css";
+import { Profile } from "../../components/Profile/Profile";
+import { confirmationToLogout } from "../../utils/ConfirmationToLogout";
 
 export const Logout = () => {
-    const div = createPage('Logout');
+    const div = createPage("Logout");
 
-    const profileContainer = document.createElement('div');
-    profileContainer.classList.add('logout-container');
+    const profileContainer = document.createElement("div");
+    profileContainer.classList.add("logout-container");
     profileContainer.innerHTML = `<h1>Perfíl de Usuario</h1>`;
 
     profileContainer.append(
         Button({
-            text: 'Actualizar Perfíl',
+            text: "Actualizar Perfíl",
             fnc: () => {
-                window.history.pushState('', '', '/profile');
+                window.history.pushState("", "", "/profile");
                 Profile();
             },
-            className: 'btn-update-profile'
+            className: "btn-update-profile"
         }),
         Button({
-            text: 'Cerrar Sesión',
+            text: "Cerrar Sesión",
             fnc: () => {
-                confirmationOfLogout({
+                confirmationToLogout({
                     parentElement: profileContainer,
-                    message: 'cerrar sesión'
+                    message: "cerrar sesión"
                 });
             },
-            className: 'btn-logout'
+            className: "btn-logout"
         })
     );
     div.append(profileContainer);
