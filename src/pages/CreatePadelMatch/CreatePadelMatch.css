@@ -9,7 +9,7 @@
 }
 
 #CreatePadelMatch > h1 {
-    padding: 30px;
+    padding: var(--app-padding-l);
     text-align: center;
     color: var(--app-bgcolor-secondary);
     text-shadow: var(--app-color-letterB) 3px 3px 3px;
@@ -20,5 +20,5 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: var(--app-padding-m);
 }

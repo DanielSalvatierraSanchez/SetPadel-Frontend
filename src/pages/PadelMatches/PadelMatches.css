@@ -9,7 +9,7 @@
 }
 
 #PadelMatches > h1 {
-    padding: 30px;
+    padding: var(--app-padding-l);
     text-align: center;
     color: var(--app-bgcolor-secondary);
     text-shadow: var(--app-color-letterB) 3px 3px 3px;
@@ -20,11 +20,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: var(--app-padding-m);
     width: 90%;
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
-    border-radius: 8px;
+    border-radius: var(--app-border-m);
 }
 
 .padel-match-card {
@@ -32,21 +32,21 @@
     flex-direction: column;
     align-items: center;
     width: 280px;
-    margin: 20px;
-    padding: 20px;
-    gap: 10px;
+    margin: var(--app-margin-m);
+    padding: var(--app-padding-m);
+    gap: var(--app-gap-xs);
     cursor: pointer;
     transition: all 0.5s;
     background-color: var(--app-bgcolor-cards);
-    border-radius: 8px;
-    border: 2px solid var(--app-bgcolor-secondary);
-    box-shadow: 2px 2px var(--app-bgcolor-secondary);
+    border-radius: var(--app-border-m);
+    border: var(--app-border-xxs) solid var(--app-bgcolor-secondary);
+    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-bgcolor-secondary);
 }
 
 .padel-match-card:hover {
     background-color: var(--app-bgcolor-secondary);
-    border: 2px solid var(--app-color-letterB);
-    box-shadow: 2px 2px var(--app-color-letterB);
+    border: var(--app-border-xxs) solid var(--app-color-letterB);
+    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterB);
 }
 
 .disable {
@@ -60,7 +60,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
+    gap: var(--app-gap-xs);
 }
 
 .card-players-img,

@@ -1,5 +1,5 @@
 .success-message {
-    margin-top: 20px;
+    margin-top: var(--app-margin-m);
     color: var(--app-color-messageSuccess);
     font-size: larger;
 }

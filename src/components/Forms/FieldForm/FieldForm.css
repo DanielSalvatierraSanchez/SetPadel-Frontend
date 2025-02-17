@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px;
-    padding: 10px;
-    gap: 5px;
+    border-radius: var(--app-border-m);
+    padding: var(--app-padding-xs);
+    gap: var(--app-gap-xxs);
 }
 
 .field-form > input {
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: var(--app-border-m);
+    padding: var(--app-padding- xs);
     border: none;
 }

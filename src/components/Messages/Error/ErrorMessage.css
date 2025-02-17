@@ -1,5 +1,5 @@
 .error-message {
-    margin-top: 20px;
+    margin-top: var(--app-margin-m);
     color: var(--app-color-messageError);
     font-size: larger;
 }

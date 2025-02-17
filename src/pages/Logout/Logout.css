@@ -7,7 +7,7 @@
     background-position: center;
     background-size: cover;
     min-height: 92svh;
-    gap: 50px;
+    gap: var(--app-gap-xxl);
 }
 
 .logout-container {
@@ -15,11 +15,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 50px;
-    padding: 20px;
+    gap: var(--app-gap-xxl);
+    padding: var(--app-padding-m);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
-    border-radius: 8px;
+    border-radius: var(--app-border-m);
 }
 
 .logout-container > button {
@@ -33,7 +33,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
+    gap: var(--app-gap-xs);
 }
 
 .btn-delete-yes:hover,

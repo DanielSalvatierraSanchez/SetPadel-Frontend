@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    gap: 20px;
+    padding: var(--app-padding-xxl);
+    gap: var(--app-gap-m);
     background-image: url('assets/fondo2.webp');
     background-position: center;
     background-size: cover;

@@ -16,11 +16,11 @@
     flex-direction: column;
     margin: auto;
     height: auto;
-    border: 2px solid var(--app-color-letterB);
+    border: var(--app-border-xxs) solid var(--app-color-letterB);
     background-color: var(--app-bgcolor-modal);
     border-radius: 20px;
-    padding: 20px;
-    gap: 10px;
+    padding: var(--app-padding-m);
+    gap: var(--app-gap-xs);
     place-items: center;
     cursor: default;
 }
@@ -36,16 +36,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    gap: 20px;
+    padding: var(--app-padding-m);
+    gap: var(--app-gap-m);
     line-height: 1.5;
 }
 
 .join-btn {
     display: flex;
     align-items: center;
-    padding: 10px;
-    gap: 10px;
+    padding: var(--app-padding-xs);
+    gap: var(--app-gap-xs);
 }
 
 .join-btn:hover {
@@ -66,7 +66,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: var(--app-gap-xs);
 }
 
 .modal-players-img,

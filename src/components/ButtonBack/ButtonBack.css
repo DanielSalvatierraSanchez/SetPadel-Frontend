@@ -1,18 +1,18 @@
 .btn-back {
     display: flex;
     align-items: center;
-    padding: 10px;
-    gap: 10px;
+    padding: var(--app-padding-xs);
+    gap: var(--app-gap-xs);
     background-color: var(--app-bgcolor-buttonBack);
     color: var(--app-color-letterB);
-    box-shadow: 2px 2px var(--app-color-letterB);
+    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterB);
 }
 
 .btn-back:hover {
     background-color: var(--app-bgcolor-secondary);
     color: var(--app-color-letterB);
-    border: 2px solid var(--app-color-letterW);
-    box-shadow: 2px 2px var(--app-color-letterW);
+    border: var(--app-border-xxs) solid var(--app-color-letterW);
+    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
 }
 
 .back-btn-img {

@@ -3,6 +3,7 @@
 :root {
     /*FONTS*/
     --app-font-family: "Montserrat Alternates";
+    --app-font-family-alternative: "Cambria, Cochin, Georgia, Times, " Times New Roman ", serif";
 
     /*COLORS*/
     --app-color-messageError: #ff0000;
@@ -20,40 +21,40 @@
     --app-bgcolor-buttonBack: #bdbdbd;
 
     /*MARGIN*/
-    --app-margin-xxs: 0.6rem;
-    --app-margin-xs: 1.3rem;
-    --app-margin-s: 1.6rem;
-    --app-margin-m: 2rem;
-    --app-margin-l: 3rem;
-    --app-margin-xl: 4rem;
-    --app-margin-xxl: 5rem;
+    --app-margin-xxs: 5px;
+    --app-margin-xs: 10px;
+    --app-margin-s: 15px;
+    --app-margin-m: 20px;
+    --app-margin-l: 30px;
+    --app-margin-xl: 40px;
+    --app-margin-xxl: 50px;
 
     /*PADDING*/
-    --app-padding-xxs: 0.6rem;
-    --app-padding-xs: 1.3rem;
-    --app-padding-s: 1.6rem;
-    --app-padding-m: 2rem;
-    --app-padding-l: 3rem;
-    --app-padding-xl: 4rem;
-    --app-padding-xxl: 5rem;
+    --app-padding-xxs: 5px;
+    --app-padding-xs: 10px;
+    --app-padding-s: 15px;
+    --app-padding-m: 20px;
+    --app-padding-l: 30px;
+    --app-padding-xl: 40px;
+    --app-padding-xxl: 50px;
 
     /*GAP*/
-    --app-gap-xxs: 0.6rem;
-    --app-gap-xs: 1rem;
-    --app-gap-s: 1.5rem;
-    --app-gap-m: 2rem;
-    --app-gap-l: 3rem;
-    --app-gap-xl: 4rem;
-    --app-gap-xxl: 5rem;
+    --app-gap-xxs: 5px;
+    --app-gap-xs: 10px;
+    --app-gap-s: 15px;
+    --app-gap-m: 20px;
+    --app-gap-l: 25px;
+    --app-gap-xl: 30px;
+    --app-gap-xxl: 50px;
 
     /*BORDER*/
-    --app-border-xxs: 0.3rem;
-    --app-border-xs: 0.6rem;
-    --app-border-s: 1rem;
-    --app-border-m: 1.3rem;
-    --app-border-l: 1.6rem;
-    --app-border-xl: 2rem;
-    --app-border-xxl: 3rem;
+    --app-border-xxs: 2px;
+    --app-border-xs: 3px;
+    --app-border-s: 5px;
+    --app-border-m: 8px;
+    --app-border-l: 10px;
+    --app-border-xl: 50px;
+    --app-border-xxl: 100px;
 }
 
 * {
@@ -62,24 +63,19 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
     font-family: var(--app-font-family);
 }
 
 body {
-    background-image: url("assets/screenLaptop.webp");
-    /* background-color: var(--app-bgcolor-body); */
-    /* min-height: 100%; */
+    background-image: url("assets/screenMobile.webp");
+    background-position: center;
     background-size: cover;
-    /* background-position: center; */
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
-@media (width <= 768px) {
+@media (width >= 768px) {
     body {
-        background-image: url("assets/screenMobile.webp");
-        background-position: center;
-        background-size: cover;
+        background-image: url("assets/screenLaptop.webp");
     }
 }

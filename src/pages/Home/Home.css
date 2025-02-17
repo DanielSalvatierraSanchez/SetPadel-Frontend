@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: var(--app-gap-xxl);
 }
 
 #Home > h1 {
@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: var(--app-gap-m);
     color: var(--app-bgcolor-secondary);
     text-shadow: var(--app-color-letterB) 3px 3px 3px;
 }
