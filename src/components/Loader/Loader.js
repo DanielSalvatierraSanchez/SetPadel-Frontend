@@ -9,7 +9,9 @@ export const Loader = (parentElement) => {
     loader.alt = "pelota de padel";
     loaderContainer.append(loader);
     parentElement.append(loaderContainer);
-    // setTimeout(() => {LoaderOff()}, 1000)
+    setTimeout(() => {
+        LoaderOff();
+    }, 1500);
     return;
 };
 

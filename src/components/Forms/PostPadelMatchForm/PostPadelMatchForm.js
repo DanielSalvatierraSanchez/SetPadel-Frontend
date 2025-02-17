@@ -15,5 +15,8 @@ export const PostPadelMatchForm = (form) => {
     <button class="btn-back-postPadelMatchForm" type="button"><img class="back-btn-img" src="/assets/back.png">Volver<img/></button>
     `;
     form.addEventListener("submit", postPadelMatch);
-    form.querySelector(".btn-back-postPadelMatchForm").addEventListener("click", () => PadelMatches());
+    form.querySelector(".btn-back-postPadelMatchForm").addEventListener("click", () => {
+        window.history.pushState("", "", "/padel_matches");
+        PadelMatches();
+    });
 };

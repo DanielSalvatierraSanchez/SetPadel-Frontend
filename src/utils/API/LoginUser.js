@@ -15,15 +15,15 @@ export const loginUser = async (e) => {
     };
 
     try {
-        const form = document.querySelector("form");
+        const container = document.querySelector("form");
         const res = await API({ endpoint: "/users/login", method: "POST", body: user });
         if (!res || !res.user) {
-            errorMessage(form, res);
+            errorMessage(container, res);
         }
 
         setUserDataInLocalStore(res);
-        successMessage(form, res);
-        Loader(form);
+        successMessage(container, res);
+        Loader(container);
         Header();
         setTimeout(() => {
             window.history.pushState("", "", "/padel_matches");

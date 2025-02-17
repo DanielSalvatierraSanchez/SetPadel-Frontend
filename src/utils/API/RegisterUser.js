@@ -8,7 +8,7 @@ import { API } from "./API";
 
 export const registerUser = async (e) => {
     e.preventDefault();
-    const form = document.querySelector("form");
+    const container = document.querySelector("form");
     const [name, email, password, phone, image] = e.target;
 
     const formData = new FormData();
@@ -25,14 +25,13 @@ export const registerUser = async (e) => {
             body: formData,
             isJSON: false
         });
-
         if (!res.token) {
-            errorMessage(form, res);
+            errorMessage(container, res);
         }
 
         setUserDataInLocalStore(res);
-        successMessage(form, res);
-        Loader(form);
+        successMessage(container, res);
+        Loader(container);
         Header();
         setTimeout(() => {
             window.history.pushState("", "", "/padel_matches");

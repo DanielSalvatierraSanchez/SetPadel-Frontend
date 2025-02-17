@@ -1,4 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+
 :root {
+    /*FONTS*/
+    --app-font-family: "Montserrat Alternates";
+
     /*COLORS*/
     --app-color-messageError: #ff0000;
     --app-color-messageSuccess: #008000;
@@ -57,7 +62,8 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
+    font-family: var(--app-font-family);
 }
 
 body {

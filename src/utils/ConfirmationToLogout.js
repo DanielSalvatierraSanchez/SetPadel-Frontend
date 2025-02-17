@@ -18,7 +18,7 @@ export const confirmationToLogout = ({ parentElement, message }) => {
         Loader(parentElement);
         setTimeout(() => {
             window.history.pushState("", "", "/home");
-            localStorage.clear(); // USO EL CLEAR DESDE EL MAIN.JS
+            localStorage.clear();
             window.location.reload();
         }, 1000);
     });

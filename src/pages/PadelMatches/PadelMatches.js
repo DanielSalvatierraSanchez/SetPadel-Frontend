@@ -35,8 +35,10 @@ export const PadelMatches = async () => {
             const padelMatchCard = document.createElement("div");
             padelMatchCard.classList.add("padel-match-card");
             padelMatchCard.innerHTML = `
-            <p><strong>Fecha:</strong> ${dateFormatted}</p>
-            <p><strong>Asistentes:</strong> ${padelMatch.players.length === 4 ? "PARTIDO COMPLETO" : padelMatch.players.length / 1}</p>
+            <p class="card-date"><img class="card-date-img" src="/assets/calendario.png"><strong>Fecha:</strong> ${dateFormatted}</p>
+            <p class="card-players"><img class="card-players-img" src="/assets/users.png"><strong>Asistentes:</strong> ${
+                padelMatch.players.length === 4 ? "PARTIDO COMPLETO" : padelMatch.players.length / 1
+            }</p>
             `;
 
             padelMatchContainer.append(padelMatchCard);

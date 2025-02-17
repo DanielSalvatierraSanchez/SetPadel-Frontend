@@ -34,6 +34,8 @@
 
 .modal-description-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     gap: 20px;
     line-height: 1.5;
@@ -51,9 +53,27 @@
     transform: scale(1.07);
 }
 
-.completed-btn-img, .removed-btn-img, .joined-btn-img {
+.completed-btn-img,
+.removed-btn-img,
+.joined-btn-img {
     width: 35px;
     height: 35px;
+}
+
+.modal-players,
+.modal-date,
+.modal-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-players-img,
+.modal-date-img,
+.modal-location-img {
+    width: 25px;
+    height: 25px;
 }
 
 .modal-players-list {
@@ -61,6 +81,7 @@
     justify-content: center;
     align-items: center;
     width: 150px;
+    line-height: 15px;
 }
 
 .close-btn {

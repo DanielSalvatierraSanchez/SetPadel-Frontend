@@ -13,8 +13,7 @@ export const joinPadelMatch = async (padelMatchId) => {
 
     try {
         const res = await API({ endpoint: `/matches/join/${padelMatchId}`, method: "PUT", token });
-        // !res ? errorMessage(container, res) : successMessage(container, res);
-        successMessage(container, res);
+        !res ? errorMessage(container, res) : successMessage(container, res);
 
         // Loader(container);
         setTimeout(() => {

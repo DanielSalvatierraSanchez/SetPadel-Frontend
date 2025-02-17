@@ -3,6 +3,7 @@ import { FieldForm } from "../FieldForm/FieldForm";
 import { registerUser } from "../../../utils/API/RegisterUser";
 import { showPassword } from "../../../utils/showPassword";
 import { Home } from "../../../pages/Home/Home";
+import { buttonBack } from "../../ButtonBack/ButtonBack";
 
 export const RegisterForm = (form) => {
     form.className = "register-form";
@@ -21,5 +22,8 @@ export const RegisterForm = (form) => {
     `;
     showPassword();
     form.addEventListener("submit", registerUser);
-    form.querySelector(".btn-back-register-form").addEventListener("click", () => Home());
+    form.querySelector(".btn-back-register-form").addEventListener("click", () => {
+        window.history.pushState("", "", "/home");
+        Home();
+    });
 };

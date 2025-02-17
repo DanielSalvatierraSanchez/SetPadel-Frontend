@@ -19,7 +19,7 @@ export const deleteUser = async () => {
         Loader(container);
         setTimeout(() => {
             window.history.pushState("", "", "/home");
-            localStorage.clear(); // USO EL CLEAR DESDE EL MAIN.JS
+            localStorage.clear();
             window.location.reload();
         }, 2000);
         return res;

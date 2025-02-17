@@ -1,8 +1,9 @@
+import "./Logout.css";
 import { createPage } from "../../functions/CreatePage";
 import { Button } from "../../components/Button/Button";
-import "./Logout.css";
 import { Profile } from "../../components/Profile/Profile";
 import { confirmationToLogout } from "../../utils/ConfirmationToLogout";
+import { buttonBack } from "../../components/ButtonBack/ButtonBack";
 
 export const Logout = () => {
     const div = createPage("Logout");
@@ -31,6 +32,7 @@ export const Logout = () => {
             className: "btn-logout"
         })
     );
+    buttonBack(profileContainer);
     div.append(profileContainer);
     return div;
 };

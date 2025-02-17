@@ -18,5 +18,8 @@ export const LoginForm = (form) => {
         `;
     showPassword();
     form.addEventListener("submit", loginUser);
-    form.querySelector(".btn-back-login").addEventListener("click", () => Home());
+    form.querySelector(".btn-back-login").addEventListener("click", () => {
+        window.history.pushState("", "", "/home");
+        Home();
+    });
 };
