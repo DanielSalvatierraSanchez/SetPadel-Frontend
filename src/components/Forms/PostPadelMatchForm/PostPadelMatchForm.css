@@ -1,11 +1,35 @@
 .postPadelMatch-form {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     border-radius: 8px;
     padding: 20px;
     gap: 10px;
-    background-color: #d6d6d6dd;
-    color: var(--app-color-letterTwo);
+    background-color: var(--app-bgcolor-body);
+    color: var(--app-color-letterB);
+}
+
+.btn-back-postPadelMatchForm {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-back-postPadelMatchForm {
+    background-color: var(--app-bgcolor-buttonBack);
+    color: var(--app-color-letterB);
+    box-shadow: 2px 2px var(--app-color-letterB);
+}
+
+.btn-back-postPadelMatchForm:hover {
+    background-color: var(--app-bgcolor-secondary);
+    color: var(--app-color-letterB);
+    border: 2px solid var(--app-color-letterW);
+    box-shadow: 2px 2px var(--app-color-letterW);
+}
+
+.back-btn-img {
+    width: 25px;
+    height: 25px;
 }

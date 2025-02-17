@@ -10,9 +10,10 @@ export const joinPadelMatch = async (padelMatchId) => {
     const token = localStorage.getItem("token");
 
     isAuth(container);
+
     try {
         const res = await API({ endpoint: `/matches/join/${padelMatchId}`, method: "PUT", token });
-        // !res ? errorMessage(container, res) : 
+        // !res ? errorMessage(container, res) : successMessage(container, res);
         successMessage(container, res);
 
         // Loader(container);

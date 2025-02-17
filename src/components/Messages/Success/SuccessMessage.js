@@ -1,7 +1,6 @@
 import "./SuccessMessage.css";
 
 export const successMessage = (parentElement, response) => {
-    // const form = document.querySelector("form");
     if (parentElement) {
         let removeError = parentElement.querySelector(".success-message");
         if (removeError) {
@@ -11,10 +10,6 @@ export const successMessage = (parentElement, response) => {
         const successMessage = document.createElement("p");
         successMessage.classList.add("success-message");
         successMessage.textContent = response.message;
-
-        // const p = document.createElement("p");
-        // p.textContent = "CARGANDO PARTIDOS...";
-        // parentElement.append(successMessage, p);
         parentElement.append(successMessage);
         return;
     }

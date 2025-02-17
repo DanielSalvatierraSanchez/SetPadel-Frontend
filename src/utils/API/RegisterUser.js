@@ -17,7 +17,6 @@ export const registerUser = async (e) => {
     formData.append("password", password.value.trim());
     formData.append("phone", phone.value.trim());
     formData.append("image", image?.files[0]);
-    // checkRegisterParams(phone, form, "El teléfono debe de tener 9 dígitos.");
 
     try {
         const res = await API({

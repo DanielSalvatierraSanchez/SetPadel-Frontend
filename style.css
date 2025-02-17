@@ -1,15 +1,54 @@
 :root {
+    /*COLORS*/
+    --app-color-messageError: #ff0000;
+    --app-color-messageSuccess: #008000;
+    --app-color-letterW: #ffffff;
+    --app-color-letterB: #000000;
+
     --app-bgcolor-primary: #4c93c1;
     --app-bgcolor-secondary: #fff976;
     --app-bgcolor-tertiary: #86fb88;
-    --app-bgcolor-body: #d6d6d6;
+    --app-bgcolor-body: #d6d6d6dd;
+    --app-bgcolor-cards: #75bcffaa;
+    --app-bgcolor-modal: #dddddd;
     --app-bgcolor-button: #ffffff;
     --app-bgcolor-buttonBack: #bdbdbd;
 
-    --app-color-message: #ff0000;
-    --app-color-messageOk: #008000;
-    --app-color-letterOne: #ffffff;
-    --app-color-letterTwo: #000000;
+    /*MARGIN*/
+    --app-margin-xxs: 0.6rem;
+    --app-margin-xs: 1.3rem;
+    --app-margin-s: 1.6rem;
+    --app-margin-m: 2rem;
+    --app-margin-l: 3rem;
+    --app-margin-xl: 4rem;
+    --app-margin-xxl: 5rem;
+
+    /*PADDING*/
+    --app-padding-xxs: 0.6rem;
+    --app-padding-xs: 1.3rem;
+    --app-padding-s: 1.6rem;
+    --app-padding-m: 2rem;
+    --app-padding-l: 3rem;
+    --app-padding-xl: 4rem;
+    --app-padding-xxl: 5rem;
+
+    /*GAP*/
+    --app-gap-xxs: 0.6rem;
+    --app-gap-xs: 1rem;
+    --app-gap-s: 1.5rem;
+    --app-gap-m: 2rem;
+    --app-gap-l: 3rem;
+    --app-gap-xl: 4rem;
+    --app-gap-xxl: 5rem;
+
+    /*BORDER*/
+    --app-border-xxs: 0.3rem;
+    --app-border-xs: 0.6rem;
+    --app-border-s: 1rem;
+    --app-border-m: 1.3rem;
+    --app-border-l: 1.6rem;
+    --app-border-xl: 2rem;
+    --app-border-xxl: 3rem;
 }
 
 * {

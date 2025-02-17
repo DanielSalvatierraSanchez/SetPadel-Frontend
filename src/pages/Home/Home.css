@@ -1,8 +1,6 @@
 #Home {
     min-height: 92svh;
-    /* background-image: url("/assets/screenLaptop.png"); */
     background-size: cover;
-    /* background-color: var(--app-bgcolor-secondary); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +19,7 @@
     align-items: center;
     gap: 20px;
     color: var(--app-bgcolor-secondary);
-    text-shadow: var(--app-color-letterTwo) 3px 3px 3px;
+    text-shadow: var(--app-color-letterB) 3px 3px 3px;
 }
 
 .home-container > h2 {
@@ -41,8 +39,8 @@
 
 @media (width <= 768px) {
     .home-container {
-        color: var(--app-color-letterOne);
-        text-shadow: var(--app-color-letterTwo) 3px 3px 3px;
+        color: var(--app-color-letterW);
+        text-shadow: var(--app-color-letterB) 3px 3px 3px;
     }
 
     .btn-home-login,

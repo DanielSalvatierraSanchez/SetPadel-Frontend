@@ -1,6 +1,5 @@
 .success-message {
     margin-top: 20px;
-    color: var(--app-color-messageOk);
+    color: var(--app-color-messageSuccess);
     font-size: larger;
 }
-/* remove > p */

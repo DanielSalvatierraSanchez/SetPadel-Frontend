@@ -6,9 +6,8 @@
     border-radius: 8px;
     padding: 30px;
     gap: 10px;
-    /* background-color: var(--app-bgcolor-tertiary); */
-    background-color: #d6d6d6dd;
-    color: var(--app-color-letterTwo);
+    background-color: var(--app-bgcolor-body);
+    color: var(--app-color-letterB);
     border-radius: 8px;
 }
 
@@ -19,7 +18,7 @@
 
 .profile-form > p {
     margin-top: 20px;
-    color: var(--app-color-messageOk);
+    color: var(--app-color-messageSuccess);
 }
 
 .div-password {
@@ -49,7 +48,7 @@
 }
 
 .btn-delete-profile:hover {
-    background-color: var(--app-color-message);
+    background-color: var(--app-color-messageError);
 }
 
 .btn-update-profile,
@@ -58,8 +57,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* margin: 10px; */
-    /* padding: 10px; */
     gap: 10px;
 }
 

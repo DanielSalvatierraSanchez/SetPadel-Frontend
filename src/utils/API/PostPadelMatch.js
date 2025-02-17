@@ -1,4 +1,4 @@
-import { Loader, LoaderOff } from "../../components/Loader/Loader";
+import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
@@ -24,7 +24,6 @@ export const postPadelMatch = async (e) => {
     }
 
     try {
-        // const container = document.querySelector("#CreatePadelMatch");
         const container = document.querySelector(".postPadelMatch-form");
         const token = localStorage.getItem("token");
 
@@ -32,11 +31,8 @@ export const postPadelMatch = async (e) => {
 
         const res = await API({ endpoint: "/matches/register", method: "POST", isJSON: false, body: formData, token });
         !res ? errorMessage(container, res) : successMessage(container, res);
+
         Loader(container);
-        //successMessage(form, res);
-        setTimeout(() => {
-            LoaderOff();
-        }, 1000);
         setTimeout(() => {
             window.history.pushState("", "", "/padel_matches");
             PadelMatches();

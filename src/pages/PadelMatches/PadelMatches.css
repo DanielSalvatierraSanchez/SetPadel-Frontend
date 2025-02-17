@@ -2,21 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: var(--app-bgcolor-primary); */
     background-image: url("assets/partidoMadrid.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;
-    /* min-height: 100%; */
 }
 
 #PadelMatches > h1 {
     padding: 30px;
     text-align: center;
-    /* color: var(--app-color-letterTwo);
-    text-shadow: var(--app-color-letterOne) 3px 3px 3px; */
     color: var(--app-bgcolor-secondary);
-    text-shadow: var(--app-color-letterTwo) 3px 3px 3px;
+    text-shadow: var(--app-color-letterB) 3px 3px 3px;
 }
 
 .padel-match-container {
@@ -24,19 +20,16 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid var(--app-color-letterTwo); */
-    /* margin: 20px; */
     padding: 20px;
     width: 90%;
-    background-color: #d6d6d6dd;
-    color: var(--app-color-letterTwo);
+    background-color: var(--app-bgcolor-body);
+    color: var(--app-color-letterB);
     border-radius: 8px;
 }
 
 .padel-match-card {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     width: 280px;
     margin: 20px;
@@ -44,21 +37,20 @@
     gap: 10px;
     cursor: pointer;
     transition: all 0.5s;
+    background-color: var(--app-bgcolor-cards);
     border-radius: 8px;
     border: 2px solid var(--app-bgcolor-secondary);
     box-shadow: 2px 2px var(--app-bgcolor-secondary);
 }
 
 .padel-match-card:hover {
-    /* transform: scale(1.03);
-    transition: all 0.5s; */
     background-color: var(--app-bgcolor-secondary);
-    border: 2px solid var(--app-color-letterTwo);
-    box-shadow: 2px 2px var(--app-color-letterTwo);
+    border: 2px solid var(--app-color-letterB);
+    box-shadow: 2px 2px var(--app-color-letterB);
 }
 
 .disable {
     cursor: not-allowed;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: never;
 }

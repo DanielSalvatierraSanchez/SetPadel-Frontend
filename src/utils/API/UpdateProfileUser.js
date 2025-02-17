@@ -25,7 +25,6 @@ export const updateProfileUser = async (e) => {
     }
 
     try {
-        // const container = document.querySelector("#Profile"); // uso el form seleccionado mas arriba
         const user = JSON.parse(localStorage.getItem("user"));
         const userId = user._id;
         const token = localStorage.getItem("token");
@@ -44,7 +43,7 @@ export const updateProfileUser = async (e) => {
         Loader(container);
         setTimeout(() => {
             Profile();
-        }, 20000000);
+        }, 2000);
     } catch (error) {
         console.log("Error en el UPDATE del usuario desde el front: ", error.message);
     }

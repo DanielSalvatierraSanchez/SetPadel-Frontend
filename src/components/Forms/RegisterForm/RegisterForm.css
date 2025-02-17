@@ -4,11 +4,8 @@
     align-items: center;
     border-radius: 8px;
     padding: 20px;
-    /* gap: 10px; */
-    /* background-color: var(--app-bgcolor-primary);
-    color: var(--app-color-letterOne); */
-    background-color: #d6d6d6dd;
-    color: var(--app-color-letterTwo);
+    background-color: var(--app-bgcolor-body);
+    color: var(--app-color-letterB);
 }
 
 .div-password {
@@ -36,22 +33,20 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* margin: 10px; */
-    /* padding: 10px; */
     gap: 10px;
 }
 
 .btn-back-register-form {
     background-color: var(--app-bgcolor-buttonBack);
-    color: var(--app-color-letterTwo);
-    box-shadow: 2px 2px var(--app-color-letterTwo);
+    color: var(--app-color-letterB);
+    box-shadow: 2px 2px var(--app-color-letterB);
 }
 
 .btn-back-register-form:hover {
     background-color: var(--app-bgcolor-secondary);
-    color: var(--app-color-letterTwo);
-    border: 2px solid var(--app-color-letterOne);
-    box-shadow: 2px 2px var(--app-color-letterOne);
+    color: var(--app-color-letterB);
+    border: 2px solid var(--app-color-letterW);
+    box-shadow: 2px 2px var(--app-color-letterW);
 }
 
 .img-back-register-form {

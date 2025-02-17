@@ -8,8 +8,8 @@ export const RegisterForm = (form) => {
     form.className = "register-form";
     form.innerHTML = `
     <h2>Registro de Usuarios</h2>
-    ${FieldForm({ inputLabel: "Nombre de Usuario", inputType: "text", inputClass: "input-name", inputPlaceholder: "Nombre de Usuario" })}
-    ${FieldForm({ inputLabel: "Email", inputType: "email", inputClass: "input-email", inputPlaceholder: "email@email.email" })}
+    ${FieldForm({ inputLabel: "Nombre de Usuario", inputType: "text", inputClass: "input-name", inputPlaceholder: "Nombre de usuario" })}
+    ${FieldForm({ inputLabel: "Email", inputType: "email", inputClass: "input-email", inputPlaceholder: "user@appadel.es" })}
     <div class="div-password">
         ${FieldForm({ inputLabel: "Contraseña", inputType: "password", inputClass: "input-password", inputPlaceholder: "********" })}
         <i class="bx bx-show"></i>

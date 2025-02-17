@@ -3,8 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--app-bgcolor-primary); */
-    background-image: url('assets/fondo2BN.webp');
+    background-image: url("assets/fondo2BN.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;
@@ -17,12 +16,9 @@
     justify-content: space-evenly;
     align-items: center;
     gap: 50px;
-    /* border: 2px solid var(--app-color-letterTwo); */
-    /* margin: 20px; */
     padding: 20px;
-    /* width: 75%; */
-    background-color: #d6d6d6dd;
-    color: var(--app-color-letterTwo);
+    background-color: var(--app-bgcolor-body);
+    color: var(--app-color-letterB);
     border-radius: 8px;
 }
 
@@ -30,20 +26,25 @@
     width: 175px;
 }
 
-.btn-delete-yes, .btn-delete-no, .btn-logout-yes, .btn-logout-no {
+.btn-delete-yes,
+.btn-delete-no,
+.btn-logout-yes,
+.btn-logout-no {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* margin: 10px; */
-    /* padding: 10px; */
     gap: 10px;
 }
 
-.btn-delete-yes:hover, .btn-logout-yes:hover {
-    background-color: var(--app-color-message);
+.btn-delete-yes:hover,
+.btn-logout-yes:hover {
+    background-color: var(--app-color-messageError);
 }
 
-.img-delete-yes, .img-delete-no, .img-logout-yes, .img-logout-no {
+.img-delete-yes,
+.img-delete-no,
+.img-logout-yes,
+.img-logout-no {
     width: 25px;
     height: 25px;
 }

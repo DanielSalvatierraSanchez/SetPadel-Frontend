@@ -1,12 +1,9 @@
 #Register {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 30px;
-    /* gap: 10px; */
-    /* background-color: var(--app-bgcolor-tertiary); */
-    background-image: url('assets/fondo1.webp');
+    background-image: url("assets/fondo1.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;

@@ -6,7 +6,6 @@ import "./Home.css";
 
 export const Home = () => {
     const div = createPage("Home");
-
     const homeContainer = document.createElement("div");
     homeContainer.classList.add("home-container");
     homeContainer.innerHTML = `
@@ -14,7 +13,6 @@ export const Home = () => {
     <br/>
     <h2>La App donde podrás gestionar tus partidos de padel.</h2>
     `;
-    // <h3>La APP de gestión de partidos de padel, donde podrás crear y encontrar partidos donde poder apuntarte a ellos.</h3>
 
     div.append(
         homeContainer,

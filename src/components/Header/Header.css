@@ -16,7 +16,7 @@ ul {
 }
 
 a {
-    color: var(--app-color-letterTwo);
+    color: var(--app-color-letterB);
     font-weight: 900;
     font-size: large;
     list-style: none;

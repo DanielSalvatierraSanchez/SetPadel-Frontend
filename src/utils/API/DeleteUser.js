@@ -11,12 +11,10 @@ export const deleteUser = async () => {
     const userId = user._id;
 
     isAuth(container);
+    
     try {
         const res = await API({ endpoint: `/users/delete/${userId}`, method: "DELETE", token });
         !res ? errorMessage(container, res) : successMessage(container, res);
-        // if (res.status !== 200) {
-        //     errorMessage(container, res);
-        // }
 
         Loader(container);
         setTimeout(() => {
