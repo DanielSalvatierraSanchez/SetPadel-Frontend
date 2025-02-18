@@ -3,15 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: var(--app-border-m);
     padding: var(--app-padding-m);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
+    width: 250px;
+    max-width: 200px;
+    max-height: 550px;
+    border-radius: var(--app-border-m);
     font-size: small;
-}
-
-i {
-    margin-top: 5px;
 }
 
 .btn-access-login,
