@@ -9,6 +9,6 @@
 
 .field-form > input {
     border-radius: var(--app-border-m);
-    padding: var(--app-padding- xs);
+    padding: var(--app-padding-xxs);
     border: none;
 }

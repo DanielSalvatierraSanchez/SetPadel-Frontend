@@ -1,32 +1,17 @@
 .login-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     border-radius: var(--app-border-m);
     padding: var(--app-padding-m);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
+    font-size: small;
 }
 
-.div-password {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(5px);
-}
-
-.bx {
-    width: 15px;
-    height: 15px;
-    transform: translate(-35px, 60%);
-    cursor: pointer;
-}
-
-.bx-show .bx-show {
-    width: 15px;
-    height: 15px;
-    transform: translate(-35px, 60%);
-    cursor: pointer;
+i {
+    margin-top: 5px;
 }
 
 .btn-access-login,
@@ -34,13 +19,15 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: var(--app-gap-xs);
+    width: 120px;
+    height: 40px;
 }
 
 .btn-back-login {
     background-color: var(--app-bgcolor-buttonBack);
     color: var(--app-color-letterB);
     box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterB);
+    /* gap: var(--app-gap-xxs); */
 }
 
 .btn-back-login:hover {
@@ -48,10 +35,4 @@
     color: var(--app-color-letterB);
     border: var(--app-border-xxs) solid var(--app-color-letterW);
     box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
-}
-
-.access-btn-img,
-.back-btn-img {
-    width: 25px;
-    height: 25px;
 }

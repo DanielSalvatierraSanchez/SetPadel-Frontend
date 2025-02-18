@@ -2,4 +2,5 @@
     margin-top: var(--app-margin-m);
     color: var(--app-color-messageSuccess);
     font-size: larger;
+    text-align: center;
 }

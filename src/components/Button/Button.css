@@ -5,7 +5,6 @@ button {
     border: var(--app-border-xxs) solid var(--app-color-letterB);
     box-shadow: var(--app-border-xxs) var(--app-border-xxs);
     background-color: var(--app-bgcolor-button);
-    font-size: 18px;
     cursor: pointer;
     transition: all 0.5s;
 }

@@ -2,44 +2,42 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: var(--app-border-m);
-    padding: var(--app-padding-m);
+
+    padding: var(--app-padding-xs);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
+    max-width: 250px;
+    max-height: 500px;
+    border-radius: var(--app-border-m);
+    font-size: x-small;
 }
 
-.div-password {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(5px);
+.field-form {
+    padding: var(--app-padding-xs);
 }
 
-.bx {
-    width: 15px;
-    height: 15px;
-    transform: translate(-35px, 75%);
-    cursor: pointer;
+input {
+    height: 22px;
 }
 
-.bx-show .bx-show {
-    width: 15px;
-    height: 15px;
-    transform: translate(-35px, 75%);
-    cursor: pointer;
+.input-image {
+    width: 140px;
 }
 
+.btn-register-form,
 .btn-back-register-form {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: var(--app-gap-xs);
+    width: 130px;
+    height: 40px;
 }
 
 .btn-back-register-form {
     background-color: var(--app-bgcolor-buttonBack);
     color: var(--app-color-letterB);
     box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterB);
+    gap: var(--app-gap-xxs);
 }
 
 .btn-back-register-form:hover {
