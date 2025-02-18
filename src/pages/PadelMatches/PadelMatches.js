@@ -37,7 +37,7 @@ export const PadelMatches = async () => {
             padelMatchCard.innerHTML = `
             <p class="card-date"><img class="card-date-img" src="/assets/calendario.png"><strong>Fecha:</strong> ${dateFormatted}</p>
             <p class="card-players"><img class="card-players-img" src="/assets/users.png"><strong>Asistentes:</strong> ${
-                padelMatch.players.length === 4 ? "PARTIDO COMPLETO" : padelMatch.players.length / 1
+                padelMatch.players.length === 4 ? "COMPLETO" : padelMatch.players.length / 1
             }</p>
             `;
 
