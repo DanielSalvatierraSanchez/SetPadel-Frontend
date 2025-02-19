@@ -1,9 +1,9 @@
 #Profile {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: var(--app-padding-xxl);
+    padding: var(--app-padding-l);
     gap: var(--app-gap-m);
     background-image: url('assets/fondo2.webp');
     background-position: center;

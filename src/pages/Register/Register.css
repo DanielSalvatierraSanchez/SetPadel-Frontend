@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--app-padding-xl);
+    padding: var(--app-padding-m);
     background-image: url("assets/fondo1.webp");
     background-position: center;
     background-size: cover;

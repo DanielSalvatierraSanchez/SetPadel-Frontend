@@ -3,11 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0px 10px 10px 10px;
     background-image: url("assets/partidoMadrid.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;
-    padding: 0px 10px 10px 10px;
 }
 
 #PadelMatches > h1 {
@@ -24,12 +24,6 @@
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
     border-radius: var(--app-border-m);
-    /*
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    flex-wrap: wrap;
-    */
 }
 
 .padel-match-card {

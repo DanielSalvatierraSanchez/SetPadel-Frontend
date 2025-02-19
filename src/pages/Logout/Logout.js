@@ -7,7 +7,6 @@ import { buttonBack } from "../../components/ButtonBack/ButtonBack";
 
 export const Logout = () => {
     const div = createPage("Logout");
-
     const profileContainer = document.createElement("div");
     profileContainer.classList.add("logout-container");
     profileContainer.innerHTML = `<h1>Perfíl de Usuario</h1>`;

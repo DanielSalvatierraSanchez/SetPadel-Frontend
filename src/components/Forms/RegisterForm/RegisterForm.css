@@ -1,40 +1,42 @@
 .register-form {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    padding: var(--app-padding-xxs);
+    padding: var(--app-padding-s);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
-    width: 250px;
-    max-width: 200px;
+    width: 270px;
+    max-width: 270px;
     max-height: 600px;
     border-radius: var(--app-border-m);
+    text-align: center;
     font-size: x-small;
 }
 
-.field-form {
+/* .field-form {
     padding: var(--app-padding-xs);
-}
+} */
 
-input {
+/* input {
     width: 150px;
     height: 15px;
     font-size: x-small;
-}
+} */
 
-.input-image {
+/* .input-image {
     width: 140px;
-}
+} */
 
 .btn-register-form,
 .btn-back-register-form {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 30px;
-    padding: var(--app-padding-xs);
-    font-size: x-small;
+    width: 120px;
+    height: 35px;
+    padding: var(--app-padding-xxs);
+    /* font-size: small; */
 }
 
 .btn-back-register-form {

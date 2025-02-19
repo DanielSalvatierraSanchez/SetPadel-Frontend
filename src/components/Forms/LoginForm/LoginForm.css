@@ -26,7 +26,6 @@
     background-color: var(--app-bgcolor-buttonBack);
     color: var(--app-color-letterB);
     box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterB);
-    /* gap: var(--app-gap-xxs); */
 }
 
 .btn-back-login:hover {

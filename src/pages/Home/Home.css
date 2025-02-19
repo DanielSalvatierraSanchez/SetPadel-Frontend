@@ -1,11 +1,11 @@
 #Home {
-    min-height: 92svh;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 92svh;
     gap: var(--app-gap-xxl);
+    background-size: cover;
 }
 
 #Home > h1 {
@@ -17,8 +17,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     gap: var(--app-gap-m);
+    text-align: center;
 }
 
 .home-container > h1,
