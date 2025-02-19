@@ -30,24 +30,8 @@ h3 {
 }
 
 @media (width >= 425px) {
-    .home-container > h1,
-    h3 {
-        min-width: 350px;
+    .home-container > h3 {
+        max-width: 350px;
         line-height: 1.5;
-    }
-}
-
-@media (width >= 560px) {
-    .home-container > h1,
-    h3 {
-        min-width: 500px;
-        line-height: 1.5;
-    }
-}
-
-@media (width >= 700px) {
-    .home-container > h1,
-    h3 {
-        min-width: 600px;
     }
 }

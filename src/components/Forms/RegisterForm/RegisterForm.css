@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: var(--app-padding-s);
+    padding: var(--app-padding-xs);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
     width: 270px;
@@ -27,6 +27,38 @@
 /* .input-image {
     width: 140px;
 } */
+
+.div-input-file {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: var(--app-margin-xs);
+    width: 120px;
+    height: 30px;
+    border: var(--app-border-xxs) solid var(--app-color-letterB);
+    background-color: var(--app-bgcolor-button);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.div-input-file:hover {
+    transform: scale(1.05);
+    transition: all 1s;
+    background-color: var(--app-bgcolor-body);
+}
+
+.input-file {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.btn-register-form {
+    margin-top: var(--app-margin-s);
+}
 
 .btn-register-form,
 .btn-back-register-form {

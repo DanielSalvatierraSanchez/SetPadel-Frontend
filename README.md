@@ -14,10 +14,6 @@ DONE _ Todos los procesos asíncronos le muestran un loading de alguna manera al
 DONE _ Mucho cariño a la componentización, no se repite código en ningún momento.
 DONE _ Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
-Continuar con medias a aprtir de 400px aprox
-
--   modificar input file en el register
--   logout probar iconos en los buttons
--   probar disabled button como en el ConfirmDeleteUser
+Continuar con medias 768
 
     ULTIMO PASO!!! ACTIVAR localStorage.clear() EN EL MAIN.js

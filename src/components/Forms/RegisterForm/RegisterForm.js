@@ -16,11 +16,18 @@ export const RegisterForm = (form) => {
         <i class="bx bx-show"></i>
     </div>
     ${FieldForm({ inputLabel: "Teléfono", inputType: "number", inputClass: "input-phone", inputPlaceholder: "123456789" })}
-    ${FieldForm({ inputLabel: "Imagen de perfil", inputType: "file", inputClass: "input-image" })}
+    ${FieldForm({ divClass: "div-input-file", inputClass: "input-file", inputLabel: "Añadir imagen...", inputType: "file" })}
+    <h4 class="name-file"></h4>
     <button class="btn-register-form" type="submit">Crear Cuenta</button>
     <button class="btn-back-register-form" type="button"><img class="img-back-register-form" src="/assets/back.png">Volver<img/></button>
     `;
+
     showPassword();
+
+    let nameFile = form.querySelector(".input-file");
+    nameFile.addEventListener("change", () => {
+        form.querySelector(".name-file").innerText = nameFile.files[0].name;
+    });
     form.addEventListener("submit", registerUser);
     form.querySelector(".btn-back-register-form").addEventListener("click", () => {
         window.history.pushState("", "", "/home");
