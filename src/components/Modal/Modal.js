@@ -31,7 +31,7 @@ export const modal = (parentElement, data, user) => {
                 </button>
                 <p class="modal-players" data-type="assistants"><img class="modal-players-img" src="/assets/users.png"><strong>Asistentes ${
                     data.players.length
-                }/4:</strong></p>
+                } / 4 :</strong></p>
                 <p class="modal-players-list" data-type="assistants">${playersList}</p>
                 <img class="close-btn" src="./assets/close.png"></img>
                 </div>

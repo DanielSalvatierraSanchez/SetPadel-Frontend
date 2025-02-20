@@ -1,4 +1,3 @@
-import { Loader } from "../Loader/Loader";
 import { successMessage } from "../Messages/Success/SuccessMessage";
 import { deleteUserOfPadelMatch } from "../../utils/API/DeleteUserOfPadelMatch";
 import { joinPadelMatch } from "../../utils/API/JoinPadelMatch";

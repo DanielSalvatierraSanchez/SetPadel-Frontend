@@ -1,8 +1,9 @@
 #Home {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-top: 25%;
     min-height: 92svh;
     gap: var(--app-gap-xxl);
     background-size: cover;
@@ -15,7 +16,7 @@
 .home-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: var(--app-gap-m);
     text-align: center;
@@ -27,6 +28,10 @@ h3 {
     line-height: 1.5;
     color: var(--app-bgcolor-secondary);
     text-shadow: var(--app-color-letterB) 2px 2px 2px;
+}
+
+.button {
+    font-size: medium;
 }
 
 @media (width >= 425px) {

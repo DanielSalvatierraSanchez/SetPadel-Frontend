@@ -1,7 +1,7 @@
 import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
-import { Profile } from "../../components/Profile/Profile";
+import { Logout } from "../../pages/Logout/Logout";
 import { isAuth } from "../isAuth";
 import { updateUserDataInLocalStorage } from "../SetUserData";
 import { API } from "./API";
@@ -36,13 +36,13 @@ export const updateProfileUser = async (e) => {
 
         const updateData = {};
         if (name.value.trim()) updateData.name = name.value.trim();
-        if (image?.files[0]) updateData.image = user.image; // Asumiendo que el servidor devuelve la URL de la imagen
+        if (image?.files[0]) updateData.image = user.image;
 
         updateUserDataInLocalStorage(updateData);
 
         Loader(container);
         setTimeout(() => {
-            Profile();
+            Logout();
         }, 1500);
     } catch (error) {
         console.log("Error en el UPDATE del usuario desde el front: ", error.message);

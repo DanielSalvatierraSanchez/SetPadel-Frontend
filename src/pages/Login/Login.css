@@ -1,12 +1,11 @@
 #Login {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: var(--app-padding-xl);
-    /* gap: var(--app-gap-m); */
+    padding: var(--app-padding-m);
     background-image: url("assets/fondo2.webp");
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     min-height: 92svh;
 }

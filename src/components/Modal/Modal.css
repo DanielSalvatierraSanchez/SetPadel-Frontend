@@ -1,11 +1,11 @@
 .modal {
     display: flex;
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 1;
     z-index: 999;
 }
@@ -13,26 +13,26 @@
 .modal-container {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    max-height: 500px;
-    padding: var(--app-padding-xxs);
-    gap: var(--app-gap-xs);
+    width: 300px;
+    /* max-height: 500px; */
+    padding: var(--app-padding-s);
+    gap: var(--app-gap-s);
     background-color: var(--app-bgcolor-modal);
     border: var(--app-border-xxs) solid var(--app-color-letterB);
     border-radius: 20px;
     place-items: center;
     cursor: default;
+    font-size: small;
 }
 
 .modal-title {
-    padding: var(--app-padding-xxs);
-    font-size: small;
+    font-size: large;
 }
 
 .modal-img {
     display: flex;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -41,8 +41,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--app-padding-xxs);
-    gap: var(--app-gap-xxs);
+    padding: var(--app-padding-xs);
+    gap: var(--app-gap-xs);
     line-height: 20px;
 }
 
@@ -50,7 +50,6 @@
 .modal-location,
 .modal-players {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: var(--app-gap-xs);
     line-height: 25px;
@@ -59,15 +58,15 @@
 .modal-date-img,
 .modal-location-img,
 .modal-players-img {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
 }
 
 .join-btn {
     display: flex;
     align-items: center;
-    padding: var(--app-padding-xs);
-    gap: var(--app-gap-s);
+    padding: var(--app-padding-s);
+    gap: var(--app-gap-xs);
 }
 
 .join-btn:hover {
@@ -85,9 +84,9 @@
 .modal-players-list {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 200px;
+    width: 245px;
     line-height: 10px;
+    text-align: center;
 }
 
 .close-btn {

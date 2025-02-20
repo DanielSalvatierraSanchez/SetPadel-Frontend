@@ -3,13 +3,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 30%;
     padding: var(--app-padding-m);
+    gap: var(--app-gap-s);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
-    width: 250px;
-    max-width: 200px;
+    width: 275px;
+    max-width: 275px;
     max-height: 550px;
     border-radius: var(--app-border-m);
+    font-size: large;
+}
+
+.input-email,
+.input-password {
+    width: 200px;
+    height: 30px;
     font-size: small;
 }
 
@@ -18,8 +27,9 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 120px;
-    height: 40px;
+    width: 150px;
+    height: 50px;
+    font-size: medium;
 }
 
 .btn-back-login {
@@ -33,4 +43,9 @@
     color: var(--app-color-letterB);
     border: var(--app-border-xxs) solid var(--app-color-letterW);
     box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
+}
+
+.back-btn-img {
+    width: 25px;
+    height: 25px;
 }
