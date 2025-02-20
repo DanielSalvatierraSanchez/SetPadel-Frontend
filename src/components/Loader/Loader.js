@@ -11,7 +11,7 @@ export const Loader = (parentElement) => {
     parentElement.append(loaderContainer);
     setTimeout(() => {
         LoaderOff();
-    }, 1500);
+    }, 2000);
     return;
 };
 

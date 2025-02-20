@@ -1,7 +1,8 @@
-import { Logout } from "../pages/Logout/Logout";
-import { deleteUser } from "./API/DeleteUser";
+import "./UserDelete.css"
+import { Logout } from "../../pages/Logout/Logout";
+import { deleteUser } from "../../utils/API/DeleteUser";
 
-export const confirmationToDeleteUser = ({ parentElement, message }) => {
+export const UserDelete = ({ parentElement, message }) => {
     parentElement.innerHTML = `
             <h2>¿Seguro que quieres ${message}?</h2>
             <button class='btn-delete-yes'><img class="img-delete-yes" src="/assets/yes.png">Sí<img/></button>
@@ -17,4 +18,4 @@ export const confirmationToDeleteUser = ({ parentElement, message }) => {
     no.addEventListener("click", () => {
         Logout();
     });
-};
+}

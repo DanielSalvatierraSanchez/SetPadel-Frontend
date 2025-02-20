@@ -3,7 +3,7 @@ import { FieldForm } from "../FieldForm/FieldForm";
 import { updateProfileUser } from "../../../utils/API/UpdateProfileUser";
 import { showPassword } from "../../../utils/showPassword";
 import { Logout } from "../../../pages/Logout/Logout";
-import { confirmationToDeleteUser } from "../../../utils/ConfirmationToDeleteUser";
+import { UserDelete } from "../../UserDelete/UserDelete";
 
 export const ProfileForm = (form) => {
     form.className = "profile-form";
@@ -51,11 +51,12 @@ export const ProfileForm = (form) => {
         form.querySelector(".name-file").innerText = nameFile.files[0].name;
     });
     form.addEventListener("submit", updateProfileUser);
-    form.querySelector(".btn-delete-profile").addEventListener("click", () =>
-        confirmationToDeleteUser({
-            parentElement: form,
-            message: "eliminar tu cuenta"
-        })
-    );
+    form.querySelector(".btn-delete-profile").addEventListener("click", () => {
+        form.classList.add("confirm-delete-user"),
+            UserDelete({
+                parentElement: form,
+                message: "eliminar tu cuenta"
+            });
+    });
     form.querySelector(".btn-back-profile").addEventListener("click", () => Logout());
 };

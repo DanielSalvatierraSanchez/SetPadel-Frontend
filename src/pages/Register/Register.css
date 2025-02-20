@@ -1,7 +1,7 @@
 #Register {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: var(--app-padding-m);
     background-image: url("assets/fondo1.webp");

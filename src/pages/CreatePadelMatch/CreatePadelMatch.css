@@ -1,9 +1,9 @@
 #CreatePadelMatch {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0px 10px 10px 10px;
+    padding: var(--app-padding-s);
     background-image: url("assets/pista.webp");
     background-position: center;
     background-size: cover;
@@ -11,16 +11,16 @@
 }
 
 #CreatePadelMatch > h1 {
-    padding: var(--app-padding-xs);
-    text-align: center;
+    margin: var(--app-padding-xs);
     color: var(--app-bgcolor-secondary);
+    text-align: center;
     text-shadow: var(--app-color-letterB) 3px 3px 3px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
-.create-padel-match-container {
+/* .create-padel-match-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: var(--app-padding-s);
-}
+} */

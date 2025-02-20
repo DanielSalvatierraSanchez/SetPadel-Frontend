@@ -2,15 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--app-padding-s);
-    padding-top: var(--app-padding-xs);
+    padding: var(--app-padding-m);
+    /* padding-top: var(--app-padding-xs); */
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
-    width: 250px;
-    max-width: 250px;
-    max-height: 460px;
+    width: 300px;
+    max-width: 300px;
+    max-height: 600px;
     border-radius: var(--app-border-m);
-    font-size: x-small;
+    text-align: center;
+    font-size: small;
 }
 
 .field-form,
@@ -19,13 +20,13 @@
 }
 
 div > input {
-    width: 150px;
-    height: 20px;
-    font-size: x-small;
+    width: 200px;
+    height: 25px;
+    font-size: small;
 }
 
 .input-select {
-    font-size: x-small;
+    font-size: small;
 }
 
 .div-input-file {
@@ -34,8 +35,8 @@ div > input {
     align-items: center;
     position: relative;
     margin: var(--app-margin-xs);
-    width: 120px;
-    height: 30px;
+    width: 180px;
+    height: 40px;
     border: var(--app-border-xxs) solid var(--app-color-letterB);
     background-color: var(--app-bgcolor-button);
     cursor: pointer;
@@ -51,6 +52,8 @@ div > input {
 .input-file {
     display: flex;
     position: absolute;
+    width: 100%;
+    height: 100%;
     opacity: 0;
 }
 
@@ -65,8 +68,8 @@ div > input {
     align-items: center;
     width: 120px;
     height: 35px;
-    padding: var(--app-padding-xs);
-    font-size: small;
+    padding: var(--app-padding-xxs);
+    /* font-size: small; */
 }
 
 .btn-back-postPadelMatchForm {

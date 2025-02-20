@@ -2,8 +2,8 @@ import "./Logout.css";
 import { createPage } from "../../functions/CreatePage";
 import { Button } from "../../components/Button/Button";
 import { Profile } from "../../components/Profile/Profile";
-import { confirmationToLogout } from "../../utils/ConfirmationToLogout";
 import { buttonBack } from "../../components/ButtonBack/ButtonBack";
+import { UserLogout } from "../../components/UserLogout/UserLogout";
 
 export const Logout = () => {
     const div = createPage("Logout");
@@ -23,7 +23,7 @@ export const Logout = () => {
         Button({
             text: "Cerrar Sesión",
             fnc: () => {
-                confirmationToLogout({
+                UserLogout({
                     parentElement: profileContainer,
                     message: "cerrar sesión"
                 });

@@ -1,0 +1,18 @@
+.btn-logout-yes,
+.btn-logout-no {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+}
+
+.btn-logout-yes:hover {
+    background-color: var(--app-color-messageError);
+}
+
+.img-logout-yes,
+.img-logout-no {
+    width: 25px;
+    height: 25px;
+}

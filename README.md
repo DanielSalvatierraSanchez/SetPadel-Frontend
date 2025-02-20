@@ -14,9 +14,8 @@ DONE _ Todos los procesos asíncronos le muestran un loading de alguna manera al
 DONE _ Mucho cariño a la componentización, no se repite código en ningún momento.
 DONE _ Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
+continuar con deleteuser
 Continuar con iphone 12 pro registerform
 Hacer menu burger
-
-
 
     ULTIMO PASO!!! ACTIVAR localStorage.clear() EN EL MAIN.js
