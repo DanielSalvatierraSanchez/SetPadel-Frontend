@@ -16,9 +16,9 @@ export const joinPadelMatch = async (padelMatchId) => {
         !res ? errorMessage(container, res) : successMessage(container, res);
 
         // Loader(container);
-        setTimeout(() => {
-            PadelMatches();
-        }, 2000);
+        // setTimeout(() => {
+        //     PadelMatches();
+        // }, 2000);
         return res;
     } catch (error) {
         console.log("Error en el JOIN de los partidos desde el front: ", error.message);

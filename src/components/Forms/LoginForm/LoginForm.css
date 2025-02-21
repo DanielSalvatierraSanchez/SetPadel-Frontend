@@ -3,7 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: var(--app-padding-s);
     gap: var(--app-gap-xs);
     background-color: var(--app-bgcolor-body);
@@ -49,4 +52,34 @@
 .back-btn-img {
     width: 25px;
     height: 25px;
+}
+
+@media (width >= 768px) {
+    .login-form {
+        padding: var(--app-padding-l);
+        gap: var(--app-gap-m);
+        width: 400px;
+        max-width: 450px;
+        max-height: 550px;
+        font-size: x-large;
+    }
+
+    .input-email,
+    .input-password {
+        width: 250px;
+        height: 50px;
+        font-size: large;
+    }
+
+    .btn-access-login,
+    .btn-back-login {
+        width: 190px;
+        height: 70px;
+        font-size: x-large;
+    }
+
+    .back-btn-img {
+        width: 40px;
+        height: 40px;
+    }
 }

@@ -16,3 +16,18 @@
     width: 25px;
     height: 25px;
 }
+
+@media (width >= 768px) {
+    .btn-logout-yes,
+    .btn-logout-no {
+        width: 250px;
+        height: 90px;
+        font-size: x-large;
+    }
+
+    .img-logout-yes,
+    .img-logout-no {
+        width: 40px;
+        height: 40px;
+    }
+}

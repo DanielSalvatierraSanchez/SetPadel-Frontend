@@ -108,9 +108,9 @@
     }
 
     .padel-match-card {
-        width: 300px;
-        height: 90px;
-        font-size: medium;
+        width: 330px;
+        height: 100px;
+        font-size: large;
         margin: var(--app-margin-xs);
         gap: var(--app-gap-s);
     }

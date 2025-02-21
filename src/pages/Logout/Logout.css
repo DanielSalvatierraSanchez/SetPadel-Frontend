@@ -15,7 +15,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: var(--app-padding-m);
     gap: var(--app-gap-m);
     background-color: var(--app-bgcolor-body);
@@ -43,4 +46,31 @@
     align-items: center;
     width: 150px;
     height: 50px;
+}
+
+@media (width >= 768px) {
+    .logout-container {
+        padding: var(--app-padding-xl);
+        gap: var(--app-gap-m);
+        width: 400px;
+        max-width: 450px;
+        max-height: 550px;
+        font-size: x-large;
+    }
+
+    .logout-container > h1 {
+        font-size: xx-large;
+    }
+
+    .btn-update-profile,
+    .btn-logout {
+        width: 250px;
+        height: 70px;
+    }
+
+    .btn-back {
+        width: 190px;
+        height: 70px;
+        font-size: x-large;
+    }
 }

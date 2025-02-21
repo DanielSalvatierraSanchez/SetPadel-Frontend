@@ -17,3 +17,9 @@
     text-shadow: var(--app-color-letterB) 3px 3px 3px;
     font-size: 25px;
 }
+
+@media (width >= 768px) {
+    #CreatePadelMatch > h1 {
+        font-size: xx-large;
+    }
+}

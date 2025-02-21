@@ -3,6 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: var(--app-padding-m);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
@@ -129,5 +133,55 @@
     .img-back-register-form {
         width: 25px;
         height: 25px;
+    }
+}
+
+@media (width >= 768px) {
+    .register-form {
+        padding: var(--app-padding-m);
+        width: 450px;
+        max-width: 500px;
+        max-height: 800px;
+        font-size: x-large;
+    }
+
+    .div-input-file {
+        width: 250px;
+        height: 60px;
+    }
+
+    .div-password {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(5px);
+    }
+
+    .bx .box-show {
+        width: 15px;
+        height: 15px;
+        transform: translate(-55px, 75%);
+        cursor: pointer;
+    }
+
+    .input-name,
+    .input-email,
+    .input-password,
+    .input-phone {
+        width: 300px;
+        height: 40px;
+        font-size: large;
+    }
+
+    .btn-register-form,
+    .btn-back-register-form {
+        width: 220px;
+        height: 70px;
+        font-size: x-large;
+    }
+
+    .img-back-register-form {
+        width: 40px;
+        height: 40px;
     }
 }

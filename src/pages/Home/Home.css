@@ -39,3 +39,15 @@ h3 {
         line-height: 1.5;
     }
 }
+
+@media (width >= 768px) {
+    #Home {
+        font-size: x-large;
+    }
+    .button {
+        font-size: x-large;
+    }
+    .btn-home-login, .btn-home-register {
+        padding: var(--app-padding-m);
+    }
+}

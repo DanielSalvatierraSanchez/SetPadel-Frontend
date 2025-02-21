@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40%;
     padding: var(--app-padding-m);
     gap: var(--app-gap-m);
     background-color: var(--app-bgcolor-body);
@@ -32,4 +31,25 @@
 .img-delete-no {
     width: 25px;
     height: 25px;
+}
+@media (width >= 768px) {
+    .confirm-delete-user {
+        padding: var(--app-padding-xl);
+        gap: var(--app-gap-l);
+        width: 400px;
+        max-width: 450px;
+        max-height: 550px;
+        font-size: x-large;
+    }
+    .profile-form > button {
+        width: 250px;
+        height: 90px;
+        font-size: x-large;
+    }
+
+    .img-delete-yes,
+.img-delete-no {
+    width: 40px;
+    height: 40px;
+}
 }

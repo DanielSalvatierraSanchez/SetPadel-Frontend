@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: var(--app-padding-s);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
@@ -60,15 +64,46 @@
     }
 
     .btn-update-profile,
-.btn-delete-profile,
-.btn-back-profile {
-    font-size: medium;
-}
+    .btn-delete-profile,
+    .btn-back-profile {
+        font-size: medium;
+    }
 
     .update-btn-img,
     .delete-btn-img,
     .back-btn-img {
         width: 25px;
         height: 25px;
+    }
+}
+@media (width >= 768px) {
+    .profile-form {
+        padding: var(--app-padding-m);
+        width: 550px;
+        max-width: 600px;
+        max-height: 840px;
+        font-size: x-large;
+    }
+
+    .div-btn-update-profile {
+        padding: var(--app-padding-m);
+    }
+
+    .div-btn-update-profile > button {
+        width: 220px;
+        height: 70px;
+    }
+
+    .btn-update-profile,
+    .btn-delete-profile,
+    .btn-back-profile {
+        font-size: x-large;
+    }
+
+    .update-btn-img,
+    .delete-btn-img,
+    .back-btn-img {
+        width: 40px;
+        height: 40px;
     }
 }
