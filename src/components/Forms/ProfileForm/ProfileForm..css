@@ -2,58 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--app-padding-l);
+    padding: var(--app-padding-s);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
-    width: 300px;
-    max-width: 300px;
+    width: 275px;
+    max-width: 275px;
     max-height: 630px;
     border-radius: var(--app-border-m);
     text-align: center;
     font-size: medium;
-}
-
-.div-password {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(5px);
-}
-
-.bx {
-    width: 15px;
-    height: 15px;
-    transform: translate(-35px, 75%);
-    cursor: pointer;
-}
-
-.div-input-file {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: var(--app-margin-xs);
-    width: 180px;
-    height: 40px;
-    border: var(--app-border-xxs) solid var(--app-color-letterB);
-    background-color: var(--app-bgcolor-button);
-    cursor: pointer;
-    transition: all 0.5s;
-}
-
-.div-input-file:hover {
-    transform: scale(1.05);
-    transition: all 1s;
-    background-color: var(--app-bgcolor-body);
-}
-
-.input-file {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
 }
 
 .div-btn-update-profile {
@@ -65,14 +22,16 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 130px;
+    width: 120px;
     height: 50px;
 }
 
 .btn-update-profile,
-.btn-delete-profile {
+.btn-delete-profile,
+.btn-back-profile {
     justify-content: space-evenly;
     padding: var(--app-padding-xxs);
+    font-size: small;
 }
 
 .btn-delete-profile:hover {
@@ -84,4 +43,32 @@
 .back-btn-img {
     width: 20px;
     height: 20px;
+}
+
+@media (width >= 425px) {
+    .profile-form {
+        padding: var(--app-padding-xs);
+        width: 355px;
+        max-width: 350px;
+        max-height: 670px;
+        font-size: medium;
+    }
+
+    .div-btn-update-profile > button {
+        width: 150px;
+        height: 45px;
+    }
+
+    .btn-update-profile,
+.btn-delete-profile,
+.btn-back-profile {
+    font-size: medium;
+}
+
+    .update-btn-img,
+    .delete-btn-img,
+    .back-btn-img {
+        width: 25px;
+        height: 25px;
+    }
 }

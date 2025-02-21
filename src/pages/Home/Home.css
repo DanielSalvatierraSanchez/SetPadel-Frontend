@@ -1,9 +1,8 @@
 #Home {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    margin-top: 25%;
     min-height: 92svh;
     gap: var(--app-gap-xxl);
     background-size: cover;

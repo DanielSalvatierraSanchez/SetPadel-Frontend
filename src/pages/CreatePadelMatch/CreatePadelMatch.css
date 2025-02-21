@@ -11,16 +11,9 @@
 }
 
 #CreatePadelMatch > h1 {
-    margin: var(--app-padding-xs);
+    margin: var(--app-padding-s);
     color: var(--app-bgcolor-secondary);
     text-align: center;
     text-shadow: var(--app-color-letterB) 3px 3px 3px;
     font-size: 25px;
 }
-
-/* .create-padel-match-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--app-padding-s);
-} */

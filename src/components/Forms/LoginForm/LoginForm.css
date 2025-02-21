@@ -4,8 +4,8 @@
     justify-content: center;
     align-items: center;
     margin-top: 40%;
-    padding: var(--app-padding-m);
-    gap: var(--app-gap-s);
+    padding: var(--app-padding-s);
+    gap: var(--app-gap-xs);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
     width: 275px;

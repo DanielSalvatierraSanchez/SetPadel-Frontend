@@ -3,16 +3,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: 10%; */
     padding: var(--app-padding-m);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
-    width: 300px;
-    max-width: 300px;
+    width: 275px;
+    max-width: 275px;
     max-height: 600px;
     border-radius: var(--app-border-m);
     text-align: center;
     font-size: small;
+}
+
+.div-password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(5px);
+}
+
+.bx {
+    width: 15px;
+    height: 15px;
+    transform: translate(-35px, 75%);
+    cursor: pointer;
 }
 
 .div-input-file {
@@ -35,7 +48,10 @@
     background-color: var(--app-bgcolor-body);
 }
 
-.input-name, .input-email, .input-password, .input-phone {
+.input-name,
+.input-email,
+.input-password,
+.input-phone {
     width: 200px;
     height: 25px;
     font-size: small;
@@ -61,7 +77,6 @@
     width: 120px;
     height: 35px;
     padding: var(--app-padding-xxs);
-    /* font-size: small; */
 }
 
 .btn-back-register-form {
@@ -81,4 +96,38 @@
 .img-back-register-form {
     width: 20px;
     height: 20px;
+}
+
+@media (width >= 425px) {
+    .register-form {
+        padding: var(--app-padding-s);
+        width: 325px;
+        max-width: 325px;
+        max-height: 600px;
+        font-size: medium;
+    }
+
+    .div-input-file {
+        height: 50px;
+    }
+
+    .input-name,
+    .input-email,
+    .input-password,
+    .input-phone {
+        width: 220px;
+        height: 30px;
+    }
+
+    .btn-register-form,
+    .btn-back-register-form {
+        width: 150px;
+        height: 45px;
+        font-size: medium;
+    }
+
+    .img-back-register-form {
+        width: 25px;
+        height: 25px;
+    }
 }

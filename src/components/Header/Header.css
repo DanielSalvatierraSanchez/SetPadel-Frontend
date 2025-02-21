@@ -24,12 +24,18 @@ a {
 
 @media (width >= 425px) {
     a {
-        font-size: x-small;
+        font-size: small;
+    }
+}
+
+@media (width >= 650px) {
+    a {
+        font-size: medium;
     }
 }
 
 @media (width >= 768px) {
     a {
-        font-size: medium;
+        font-size: large;
     }
 }

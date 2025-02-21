@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 15%;
     left: 50%;
+    width: 90%;
     transform: translateX(-50%);
     opacity: 1;
     z-index: 999;
@@ -13,8 +14,7 @@
 .modal-container {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    /* max-height: 500px; */
+    max-width: 275px;
     padding: var(--app-padding-s);
     gap: var(--app-gap-s);
     background-color: var(--app-bgcolor-modal);
@@ -101,3 +101,59 @@
 .close-btn:hover {
     transform: scale(1.1);
 }
+
+@media (width >= 425px) {
+    .modal-container {
+        width: 330px;
+        max-width: 450px;
+        padding: var(--app-padding-xxs);
+        gap: var(--app-gap-xs);
+        font-size: medium;
+    }
+
+    .modal-title {
+        font-size: x-large;
+    }
+
+    .modal-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .modal-date,
+    .modal-location,
+    .modal-players {
+        gap: var(--app-gap-xs);
+    }
+
+    .modal-date-img,
+    .modal-location-img,
+    .modal-players-img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .join-btn {
+        padding: var(--app-padding-s);
+        gap: var(--app-gap-xs);
+        font-size: medium;
+    }
+
+    .completed-btn-img,
+    .removed-btn-img,
+    .joined-btn-img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .close-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* @media (width >= 650px) {
+}
+
+@media (width >= 768px) {
+} */

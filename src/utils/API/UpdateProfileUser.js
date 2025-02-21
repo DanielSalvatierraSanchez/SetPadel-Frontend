@@ -43,7 +43,7 @@ export const updateProfileUser = async (e) => {
         Loader(container);
         setTimeout(() => {
             Logout();
-        }, 1500);
+        }, 2000);
     } catch (error) {
         console.log("Error en el UPDATE del usuario desde el front: ", error.message);
     }
