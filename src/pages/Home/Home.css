@@ -44,10 +44,13 @@ h3 {
     #Home {
         font-size: x-large;
     }
+
     .button {
-        font-size: x-large;
+        font-size: large;
     }
-    .btn-home-login, .btn-home-register {
-        padding: var(--app-padding-m);
+
+    .btn-home-login,
+    .btn-home-register {
+        padding: var(--app-padding-s);
     }
 }

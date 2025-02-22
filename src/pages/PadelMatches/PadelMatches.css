@@ -104,19 +104,24 @@
 @media (width >= 768px) {
     #PadelMatches > h1 {
         padding: var(--app-padding-s);
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .padel-match-card {
-        width: 330px;
-        height: 100px;
-        font-size: large;
-        margin: var(--app-margin-xs);
+        width: 290px;
+        height: 90px;
         gap: var(--app-gap-s);
+        font-size: medium;
     }
 
     .card-players,
     .card-date {
         gap: var(--app-gap-s);
+    }
+
+    .card-players-img,
+    .card-date-img {
+        width: 25px;
+        height: 25px;
     }
 }

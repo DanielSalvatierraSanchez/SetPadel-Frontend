@@ -19,7 +19,7 @@
     text-align: center;
 }
 
-.input-email,
+.input-email-login,
 .input-password {
     width: 200px;
     height: 30px;
@@ -49,7 +49,7 @@
     box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
 }
 
-.back-btn-img {
+.img-btn-back-login {
     width: 25px;
     height: 25px;
 }
@@ -58,28 +58,27 @@
     .login-form {
         padding: var(--app-padding-l);
         gap: var(--app-gap-m);
-        width: 400px;
-        max-width: 450px;
+        width: 275px;
+        max-width: 275px;
         max-height: 550px;
-        font-size: x-large;
     }
 
-    .input-email,
+    /* .input-email-login,
     .input-password {
         width: 250px;
         height: 50px;
         font-size: large;
-    }
+    } */
 
     .btn-access-login,
     .btn-back-login {
-        width: 190px;
-        height: 70px;
-        font-size: x-large;
+        width: 150px;
+        height: 55px;
+        font-size: large;
     }
 
-    .back-btn-img {
-        width: 40px;
-        height: 40px;
+    .img-btn-back-login {
+        width: 35px;
+        height: 35px;
     }
 }

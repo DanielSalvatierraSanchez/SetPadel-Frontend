@@ -30,12 +30,16 @@
     text-align: center;
 }
 
-.logout-container > h1 {
-    font-size: x-large;
+.title-logout {
+    margin: var(--app-padding-s);
+    color: var(--app-bgcolor-secondary);
+    text-align: center;
+    text-shadow: var(--app-color-letterB) 3px 3px 3px;
+    font-size: 25px;
 }
 
-.btn-update-profile,
-.btn-logout {
+.btn-update-profile-logout,
+.btn-logout-logout {
     width: 175px;
     height: 60px;
 }
@@ -46,6 +50,7 @@
     align-items: center;
     width: 150px;
     height: 50px;
+    /* font-size: medium; */
 }
 
 @media (width >= 768px) {
@@ -58,19 +63,24 @@
         font-size: x-large;
     }
 
-    .logout-container > h1 {
+    .title-logout {
         font-size: xx-large;
     }
 
-    .btn-update-profile,
-    .btn-logout {
+    .btn-update-profile-logout,
+    .btn-logout-logout {
         width: 250px;
-        height: 70px;
+        height: 60px;
     }
 
     .btn-back {
-        width: 190px;
-        height: 70px;
-        font-size: x-large;
+        width: 150px;
+        height: 55px;
+        font-size: large;
+    }
+    
+    .img-btn-back {
+        width: 35px;
+        height: 35px;
     }
 }

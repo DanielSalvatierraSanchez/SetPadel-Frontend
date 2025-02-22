@@ -18,21 +18,29 @@
     font-size: small;
 }
 
-.div-password {
+.data-container-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-container {
     display: flex;
     justify-content: center;
     align-items: center;
     transform: translateX(5px);
 }
 
-.bx {
+i {
+    font-size: large;
     width: 15px;
     height: 15px;
-    transform: translate(-35px, 75%);
+    transform: translate(-45px, 75%);
     cursor: pointer;
 }
 
-.div-input-file {
+.input-file-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,19 +54,10 @@
     transition: all 0.5s;
 }
 
-.div-input-file:hover {
+.input-file-container:hover {
     transform: scale(1.05);
     transition: all 1s;
     background-color: var(--app-bgcolor-body);
-}
-
-.input-name,
-.input-email,
-.input-password,
-.input-phone {
-    width: 200px;
-    height: 25px;
-    font-size: small;
 }
 
 .input-file {
@@ -69,12 +68,25 @@
     opacity: 0;
 }
 
-.btn-register-form {
-    margin-top: var(--app-margin-s);
+.input-name-register,
+.input-email-register,
+.input-password,
+.input-phone-register {
+    width: 200px;
+    height: 25px;
+    font-size: small;
 }
 
-.btn-register-form,
-.btn-back-register-form {
+.button-container-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--app-padding-xs);
+    gap: var(--app-gap-s);
+}
+
+.btn-create-register,
+.btn-back-register {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -83,21 +95,21 @@
     padding: var(--app-padding-xxs);
 }
 
-.btn-back-register-form {
+.btn-back-register {
     background-color: var(--app-bgcolor-buttonBack);
     color: var(--app-color-letterB);
     box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterB);
     gap: var(--app-gap-xxs);
 }
 
-.btn-back-register-form:hover {
+.btn-back-register:hover {
     background-color: var(--app-bgcolor-secondary);
     color: var(--app-color-letterB);
     border: var(--app-border-xxs) solid var(--app-color-letterW);
     box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
 }
 
-.img-back-register-form {
+.img-btn-back-register {
     width: 20px;
     height: 20px;
 }
@@ -107,30 +119,26 @@
         padding: var(--app-padding-s);
         width: 325px;
         max-width: 325px;
-        max-height: 600px;
+        max-height: 800px;
         font-size: medium;
     }
 
-    .div-input-file {
-        height: 50px;
-    }
-
-    .input-name,
-    .input-email,
+    .input-name-register,
+    .input-email-register,
     .input-password,
-    .input-phone {
+    .input-phone-register {
         width: 220px;
         height: 30px;
     }
 
-    .btn-register-form,
-    .btn-back-register-form {
+    .btn-create-register,
+    .btn-back-register {
         width: 150px;
         height: 45px;
         font-size: medium;
     }
 
-    .img-back-register-form {
+    .img-back-register {
         width: 25px;
         height: 25px;
     }
@@ -138,50 +146,30 @@
 
 @media (width >= 768px) {
     .register-form {
-        padding: var(--app-padding-m);
-        width: 450px;
-        max-width: 500px;
+        padding: var(--app-padding-xs);
+        width: 400px;
+        max-width: 450px;
         max-height: 800px;
-        font-size: x-large;
+        font-size: medium;
     }
 
-    .div-input-file {
-        width: 250px;
-        height: 60px;
-    }
-
-    .div-password {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(5px);
-    }
-
-    .bx .box-show {
-        width: 15px;
-        height: 15px;
-        transform: translate(-55px, 75%);
-        cursor: pointer;
-    }
-
-    .input-name,
-    .input-email,
+    .input-name-register,
+    .input-email-register,
     .input-password,
-    .input-phone {
-        width: 300px;
-        height: 40px;
+    .input-phone-register {
+        width: 220px;
+        height: 30px;
+    }
+
+    .btn-create-register,
+    .btn-back-register {
+        width: 150px;
+        height: 55px;
         font-size: large;
     }
 
-    .btn-register-form,
-    .btn-back-register-form {
-        width: 220px;
-        height: 70px;
-        font-size: x-large;
-    }
-
-    .img-back-register-form {
-        width: 40px;
-        height: 40px;
+    .img-btn-back-register {
+        width: 35px;
+        height: 35px;
     }
 }

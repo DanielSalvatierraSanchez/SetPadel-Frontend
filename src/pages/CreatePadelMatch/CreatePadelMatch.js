@@ -6,7 +6,6 @@ import { getToken, isAuth } from "../../utils/isAuth";
 
 export const CreatePadelMatch = async () => {
     const div = createPage("CreatePadelMatch");
-    div.innerHTML = `<h1>Crea un Partido de Padel</h1>`;
 
     getToken();
     const createPadelMatchContainer = document.createElement("div");

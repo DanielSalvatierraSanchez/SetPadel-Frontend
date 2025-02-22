@@ -6,23 +6,35 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: var(--app-padding-s);
+    padding: var(--app-padding-m);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
     width: 275px;
     max-width: 275px;
-    max-height: 630px;
+    max-height: 600px;
     border-radius: var(--app-border-m);
     text-align: center;
     font-size: medium;
 }
 
-.div-btn-update-profile {
+.title-profile {
+    margin: var(--app-padding-s);
+    font-size: 25px;
+}
+
+.data-container-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container-profile {
     display: flex;
     padding: var(--app-padding-s);
 }
 
-.div-btn-update-profile > button {
+.button-container-profile > button {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -33,20 +45,42 @@
 .btn-update-profile,
 .btn-delete-profile,
 .btn-back-profile {
-    justify-content: space-evenly;
+    /* justify-content: space-evenly;
     padding: var(--app-padding-xxs);
-    font-size: small;
+    font-size: small; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 120px;
+    height: 35px;
+    padding: var(--app-padding-xxs);
 }
 
 .btn-delete-profile:hover {
     background-color: var(--app-color-messageError);
 }
 
-.update-btn-img,
-.delete-btn-img,
-.back-btn-img {
+.btn-back-profile {
+    background-color: var(--app-bgcolor-buttonBack);
+    color: var(--app-color-letterB);
+    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterB);
+}
+
+.btn-back-profile:hover {
+    color: var(--app-color-letterB);
+    border: var(--app-border-xxs) solid var(--app-color-letterW);
+    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
+}
+
+.img-btn-update-profile,
+.img-btn-delete-profile {
     width: 20px;
     height: 20px;
+}
+
+.img-btn-back-profile {
+    width: 25px;
+    height: 25px;
 }
 
 @media (width >= 425px) {
@@ -58,7 +92,7 @@
         font-size: medium;
     }
 
-    .div-btn-update-profile > button {
+    .button-container-profile > button {
         width: 150px;
         height: 45px;
     }
@@ -69,41 +103,52 @@
         font-size: medium;
     }
 
-    .update-btn-img,
-    .delete-btn-img,
-    .back-btn-img {
+    .img-btn-update-profile,
+    .img-btn-delete-profile,
+    .img-btn-back-profile {
         width: 25px;
         height: 25px;
     }
 }
+
 @media (width >= 768px) {
     .profile-form {
-        padding: var(--app-padding-m);
-        width: 550px;
-        max-width: 600px;
-        max-height: 840px;
-        font-size: x-large;
+        padding: var(--app-padding-xs);
+        width: 400px;
+        max-width: 450px;
+        max-height: 800px;
+        font-size: medium;
     }
 
-    .div-btn-update-profile {
-        padding: var(--app-padding-m);
-    }
+    /* .button-container-profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: var(--app-padding-xs);
+        gap: var(--app-gap-s);
+        width: 150px;
+        height: 55px;
+    } */
 
-    .div-btn-update-profile > button {
-        width: 220px;
-        height: 70px;
-    }
+    /* .btn-update-profile,
+    .btn-delete-profile {
+        width: 150px;
+        height: 55px;
+    } */
 
-    .btn-update-profile,
-    .btn-delete-profile,
     .btn-back-profile {
-        font-size: x-large;
+        width: 150px;
+        height: 55px;
     }
 
-    .update-btn-img,
-    .delete-btn-img,
-    .back-btn-img {
-        width: 40px;
-        height: 40px;
+    .img-btn-update-profile,
+    .img-btn-delete-profile {
+        width: 25px;
+        height: 25px;
+    }
+
+    .img-btn-back-profile {
+        width: 30px;
+        height: 30px;
     }
 }

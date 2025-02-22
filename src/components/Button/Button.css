@@ -16,15 +16,3 @@ button:hover {
     box-shadow: var(--app-border-xxs) var(--app-border-xxs);
     transform: scale(1.07);
 }
-
-.btn-back-profile {
-    background-color: var(--app-bgcolor-buttonBack);
-    color: var(--app-color-letterB);
-    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterB);
-}
-
-.btn-back-profile:hover {
-    color: var(--app-color-letterB);
-    border: var(--app-border-xxs) solid var(--app-color-letterW);
-    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
-}

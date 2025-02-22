@@ -11,23 +11,27 @@
     background-color: var(--app-color-messageError);
 }
 
-.img-logout-yes,
-.img-logout-no {
+.img-btn-logout-yes,
+.img-btn-logout-no {
     width: 25px;
     height: 25px;
 }
 
 @media (width >= 768px) {
-    .btn-logout-yes,
-    .btn-logout-no {
-        width: 250px;
-        height: 90px;
+    .logout-container > h2 {
         font-size: x-large;
     }
 
-    .img-logout-yes,
-    .img-logout-no {
-        width: 40px;
-        height: 40px;
+    .btn-logout-yes,
+    .btn-logout-no {
+        width: 150px;
+        height: 70px;
+        font-size: large;
+    }
+
+    .img-btn-logout-yes,
+    .img-btn-logout-no {
+        width: 30px;
+        height: 30px;
     }
 }

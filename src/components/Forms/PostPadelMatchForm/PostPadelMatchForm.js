@@ -6,14 +6,19 @@ import "./PostPadelMatchForm.css";
 export const PostPadelMatchForm = (form) => {
     form.className = "postPadelMatch-form";
     form.innerHTML = `
-    ${FieldForm({ inputLabel: "Título", inputType: "text", inputPlaceholder: "Título" })}
-    ${FieldForm({ inputLabel: "Ubicación", inputType: "text", inputPlaceholder: "Ubicación" })}
-    ${FieldForm({ inputLabel: "Fecha y Hora", inputType: "datetime-local", inputPlaceholder: "DD / MM / YYYY - HH : MM" })}
-    ${FieldSelect({ inputLabel: "Tipo de pista", inputClass: "input-select", inputOption1: "Indoor", inputOption2: "Outdoor" })}
-    ${FieldForm({ divClass: "div-input-file", inputClass: "input-file", inputLabel: "Añadir imagen...", inputType: "file" })}
+    <h2 class="title-postPadelMatchForm">Crea un Partido de Padel</h2>
+    <div class="data-container-postPadelMatchForm">
+    ${FieldForm({ inputLabel: "Título", inputClass: "input-title-postPadelMatchForm", inputType: "text", inputPlaceholder: "Título" })}
+    ${FieldForm({ inputLabel: "Ubicación", inputClass: "input-location-postPadelMatchForm", inputType: "text", inputPlaceholder: "Ubicación" })}
+    ${FieldForm({ inputLabel: "Fecha y Hora", inputClass: "input-date-postPadelMatchForm", inputType: "datetime-local", inputPlaceholder: "DD / MM / YYYY - HH : MM" })}
+    ${FieldSelect({ inputLabel: "Tipo de pista", inputClass: "input-select-postPadelMatchForm", inputOption1: "Indoor", inputOption2: "Outdoor" })}
+    ${FieldForm({ divClass: "input-file-container", inputClass: "input-file", inputLabel: "Añadir imagen...", inputType: "file" })}
     <h4 class="name-file"></h4>
-    <button class="btn-postPadelMatchForm" type="submit">Crear Partido</button>
-    <button class="btn-back-postPadelMatchForm" type="button"><img class="back-btn-img" src="/assets/back.png">Volver<img/></button>
+    </div>
+    <div class="button-container-postPadelMatchForm">
+    <button class="btn-create-postPadelMatchForm" type="submit">Crear Partido</button>
+    <button class="btn-back-postPadelMatchForm" type="button"><img class="img-btn-back-postPadelMatchForm" src="/assets/back.png">Volver<img/></button>
+    </div>
     `;
 
     let nameFile = form.querySelector(".input-file");

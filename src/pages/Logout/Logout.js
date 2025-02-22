@@ -9,7 +9,7 @@ export const Logout = () => {
     const div = createPage("Logout");
     const profileContainer = document.createElement("div");
     profileContainer.classList.add("logout-container");
-    profileContainer.innerHTML = `<h1>Perfíl de Usuario</h1>`;
+    profileContainer.innerHTML = `<h1 class="title-logout">Perfíl de Usuario</h1>`;
 
     profileContainer.append(
         Button({
@@ -18,7 +18,7 @@ export const Logout = () => {
                 window.history.pushState("", "", "/profile");
                 Profile();
             },
-            className: "btn-update-profile"
+            className: "btn-update-profile-logout"
         }),
         Button({
             text: "Cerrar Sesión",
@@ -28,7 +28,7 @@ export const Logout = () => {
                     message: "cerrar sesión"
                 });
             },
-            className: "btn-logout"
+            className: "btn-logout-logout"
         })
     );
     buttonBack(profileContainer);

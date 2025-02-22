@@ -15,7 +15,7 @@
     box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
 }
 
-.back-btn-img {
+.img-btn-back {
     width: 25px;
     height: 25px;
 }

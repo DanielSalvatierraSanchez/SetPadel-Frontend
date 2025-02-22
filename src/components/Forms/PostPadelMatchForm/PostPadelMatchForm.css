@@ -17,6 +17,21 @@
     font-size: small;
 }
 
+.title-postPadelMatchForm {
+    margin: var(--app-padding-s);
+    color: var(--app-bgcolor-secondary);
+    text-align: center;
+    text-shadow: var(--app-color-letterB) 3px 3px 3px;
+    font-size: 25px;
+}
+
+.data-container-postPadelMatchForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .field-form,
 .field-select {
     padding: var(--app-padding-xs);
@@ -28,15 +43,19 @@ div > input {
     font-size: small;
 }
 
-.input-select {
+.input-select-postPadelMatchForm {
     font-size: small;
 }
 
-.btn-postPadelMatchForm {
-    margin-top: var(--app-margin-s);
+.button-container-postPadelMatchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--app-padding-xs);
+    gap: var(--app-gap-s);
 }
 
-.btn-postPadelMatchForm,
+.btn-create-postPadelMatchForm,
 .btn-back-postPadelMatchForm {
     display: flex;
     justify-content: space-evenly;
@@ -60,7 +79,7 @@ div > input {
     box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
 }
 
-.back-btn-img {
+.img-btn-back-postPadelMatchForm {
     width: 20px;
     height: 20px;
 }
@@ -74,52 +93,52 @@ div > input {
         font-size: medium;
     }
 
-    .btn-postPadelMatchForm,
+    .btn-create-postPadelMatchForm,
     .btn-back-postPadelMatchForm {
         width: 150px;
         height: 45px;
         font-size: medium;
     }
 
-    .back-btn-img {
+    .img-btn-back-postPadelMatchForm {
         width: 25px;
         height: 25px;
     }
 }
+
 @media (width >= 768px) {
     .postPadelMatch-form {
-        top: 55%;
-        padding: var(--app-padding-s);
-        width: 450px;
-        max-width: 500px;
+        padding: var(--app-padding-xs);
+        width: 400px;
+        max-width: 450px;
         max-height: 800px;
-        font-size: x-large;
+        font-size: medium;
     }
 
     .field-form,
     .field-select {
-        padding: var(--app-padding-s);
+        padding: var(--app-padding-xs);
     }
 
     div > input {
-        width: 275px;
-        height: 40px;
-        font-size: large;
+        width: 250px;
+        height: 30px;
+        /* font-size: medium; */
     }
 
     .input-select {
-        font-size: large;
+        font-size: medium;
     }
 
-    .btn-postPadelMatchForm,
+    .btn-create-postPadelMatchForm,
     .btn-back-postPadelMatchForm {
-        width: 220px;
-        height: 70px;
-        font-size: x-large;
+        width: 150px;
+        height: 45px;
+        font-size: medium;
     }
 
-    .back-btn-img {
-        width: 40px;
-        height: 40px;
+    .img-btn-back-postPadelMatchForm {
+        width: 35px;
+        height: 35px;
     }
 }

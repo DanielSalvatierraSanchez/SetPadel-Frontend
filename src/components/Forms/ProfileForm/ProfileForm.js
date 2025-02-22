@@ -8,14 +8,15 @@ import { UserDelete } from "../../UserDelete/UserDelete";
 export const ProfileForm = (form) => {
     form.className = "profile-form";
     form.innerHTML = `
-    <h2>Actualizar Perfil de Usuario</h2>
+    <h2 class="title-profile">Actualizar Perfil de Usuario</h2>
+    <div class="data-container-profile">
     ${FieldForm({
         inputLabel: "Nuevo nombre de usuario",
         inputType: "text",
-        inputClass: "input-name",
+        inputClass: "input-name-profile",
         inputPlaceholder: "Nombre de Usuario"
     })}
-    <div class="div-password">
+    <div class="password-container">
         ${FieldForm({
             inputLabel: "Nueva contraseña",
             inputType: "password",
@@ -27,21 +28,22 @@ export const ProfileForm = (form) => {
     ${FieldForm({
         inputLabel: "Nuevo teléfono",
         inputType: "number",
-        inputClass: "input-phone",
+        inputClass: "input-phone-profile",
         inputPlaceholder: "123456789"
     })}
     ${FieldForm({
-        divClass: "div-input-file",
+        divClass: "input-file-container",
         inputClass: "input-file",
         inputLabel: "Nueva imagen...",
         inputType: "file"
     })}
     <h4 class="name-file"></h4>
-    <div class="div-btn-update-profile">
-    <button class="btn-update-profile" type="submit"><img class="update-btn-img" src="/assets/update.png">Actualizar<img/></button>
-    <button class="btn-delete-profile" type="submit"><img class="delete-btn-img" src="/assets/close.png">Eliminar<img/></button>
     </div>
-    <button class="btn-back-profile" type="button"><img class="back-btn-img" src="/assets/back.png">Volver<img/></button>
+    <div class="button-container-profile">
+    <button class="btn-update-profile" type="submit"><img class="img-btn-update-profile" src="/assets/update.png">Actualizar<img/></button>
+    <button class="btn-delete-profile" type="submit"><img class="img-btn-delete-profile" src="/assets/close.png">Eliminar<img/></button>
+    </div>
+    <button class="btn-back-profile" type="button"><img class="img-btn-back-profile" src="/assets/back.png">Volver<img/></button>
 `;
 
     showPassword();
