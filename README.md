@@ -15,8 +15,7 @@ DONE _ Mucho cariño a la componentización, no se repite código en ningún mom
 DONE _ Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
 
-Revisar todo + 768
-Hacer menu burger
+Revisar todo modal tamaño letras
 consultar orden de partidos segun creacion
 filter PM by date
 Poder eliminar partidos por el creador

@@ -30,7 +30,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    transform: translate(85px, -225%);
+    transform: translate(90px, -215%);
     cursor: pointer;
 }
 
@@ -147,7 +147,7 @@
     }
 
     .i-register {
-        transform: translate(105px, -250%);
+        transform: translate(15px, -250%);
     }
 
     .input-file-container {

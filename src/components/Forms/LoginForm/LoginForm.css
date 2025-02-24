@@ -19,8 +19,13 @@
     text-align: center;
 }
 
-.field-form, .password-container {
+.field-form,
+.password-container {
     width: 100%;
+}
+
+.i-login {
+    transform: translate(95px, -190%);
 }
 
 .input-email-login,

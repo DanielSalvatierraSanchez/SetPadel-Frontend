@@ -1,0 +1,20 @@
+.img-open {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.img-close {
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+@media (width >= 650px) {
+    .img-open,
+    .img-close {
+        display: none;
+    }
+}

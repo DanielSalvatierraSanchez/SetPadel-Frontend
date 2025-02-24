@@ -30,6 +30,14 @@
     width: 100%;
 }
 
+.password-container {
+    height: 75px;
+}
+
+.i-profile {
+    transform: translate(95px, -200%);
+}
+
 .button-container-profile {
     display: flex;
     justify-content: center;
@@ -128,10 +136,10 @@
         transform: translate(120px, -150%);
     }
 
-    .button-container-profile {
-        /* padding: var(--app-padding-xs); */
-        /* gap: var(--app-gap-s); */
-    }
+    /* .button-container-profile {
+        padding: var(--app-padding-xs);
+        gap: var(--app-gap-s);
+    } */
 
     .button-container-profile > button {
         width: 180px;
