@@ -9,22 +9,21 @@ export const Header = () => {
     }
 
     const header = document.createElement("header");
-    const menuBurguerOpen = document.createElement("button");
     const imgOpen = document.createElement("img");
-    const menuBurguerClose = document.createElement("button");
     const imgClose = document.createElement("img");
     const nav = document.createElement("nav");
     const ul = document.createElement("ul");
-    menuBurguerOpen.className = "menu-burguer-open";
-    imgOpen.src = "/assets/menu.png";
-    menuBurguerClose.className = "menu-burguer-close";
+    imgOpen.className = "img-open";
+    imgClose.className = "img-close";
+    imgOpen.src = "/assets/burguer.png";
     imgClose.src = "/assets/close.png";
-    menuBurguer.textContent = "Menu";
+    nav.className = "nav";
+    ul.className = "ul";
 
     const isAuth = !!localStorage.getItem("token");
 
     const filterRoutes = isAuth ? routes.filter((route) => route.id !== "home") : routes.filter((route) => route.id === "home");
-
+    
     for (const route of filterRoutes) {
         const li = document.createElement("li");
         const a = document.createElement("a");
@@ -36,9 +35,16 @@ export const Header = () => {
         });
         li.append(a);
         ul.append(li);
-        nav.append(ul);
     }
+    
+    imgOpen.addEventListener("click", () => {
+        nav.classList.add("visible");
+    });
+    imgClose.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    });
 
-    header.append(menuBurguer, nav);
+    nav.append(imgClose, ul)
+    header.append(nav, imgOpen);
     document.body.prepend(header);
 };
