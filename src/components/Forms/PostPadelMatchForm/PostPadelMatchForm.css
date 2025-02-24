@@ -1,12 +1,13 @@
 .postPadelMatch-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: var(--app-padding-m);
+    padding: var(--app-padding-s);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
     width: 275px;
@@ -18,7 +19,6 @@
 }
 
 .title-postPadelMatchForm {
-    margin: var(--app-padding-s);
     color: var(--app-bgcolor-secondary);
     text-align: center;
     text-shadow: var(--app-color-letterB) 3px 3px 3px;
@@ -30,21 +30,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
 }
 
 .field-form,
 .field-select {
     padding: var(--app-padding-xs);
-}
-
-div > input {
-    width: 200px;
-    height: 25px;
-    font-size: small;
-}
-
-.input-select-postPadelMatchForm {
-    font-size: small;
 }
 
 .button-container-postPadelMatchForm {
@@ -53,6 +44,7 @@ div > input {
     align-items: center;
     padding: var(--app-padding-xs);
     gap: var(--app-gap-s);
+    width: 100%;
 }
 
 .btn-create-postPadelMatchForm,
@@ -60,10 +52,9 @@ div > input {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 120px;
-    height: 35px;
+    width: 150px;
+    height: 45px;
     padding: var(--app-padding-xxs);
-    /* font-size: small; */
 }
 
 .btn-back-postPadelMatchForm {
@@ -73,10 +64,10 @@ div > input {
 }
 
 .btn-back-postPadelMatchForm:hover {
-    background-color: var(--app-bgcolor-secondary);
-    color: var(--app-color-letterB);
+    background-color: var(--app-bgcolor-buttonBackHover);
+    /* color: var(--app-color-letterB);
     border: var(--app-border-xxs) solid var(--app-color-letterW);
-    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
+    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW); */
 }
 
 .img-btn-back-postPadelMatchForm {
@@ -108,37 +99,43 @@ div > input {
 
 @media (width >= 768px) {
     .postPadelMatch-form {
-        padding: var(--app-padding-xs);
         width: 400px;
         max-width: 450px;
         max-height: 800px;
-        font-size: medium;
+        font-size: x-large;
+    }
+
+    .title-postPadelMatchForm {
+        font-size: 35px;
+    }
+
+    .data-container-postPadelMatchForm {
+        width: 80%;
     }
 
     .field-form,
     .field-select {
-        padding: var(--app-padding-xs);
+        font-size: x-large;
     }
 
-    div > input {
-        width: 250px;
-        height: 30px;
-        /* font-size: medium; */
+    .field-form > input {
+        font-size: large;
     }
 
-    .input-select {
-        font-size: medium;
+    .field-select > select {
+        font-size: large;
+        padding: var(--app-padding-xxs);
     }
 
     .btn-create-postPadelMatchForm,
     .btn-back-postPadelMatchForm {
-        width: 150px;
-        height: 45px;
-        font-size: medium;
+        width: 100%;
+        height: 60px;
+        font-size: x-large;
     }
 
     .img-btn-back-postPadelMatchForm {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 }

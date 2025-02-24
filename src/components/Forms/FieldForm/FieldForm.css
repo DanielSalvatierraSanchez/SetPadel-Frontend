@@ -11,4 +11,6 @@
     border-radius: var(--app-border-m);
     padding: var(--app-padding-xs);
     border: none;
+    height: 30px;
+    width: 100%;
 }

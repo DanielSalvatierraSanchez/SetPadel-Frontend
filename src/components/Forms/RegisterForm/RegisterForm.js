@@ -13,9 +13,9 @@ export const RegisterForm = (form) => {
     ${FieldForm({ inputLabel: "Email", inputType: "email", inputClass: "input-email-register", inputPlaceholder: "user@appadel.es" })}
     <div class="password-container">
         ${FieldForm({ inputLabel: "Contraseña", inputType: "password", inputClass: "input-password", inputPlaceholder: "********" })}
-    <i class='bx bx-show'></i>
+    <i class='i-register bx bx-show'></i>
     </div>
-    ${FieldForm({ inputLabel: "Teléfono", inputType: "number", inputClass: "input-phone-register", inputPlaceholder: "123456789" })}
+    ${FieldForm({ inputLabel: "Teléfono", inputType: "text", inputClass: "input-phone-register", inputPlaceholder: "123456789" })}
     ${FieldForm({ divClass: "input-file-container", inputClass: "input-file", inputLabel: "Añadir imagen...", inputType: "file" })}
     <h4 class="name-file"></h4>
     </div>

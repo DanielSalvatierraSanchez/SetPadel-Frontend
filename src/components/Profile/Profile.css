@@ -5,12 +5,8 @@
     align-items: center;
     padding: var(--app-padding-l);
     gap: var(--app-gap-m);
-    background-image: url('assets/fondo2.webp');
+    background-image: url("assets/fondo2.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;
 }
-
-/* .btn-profile-form:hover {
-    background-color: var(--app-bgcolor-tertiary);
-} */

@@ -8,7 +8,7 @@ import { UserDelete } from "../../UserDelete/UserDelete";
 export const ProfileForm = (form) => {
     form.className = "profile-form";
     form.innerHTML = `
-    <h2 class="title-profile">Actualizar Perfil de Usuario</h2>
+    <h2 class="title-profile">Actualizar Usuario</h2>
     <div class="data-container-profile">
     ${FieldForm({
         inputLabel: "Nuevo nombre de usuario",
@@ -23,11 +23,11 @@ export const ProfileForm = (form) => {
             inputClass: "input-password",
             inputPlaceholder: "********"
         })}
-        <i class="bx bx-show"></i>
+        <i class="i-profile bx bx-show"></i>
     </div>
     ${FieldForm({
         inputLabel: "Nuevo teléfono",
-        inputType: "number",
+        inputType: "text",
         inputClass: "input-phone-profile",
         inputPlaceholder: "123456789"
     })}

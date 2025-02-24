@@ -7,7 +7,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: var(--app-padding-m);
+    padding: var(--app-padding-s);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
     width: 275px;
@@ -23,20 +23,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
-.password-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(5px);
-}
-
-i {
-    font-size: large;
+.i-register {
+    position: absolute;
     width: 15px;
     height: 15px;
-    transform: translate(-45px, 75%);
+    transform: translate(85px, -225%);
     cursor: pointer;
 }
 
@@ -68,21 +62,13 @@ i {
     opacity: 0;
 }
 
-.input-name-register,
-.input-email-register,
-.input-password,
-.input-phone-register {
-    width: 200px;
-    height: 25px;
-    font-size: small;
-}
-
 .button-container-register {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: var(--app-padding-xs);
     gap: var(--app-gap-s);
+    width: 100%;
 }
 
 .btn-create-register,
@@ -90,8 +76,8 @@ i {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 120px;
-    height: 35px;
+    width: 150px;
+    height: 45px;
     padding: var(--app-padding-xxs);
 }
 
@@ -103,10 +89,7 @@ i {
 }
 
 .btn-back-register:hover {
-    background-color: var(--app-bgcolor-secondary);
-    color: var(--app-color-letterB);
-    border: var(--app-border-xxs) solid var(--app-color-letterW);
-    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
+    background-color: var(--app-bgcolor-buttonBackHover);
 }
 
 .img-btn-back-register {
@@ -116,7 +99,6 @@ i {
 
 @media (width >= 425px) {
     .register-form {
-        padding: var(--app-padding-s);
         width: 325px;
         max-width: 325px;
         max-height: 800px;
@@ -146,30 +128,43 @@ i {
 
 @media (width >= 768px) {
     .register-form {
-        padding: var(--app-padding-xs);
         width: 400px;
         max-width: 450px;
         max-height: 800px;
-        font-size: medium;
+        font-size: x-large;
+    }
+
+    .data-container-register {
+        width: 300px;
+        font-size: x-large;
     }
 
     .input-name-register,
     .input-email-register,
     .input-password,
     .input-phone-register {
-        width: 220px;
-        height: 30px;
+        font-size: large;
+    }
+
+    .i-register {
+        transform: translate(105px, -250%);
+    }
+
+    .input-file-container {
+        width: 180px;
+        height: 50px;
+        margin: var(--app-margin-s);
     }
 
     .btn-create-register,
     .btn-back-register {
-        width: 150px;
-        height: 55px;
-        font-size: large;
+        width: 100%;
+        height: 60px;
+        font-size: x-large;
     }
 
     .img-btn-back-register {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 }

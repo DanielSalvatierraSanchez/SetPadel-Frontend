@@ -21,11 +21,12 @@
     align-items: center;
     width: 150px;
     height: 60px;
+    font-size: medium;
 }
 
 .btn-delete-yes:hover,
 .btn-logout-yes:hover {
-    background-color: var(--app-color-messageError);
+    background-color: var(--app-bgcolor-buttonOff);
 }
 
 .img-btn-delete-yes,
@@ -35,24 +36,24 @@
 }
 @media (width >= 768px) {
     .confirm-delete-user {
-        padding: var(--app-padding-xl);
-        gap: var(--app-gap-l);
-        width: 400px;
-        max-width: 450px;
+        padding: var(--app-padding-l);
+        gap: var(--app-gap-m);
+        width: 375px;
+        max-width: 425px;
         max-height: 550px;
-        font-size: large;
+        font-size: x-large;
     }
 
     .btn-delete-yes,
     .btn-delete-no {
-        width: 150px;
-        height: 70px;
-        font-size: large;
+        width: 175px;
+        height: 90px;
+        font-size: x-large;
     }
 
     .img-btn-delete-yes,
     .img-btn-delete-no {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
 }

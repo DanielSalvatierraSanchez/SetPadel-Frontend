@@ -8,6 +8,10 @@ header > nav {
     background-color: var(--app-bgcolor-secondary);
 }
 
+.menu-burguer {
+    display: none;
+}
+
 ul {
     display: flex;
     justify-content: space-evenly;
@@ -28,6 +32,18 @@ a {
     }
 }
 
+/* @media (width <= 550px) {
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    ul {
+        flex-direction: column;
+        align-items: end;
+    }
+} */
+
 @media (width >= 650px) {
     a {
         font-size: medium;
@@ -36,6 +52,6 @@ a {
 
 @media (width >= 768px) {
     a {
-        font-size: large;
+        font-size: x-large;
     }
 }

@@ -8,10 +8,6 @@
     background-size: cover;
 }
 
-#Home > h1 {
-    font-size: 50px;
-}
-
 .home-container {
     display: flex;
     flex-direction: column;
@@ -21,12 +17,18 @@
     text-align: center;
 }
 
+.home-container > h1 {
+    font-family: var(--app-font-family);
+    font-size: 50px;
+}
+
 .home-container > h1,
 h3 {
     max-width: 275px;
     line-height: 1.5;
     color: var(--app-bgcolor-secondary);
     text-shadow: var(--app-color-letterB) 2px 2px 2px;
+    cursor: default;
 }
 
 .button {
@@ -42,11 +44,11 @@ h3 {
 
 @media (width >= 768px) {
     #Home {
-        font-size: x-large;
+        font-size: xx-large;
     }
 
     .button {
-        font-size: large;
+        font-size: x-large;
     }
 
     .btn-home-login,

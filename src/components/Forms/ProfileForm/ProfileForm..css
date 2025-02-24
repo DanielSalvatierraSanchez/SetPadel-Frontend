@@ -1,12 +1,13 @@
 .profile-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: var(--app-padding-m);
+    padding: var(--app-padding-s);
     background-color: var(--app-bgcolor-body);
     color: var(--app-color-letterB);
     width: 275px;
@@ -18,7 +19,6 @@
 }
 
 .title-profile {
-    margin: var(--app-padding-s);
     font-size: 25px;
 }
 
@@ -27,37 +27,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .button-container-profile {
     display: flex;
-    padding: var(--app-padding-s);
-}
-
-.button-container-profile > button {
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 120px;
-    height: 50px;
+    padding: var(--app-padding-xs);
+    gap: var(--app-gap-s);
+    width: 100%;
 }
 
-.btn-update-profile,
-.btn-delete-profile,
+.button-container-profile > button,
 .btn-back-profile {
-    /* justify-content: space-evenly;
-    padding: var(--app-padding-xxs);
-    font-size: small; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 120px;
-    height: 35px;
+    width: 150px;
+    height: 50px;
     padding: var(--app-padding-xxs);
+    font-size: medium;
 }
 
 .btn-delete-profile:hover {
-    background-color: var(--app-color-messageError);
+    background-color: var(--app-bgcolor-buttonOff);
 }
 
 .btn-back-profile {
@@ -67,9 +61,7 @@
 }
 
 .btn-back-profile:hover {
-    color: var(--app-color-letterB);
-    border: var(--app-border-xxs) solid var(--app-color-letterW);
-    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW);
+    background-color: var(--app-bgcolor-buttonBackHover);
 }
 
 .img-btn-update-profile,
@@ -113,32 +105,50 @@
 
 @media (width >= 768px) {
     .profile-form {
-        padding: var(--app-padding-xs);
         width: 400px;
         max-width: 450px;
         max-height: 800px;
-        font-size: medium;
+        font-size: x-large;
     }
 
-    /* .button-container-profile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: var(--app-padding-xs);
-        gap: var(--app-gap-s);
-        width: 150px;
-        height: 55px;
-    } */
+    .title-profile {
+        font-size: 40px;
+    }
 
-    /* .btn-update-profile,
-    .btn-delete-profile {
-        width: 150px;
-        height: 55px;
-    } */
+    .data-container-profile {
+        width: 300px;
+        font-size: x-large;
+    }
+
+    .password-container {
+        height: 90px;
+    }
+
+    .i-profile {
+        transform: translate(120px, -150%);
+    }
+
+    .button-container-profile {
+        /* padding: var(--app-padding-xs); */
+        /* gap: var(--app-gap-s); */
+    }
+
+    .button-container-profile > button {
+        width: 180px;
+        height: 60px;
+        font-size: x-large;
+    }
+
+    .btn-update-profile,
+    .btn-delete-profile,
+    .btn-back-profile {
+        font-size: x-large;
+    }
 
     .btn-back-profile {
-        width: 150px;
-        height: 55px;
+        width: 180px;
+        height: 60px;
+        margin: var(--app-margin-s);
     }
 
     .img-btn-update-profile,

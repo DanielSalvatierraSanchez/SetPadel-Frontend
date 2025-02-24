@@ -9,8 +9,17 @@ export const Header = () => {
     }
 
     const header = document.createElement("header");
+    const menuBurguerOpen = document.createElement("button");
+    const imgOpen = document.createElement("img");
+    const menuBurguerClose = document.createElement("button");
+    const imgClose = document.createElement("img");
     const nav = document.createElement("nav");
     const ul = document.createElement("ul");
+    menuBurguerOpen.className = "menu-burguer-open";
+    imgOpen.src = "/assets/menu.png";
+    menuBurguerClose.className = "menu-burguer-close";
+    imgClose.src = "/assets/close.png";
+    menuBurguer.textContent = "Menu";
 
     const isAuth = !!localStorage.getItem("token");
 
@@ -30,6 +39,6 @@ export const Header = () => {
         nav.append(ul);
     }
 
-    header.append(nav);
+    header.append(menuBurguer, nav);
     document.body.prepend(header);
 };

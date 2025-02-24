@@ -5,10 +5,11 @@
     align-items: center;
     width: 150px;
     height: 60px;
+    font-size: medium;
 }
 
 .btn-logout-yes:hover {
-    background-color: var(--app-color-messageError);
+    background-color: var(--app-bgcolor-buttonOff);
 }
 
 .img-btn-logout-yes,
@@ -19,19 +20,19 @@
 
 @media (width >= 768px) {
     .logout-container > h2 {
-        font-size: x-large;
+        font-size: xx-large;
     }
 
     .btn-logout-yes,
     .btn-logout-no {
-        width: 150px;
-        height: 70px;
-        font-size: large;
+        width: 175px;
+        height: 90px;
+        font-size: x-large;
     }
 
     .img-btn-logout-yes,
     .img-btn-logout-no {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
 }
