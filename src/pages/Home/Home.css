@@ -23,7 +23,7 @@
 }
 
 .home-container > h1,
-h3 {
+p {
     max-width: 275px;
     line-height: 1.5;
     color: var(--app-bgcolor-secondary);
@@ -31,14 +31,23 @@ h3 {
     cursor: default;
 }
 
+.home-container > img {
+    width: 100px;
+    height: 75px;
+}
+
 .button {
     font-size: medium;
 }
 
 @media (width >= 425px) {
-    .home-container > h3 {
+    .home-container > p {
         max-width: 350px;
-        line-height: 1.5;
+    }
+
+    .home-container > img {
+        width: 200px;
+        height: 150px;
     }
 }
 
@@ -54,5 +63,16 @@ h3 {
     .btn-home-login,
     .btn-home-register {
         padding: var(--app-padding-s);
+    }
+}
+
+@media (width >= 1024px) {
+    .home-container > p {
+        max-width: 650px;
+    }
+
+    .home-container > img {
+        width: 150px;
+        height: 100px;
     }
 }

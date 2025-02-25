@@ -7,6 +7,8 @@ export const MenuBurger = (container, parentElement) => {
     imgClose.className = "img-close";
     imgOpen.src = "/assets/burguer.png";
     imgClose.src = "/assets/close.png";
+    imgOpen.alt = "open menu burguer";
+    imgClose.alt = "close menu burguer";
 
     imgOpen.addEventListener("click", () => {
         parentElement.classList.add("visible");

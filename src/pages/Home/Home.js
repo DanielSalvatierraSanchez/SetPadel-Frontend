@@ -9,9 +9,9 @@ export const Home = () => {
     const homeContainer = document.createElement("div");
     homeContainer.classList.add("home-container");
     homeContainer.innerHTML = `
-    <h1>APPADEL</h1>
-    <br/>
-    <h3>La App donde podrás gestionar tus partidos de padel.</h3>
+    <h1>SetPadel</h1>
+    <p>La App donde podrás gestionar tus partidos de padel.</p>
+    <img src="/assets/SetPadel.png" alt="logo_SetPadel"></img>
     `;
 
     div.append(

@@ -10,16 +10,14 @@ export const Header = () => {
     }
 
     const header = document.createElement("header");
-    // const imgOpen = document.createElement("img");
-    // const imgClose = document.createElement("img");
     const nav = document.createElement("nav");
+    const logo = document.createElement("img");
     const ul = document.createElement("ul");
-    // imgOpen.className = "img-open";
-    // imgClose.className = "img-close";
-    // imgOpen.src = "/assets/burguer.png";
-    // imgClose.src = "/assets/close.png";
     nav.className = "nav";
+    logo.className = "logo";
     ul.className = "ul";
+    logo.src = "/assets/logoS_black.png";
+    logo.alt = "logo SetPadel black";
 
     const isAuth = !!localStorage.getItem("token");
 
@@ -38,15 +36,8 @@ export const Header = () => {
         ul.append(li);
     }
 
-    // imgOpen.addEventListener("click", () => {
-    //     nav.classList.add("visible");
-    // });
-    // imgClose.addEventListener("click", () => {
-    //     nav.classList.remove("visible");
-    // });
-
     MenuBurger(header, nav);
-    nav.append(ul);
+    nav.append(logo, ul);
     header.append(nav);
     document.body.prepend(header);
 };

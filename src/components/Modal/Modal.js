@@ -12,10 +12,10 @@ export const modal = (parentElement, data, user) => {
     parentElement.innerHTML = `
                 <div class="modal-container">
                 <h3 class="modal-title">${data.title}</h3>
-                <img class="modal-img" src=${data.image}>
+                <img class="modal-img" src=${data.image} alt="image padel match">
                 <div class="modal-description-container">
-                <p class="modal-date"><img class="modal-date-img" src="/assets/calendario.png"><strong>Fecha:</strong> ${dateFormatted}</p>
-                <p class="modal-location"><img class="modal-location-img" src="/assets/location.png"><strong>Lugar:</strong> ${data.location}</p>
+                <p class="modal-date"><img class="modal-date-img" src="/assets/calendario.png" alt="image date"><strong>Fecha:</strong> ${dateFormatted}</p>
+                <p class="modal-location"><img class="modal-location-img" src="/assets/location.png" alt="image location"><strong>Lugar:</strong> ${data.location}</p>
                 <p class="modal-place"><strong>Pista:</strong> ${data.place}</p>
                 <p class="modal-author"><strong>Creador:</strong> ${data.author?.name}</p>
                 </div>
@@ -23,17 +23,17 @@ export const modal = (parentElement, data, user) => {
                 padelMatch-id="${data._id}">
                 ${
                     isFull && !isUserJoined
-                        ? `<img class="completed-btn-img" src="/assets/full.png">PARTIDO COMPLETADO<img/>`
+                        ? `<img class="completed-btn-img" src="/assets/full.png" alt="padel match complete">PARTIDO COMPLETADO<img/>`
                         : isUserJoined
-                        ? `<img class="removed-btn-img" src="/assets/borrar-usuario.png">RETIRARSE<img/>`
-                        : `<img class="joined-btn-img" src="/assets/agregar-usuario.png">UNIRSE<img/>`
+                        ? `<img class="removed-btn-img" src="/assets/borrar-usuario.png" alt="remove user">RETIRARSE<img/>`
+                        : `<img class="joined-btn-img" src="/assets/agregar-usuario.png" alt="join user">UNIRSE<img/>`
                 }
                 </button>
-                <p class="modal-players" data-type="assistants"><img class="modal-players-img" src="/assets/users.png"><strong>Asistentes ${
+                <p class="modal-players" data-type="assistants"><img class="modal-players-img" src="/assets/users.png" alt="assistants padel match"><strong>Asistentes ${
                     data.players.length
                 } / 4 :</strong></p>
                 <p class="modal-players-list" data-type="assistants">${playersList}</p>
-                <img class="close-btn" src="./assets/close.png"></img>
+                <img class="close-btn" src="./assets/close.png" alt="close modal"></img>
                 </div>
                 `;
 

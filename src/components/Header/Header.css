@@ -35,6 +35,16 @@ header {
     transform: translate3d(0px, 0px, 0px);
 }
 
+.logo {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    margin: var(--app-padding-xs);
+    width: 75px;
+    height: 50px;
+}
+
 .ul {
     display: flex;
     flex-direction: column;
@@ -84,17 +94,27 @@ header {
         opacity: 1;
     }
 
+    .logo {
+        opacity: 0;
+    }
+
     .ul {
         position: absolute;
         flex-direction: row;
         justify-content: space-evenly;
         width: 100%;
-    } 
+    }
 }
 
 @media (width >= 768px) {
     a {
         font-size: 150px;
+    }
+}
+
+@media (width >= 880px) {
+    .logo {
+        opacity: 1;
     }
 }
 

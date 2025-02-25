@@ -18,7 +18,7 @@ export const PadelMatches = async () => {
     try {
         const allPadelMatch = await getPadelMatches();
         const { allPadelMatches } = allPadelMatch;
-        localStorage.setItem("allPadelMatches", JSON.stringify(allPadelMatches));
+        // localStorage.setItem("allPadelMatches", JSON.stringify(allPadelMatches));
 
         const padelMatchContainer = document.createElement("div");
         padelMatchContainer.classList.add("padel-match-container");
@@ -30,13 +30,14 @@ export const PadelMatches = async () => {
 
         const userData = JSON.parse(localStorage.getItem("user"));
 
+        allPadelMatches.sort((a, b) => new Date(a.date) - new Date(b.date));
         allPadelMatches.forEach((padelMatch) => {
             const dateFormatted = dateFormat(padelMatch.date);
             const padelMatchCard = document.createElement("div");
             padelMatchCard.classList.add("padel-match-card");
             padelMatchCard.innerHTML = `
-            <p class="card-date"><img class="card-date-img" src="/assets/calendario.png"><strong>Fecha:</strong> ${dateFormatted}</p>
-            <p class="card-players"><img class="card-players-img" src="/assets/users.png"><strong>Asistentes:</strong> ${
+            <p class="card-date"><img class="card-date-img" src="/assets/calendario.png" alt="image date"><strong>Fecha:</strong> ${dateFormatted}</p>
+            <p class="card-players"><img class="card-players-img" src="/assets/users.png" alt="assistants padel match"><strong>Asistentes:</strong> ${
                 padelMatch.players.length === 4 ? "COMPLETO" : padelMatch.players.length / 1
             }</p>
             `;

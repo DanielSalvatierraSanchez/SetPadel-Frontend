@@ -2,10 +2,10 @@
 
 :root {
     /*FONTS*/
-    /* --app-font-family: "Montserrat Alternates"; */
     --app-font-family: "Montserrat", sans-serif;
     --app-font-title: "Rajdhani", sans-serif;
     --app-font-family-alternative: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    /* --app-font-family-secondary: "Montserrat Alternates"; */
 
     /*COLORS*/
     --app-color-messageError: #ff0000;
