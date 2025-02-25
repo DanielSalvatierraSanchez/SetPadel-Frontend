@@ -17,7 +17,7 @@ export const PostPadelMatchForm = (form) => {
     </div>
     <div class="button-container-postPadelMatchForm">
     <button class="btn-create-postPadelMatchForm" type="submit">Crear Partido</button>
-    <button class="btn-back-postPadelMatchForm" type="button"><img class="img-btn-back-postPadelMatchForm" src="/assets/back.png">Volver<img/></button>
+    <button class="btn-back-postPadelMatchForm" type="button"><img class="img-btn-back-postPadelMatchForm" src="/assets/back.webp">Volver<img/></button>
     </div>
     `;
 

@@ -24,7 +24,7 @@ header {
     gap: var(--app-gap-m);
     border-radius: 0px 0px var(--app-border-l) var(--app-border-l);
     box-shadow: 0 0 0 100vmax var(--app-bgcolor-body);
-    transition: 1s;
+    transition: 0.5s;
     transform: translate3d(0px, -100%, 0px);
     opacity: 0;
 }

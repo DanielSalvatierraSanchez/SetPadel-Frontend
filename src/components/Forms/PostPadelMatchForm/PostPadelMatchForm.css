@@ -69,9 +69,6 @@
 
 .btn-back-postPadelMatchForm:hover {
     background-color: var(--app-bgcolor-buttonBackHover);
-    /* color: var(--app-color-letterB);
-    border: var(--app-border-xxs) solid var(--app-color-letterW);
-    box-shadow: var(--app-border-xxs) var(--app-border-xxs) var(--app-color-letterW); */
 }
 
 .img-btn-back-postPadelMatchForm {

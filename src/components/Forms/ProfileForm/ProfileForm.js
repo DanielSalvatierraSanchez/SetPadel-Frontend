@@ -40,10 +40,10 @@ export const ProfileForm = (form) => {
     <h4 class="name-file"></h4>
     </div>
     <div class="button-container-profile">
-    <button class="btn-update-profile" type="submit"><img class="img-btn-update-profile" src="/assets/update.png">Actualizar<img/></button>
-    <button class="btn-delete-profile" type="submit"><img class="img-btn-delete-profile" src="/assets/close.png">Eliminar<img/></button>
+    <button class="btn-update-profile" type="submit"><img class="img-btn-update-profile" src="/assets/update.webp">Actualizar<img/></button>
+    <button class="btn-delete-profile" type="submit"><img class="img-btn-delete-profile" src="/assets/close.webp">Eliminar<img/></button>
     </div>
-    <button class="btn-back-profile" type="button"><img class="img-btn-back-profile" src="/assets/back.png">Volver<img/></button>
+    <button class="btn-back-profile" type="button"><img class="img-btn-back-profile" src="/assets/back.webp">Volver<img/></button>
 `;
 
     showPassword();

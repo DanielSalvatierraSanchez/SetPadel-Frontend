@@ -21,7 +21,7 @@ export const RegisterForm = (form) => {
     </div>
     <div class="button-container-register">
     <button class="btn-create-register" type="submit">Crear Cuenta</button>
-    <button class="btn-back-register" type="button"><img class="img-btn-back-register" src="/assets/back.png">Volver<img/></button>
+    <button class="btn-back-register" type="button"><img class="img-btn-back-register" src="/assets/back.webp">Volver<img/></button>
     </div>
     `;
 

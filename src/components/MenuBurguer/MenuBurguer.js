@@ -5,8 +5,8 @@ export const MenuBurger = (container, parentElement) => {
     const imgClose = document.createElement("img");
     imgOpen.className = "img-open";
     imgClose.className = "img-close";
-    imgOpen.src = "/assets/burguer.png";
-    imgClose.src = "/assets/close.png";
+    imgOpen.src = "/assets/burguer.webp";
+    imgClose.src = "/assets/close.webp";
     imgOpen.alt = "open menu burguer";
     imgClose.alt = "close menu burguer";
 

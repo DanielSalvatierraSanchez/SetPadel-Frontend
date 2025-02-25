@@ -5,9 +5,9 @@ import { Loader } from "../Loader/Loader";
 
 export const UserLogout = ({ parentElement, message }) => {
     parentElement.innerHTML = `
-                    <h2 class"title-user-logout">¿Seguro que quieres ${message}?</h2>
-            <button class='btn-logout-yes'><img class="img-btn-logout-yes" src="/assets/salir.png" alt="logout">Sí<img/></button>
-            <button class='btn-logout-no'><img class="img-btn-logout-no" src="/assets/back.png" alt="return">No<img/></button>`;
+        <h2 class"title-user-logout">¿Seguro que quieres ${message}?</h2>
+        <button class='btn-logout-yes'><img class="img-btn-logout-yes" src="/assets/close.webp" alt="logout">Sí<img/></button>
+        <button class='btn-logout-no'><img class="img-btn-logout-no" src="/assets/back.webp" alt="return">No<img/></button>`;
 
     const yes = parentElement.querySelector(".btn-logout-yes");
     const no = parentElement.querySelector(".btn-logout-no");

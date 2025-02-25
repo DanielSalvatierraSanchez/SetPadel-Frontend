@@ -1,5 +1,4 @@
 .success-message {
-    /* margin-top: var(--app-margin-xxs); */
     padding: var(--app-padding-s);
     color: var(--app-color-messageSuccess);
     font-size: medium;

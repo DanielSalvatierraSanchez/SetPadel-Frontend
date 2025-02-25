@@ -1,5 +1,4 @@
 button {
-    /* margin: var(--app-margin-xxs); */
     padding: var(--app-padding-xs) var(--app-padding-s);
     border-radius: var(--app-border-m);
     border: var(--app-border-xxs) solid var(--app-color-letterB);

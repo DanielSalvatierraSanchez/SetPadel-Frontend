@@ -1,5 +1,4 @@
 .error-message {
-    /* margin-top: var(--app-margin-xxs); */
     padding: 10px;
     color: var(--app-color-messageError);
     font-size: medium;

@@ -93,6 +93,10 @@
         font-size: medium;
     }
 
+    .i-profile {
+        transform: translate(135px, -200%);
+    }
+
     .button-container-profile > button {
         width: 150px;
         height: 45px;
@@ -136,11 +140,6 @@
     .i-profile {
         transform: translate(120px, -150%);
     }
-
-    /* .button-container-profile {
-        padding: var(--app-padding-xs);
-        gap: var(--app-gap-s);
-    } */
 
     .button-container-profile > button {
         width: 180px;

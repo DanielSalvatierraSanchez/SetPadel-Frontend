@@ -3,7 +3,6 @@ import { FieldForm } from "../FieldForm/FieldForm";
 import { loginUser } from "../../../utils/API/LoginUser";
 import { showPassword } from "../../../utils/showPassword";
 import { Home } from "../../../pages/Home/Home";
-import { Button } from "../../Button/Button";
 
 export const LoginForm = (form) => {
     form.className = "login-form";
@@ -15,7 +14,7 @@ export const LoginForm = (form) => {
             <i class="i-login bx bx-show"></i>
         </div>
         <button class="btn-access-login" type="submit">Acceder</button>
-        <button class="btn-back-login" type="button"><img class="img-btn-back-login" src="/assets/back.png">Volver<img/></button>
+        <button class="btn-back-login" type="button"><img class="img-btn-back-login" src="/assets/back.webp">Volver<img/></button>
         `;
     showPassword();
     form.addEventListener("submit", loginUser);
