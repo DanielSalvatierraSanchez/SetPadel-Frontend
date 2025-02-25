@@ -30,7 +30,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    transform: translate(90px, -215%);
+    transform: translate(90px, -200%);
     cursor: pointer;
 }
 
@@ -48,8 +48,12 @@
     transition: all 0.5s;
 }
 
+.input-file-container > label {
+    cursor: pointer;
+}
+
 .input-file-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition: all 1s;
     background-color: var(--app-bgcolor-body);
 }
@@ -60,6 +64,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
+    cursor: pointer;
 }
 
 .button-container-register {
@@ -113,6 +118,10 @@
         height: 30px;
     }
 
+    .i-register {
+        transform: translate(110px, -215%);
+    }
+
     .btn-create-register,
     .btn-back-register {
         width: 150px;
@@ -147,7 +156,7 @@
     }
 
     .i-register {
-        transform: translate(15px, -250%);
+        transform: translate(105px, -250%);
     }
 
     .input-file-container {

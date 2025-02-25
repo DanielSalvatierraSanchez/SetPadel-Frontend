@@ -17,13 +17,13 @@
     text-align: center;
 }
 
-.home-container > h1 {
+.home-container > .title-home {
     font-family: var(--app-font-family);
     font-size: 50px;
 }
 
-.home-container > h1,
-p {
+.home-container > .title-home,
+.text-home {
     max-width: 275px;
     line-height: 1.5;
     color: var(--app-bgcolor-secondary);
@@ -41,7 +41,7 @@ p {
 }
 
 @media (width >= 425px) {
-    .home-container > p {
+    .text-home {
         max-width: 350px;
     }
 
@@ -67,7 +67,7 @@ p {
 }
 
 @media (width >= 1024px) {
-    .home-container > p {
+    .text-home {
         max-width: 650px;
     }
 

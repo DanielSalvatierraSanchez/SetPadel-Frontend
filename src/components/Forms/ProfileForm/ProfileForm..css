@@ -36,6 +36,7 @@
 
 .i-profile {
     transform: translate(95px, -200%);
+    cursor: pointer;
 }
 
 .button-container-profile {

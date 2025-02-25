@@ -14,9 +14,9 @@ DONE _ Todos los procesos asíncronos le muestran un loading de alguna manera al
 DONE _ Mucho cariño a la componentización, no se repite código en ningún momento.
 DONE _ Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
-
-Quitar codigo comentado, revisar modal tamaño letras +1000px
 filter PM by date
 Poder eliminar partidos por el creador
+Quitar codigo comentado
+pasar imagenes a webp y eliminar las no usadas
 
     ULTIMO PASO!!! ACTIVAR localStorage.clear() EN EL MAIN.js

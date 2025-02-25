@@ -38,6 +38,10 @@
     padding: var(--app-padding-xs);
 }
 
+.input-select-postPadelMatchForm {
+    cursor: pointer;
+}
+
 .button-container-postPadelMatchForm {
     display: flex;
     justify-content: center;

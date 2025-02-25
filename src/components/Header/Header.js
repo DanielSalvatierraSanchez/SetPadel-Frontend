@@ -11,13 +11,9 @@ export const Header = () => {
 
     const header = document.createElement("header");
     const nav = document.createElement("nav");
-    const logo = document.createElement("img");
     const ul = document.createElement("ul");
     nav.className = "nav";
-    logo.className = "logo";
     ul.className = "ul";
-    logo.src = "/assets/logoS_black.png";
-    logo.alt = "logo SetPadel black";
 
     const isAuth = !!localStorage.getItem("token");
 
@@ -37,7 +33,7 @@ export const Header = () => {
     }
 
     MenuBurger(header, nav);
-    nav.append(logo, ul);
+    nav.append(ul);
     header.append(nav);
     document.body.prepend(header);
 };
