@@ -14,7 +14,8 @@ DONE _ Todos los procesos asíncronos le muestran un loading de alguna manera al
 DONE _ Mucho cariño a la componentización, no se repite código en ningún momento.
 DONE _ Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
-filter PM by date
+Continuar con funcionalidad de button, ya que solo deja pulsar una vez, ponewr onclick() o probar con change o submit u otros
+cerrar menu burguer al pulsarlo mirar en proyecto 5 o 3
 Poder eliminar partidos por el creador
 
     ULTIMO PASO!!! ACTIVAR localStorage.clear() EN EL MAIN.js
