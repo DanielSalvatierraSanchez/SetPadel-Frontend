@@ -21,7 +21,7 @@ export const PadelMatches = async () => {
         padelMatchContainer.classList.add("padel-match-container");
 
         FilterPadelMatches(div, padelMatchContainer);
-        Loader(div);
+        Loader(div);""
 
         if (!allPadelMatches || allPadelMatches.length === 0) {
             randomMessageError(div, "No hay ningún partido programado.");

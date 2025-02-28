@@ -1,0 +1,19 @@
+.delete-padel-matches {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--app-padding-l);
+    gap: var(--app-gap-m);
+    background-image: url("assets/match.webp");
+    background-position: center;
+    background-size: cover;
+    min-height: 92svh;
+}
+
+.delete-padel-matches > h1 {
+    color: var(--app-bgcolor-secondary);
+    text-align: center;
+    text-shadow: var(--app-color-letterB) 3px 3px 3px;
+    font-size: 25px;
+}

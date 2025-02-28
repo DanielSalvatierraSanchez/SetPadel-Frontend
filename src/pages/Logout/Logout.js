@@ -4,6 +4,7 @@ import { Button } from "../../components/Button/Button";
 import { Profile } from "../../components/Profile/Profile";
 import { buttonBack } from "../../components/ButtonBack/ButtonBack";
 import { UserLogout } from "../../components/UserLogout/UserLogout";
+import { DeletePadelMatches } from "../../components/DeletePadelMatches/DeletePadelMatches";
 
 export const Logout = () => {
     const div = createPage("Logout");
@@ -24,6 +25,7 @@ export const Logout = () => {
             text: "Mis Partidos Creados",
             fnc: () => {
                 window.history.pushState("", "", "/delete_padel_match");
+                DeletePadelMatches();
             },
             className: "btn-my-padel-matches-logout"
         }),
