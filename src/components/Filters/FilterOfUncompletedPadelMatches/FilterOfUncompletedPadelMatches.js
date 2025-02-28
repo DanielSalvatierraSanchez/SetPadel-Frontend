@@ -11,7 +11,6 @@ export const FilterOfUncompletedPadelMatches = async (parentElement, uncompleted
             randomMessageError(parentElement, "Todos los partidos están completos.");
             return;
         }
-
         CardOfPadelMatch(uncompletedPadelMatchContainer, uncompletedPadelMatches);
 
         parentElement.append(uncompletedPadelMatchContainer);

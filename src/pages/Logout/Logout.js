@@ -15,10 +15,17 @@ export const Logout = () => {
         Button({
             text: "Actualizar Perfíl",
             fnc: () => {
-                window.history.pushState("", "", "/profile");
+                window.history.pushState("", "", "/update_profile");
                 Profile();
             },
             className: "btn-update-profile-logout"
+        }),
+        Button({
+            text: "Mis Partidos Creados",
+            fnc: () => {
+                window.history.pushState("", "", "/delete_padel_match");
+            },
+            className: "btn-my-padel-matches-logout"
         }),
         Button({
             text: "Cerrar Sesión",

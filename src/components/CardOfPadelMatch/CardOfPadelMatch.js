@@ -13,9 +13,8 @@ export const CardOfPadelMatch = (parentElement, padelMatches) => {
         padelMatchCard.innerHTML = `
         <p class="card-date"><img class="card-date-img" src="/assets/date.webp" alt="image date"><strong>Fecha:</strong> ${dateFormatted}</p>
         <p class="card-players"><img class="card-players-img" src="/assets/assistants.webp" alt="assistants padel match"><strong>Asistentes:</strong> ${
-            padelMatch.players.length === 4 ? "COMPLETO" : padelMatch.players.length / 1
-        }</p>
-        `;
+            padelMatch.players.length === 4 ? "COMPLETO" : padelMatch.players.length
+        }</p>`;
 
         parentElement.append(padelMatchCard);
 

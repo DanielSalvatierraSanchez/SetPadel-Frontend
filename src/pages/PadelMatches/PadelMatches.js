@@ -20,7 +20,7 @@ export const PadelMatches = async () => {
         const padelMatchContainer = document.createElement("div");
         padelMatchContainer.classList.add("padel-match-container");
 
-        FilterPadelMatches(padelMatchContainer);
+        FilterPadelMatches(div, padelMatchContainer);
         Loader(div);
 
         if (!allPadelMatches || allPadelMatches.length === 0) {

@@ -1,30 +1,45 @@
-import { PadelMatches } from "../../../pages/PadelMatches/PadelMatches";
 import { Loader } from "../../Loader/Loader";
 import { Filter } from "../Filter/Filter";
 import { getUncompletedPadelMatches } from "../../../utils/API/GetUncompletedPadelMatches";
 import { FilterOfUncompletedPadelMatches } from "../FilterOfUncompletedPadelMatches/FilterOfUncompletedPadelMatches";
+import { getPadelMatches } from "../../../utils/API/GetPadelMatches";
+import { CardOfPadelMatch } from "../../CardOfPadelMatch/CardOfPadelMatch";
 
-export const FilterPadelMatches = (parentElement) => {
+export const FilterPadelMatches = (container, parentElement) => {
     parentElement.innerHTML = "";
-    const container = parentElement.querySelector(".padel-matches");
-    Filter(parentElement, "Sólo disponibles");
+    Filter(container, "Sólo disponibles");
 
-    const filterButton = parentElement.querySelector(".btn-filter-uncompleted");
-    const showAllButton = parentElement.querySelector(".btn-show-all");
+    const filterButton = container.querySelector(".btn-filter-uncompleted");
+    const showAllButton = container.querySelector(".btn-show-all");
 
     filterButton.addEventListener("click", async () => {
-        console.log("CLICK EN FILTRO");
         parentElement.innerHTML = "";
-        Filter(parentElement, "Solo disponibles");
-        Loader(parentElement);
+        filterButton.disabled = true;
+        showAllButton.disabled = true;
+
+        Loader(container);
+        setTimeout(() => {
+            filterButton.disabled = false;
+            showAllButton.disabled = false;
+        }, 2000);
 
         const uncompletedPadelMatches = await getUncompletedPadelMatches();
         FilterOfUncompletedPadelMatches(parentElement, uncompletedPadelMatches.uncompletedPadelMatches);
     });
 
     showAllButton.addEventListener("click", async () => {
-        console.log("CLICK EN MOSTRAR TODO");
-        
-        PadelMatches();
+        parentElement.innerHTML = "";
+        showAllButton.disabled = true;
+        filterButton.disabled = true;
+
+        Loader(container);
+        setTimeout(() => {
+            filterButton.disabled = false;
+            showAllButton.disabled = false;
+        }, 2000);
+
+        const allPadelMatch = await getPadelMatches();
+        const { allPadelMatches } = allPadelMatch;
+        CardOfPadelMatch(parentElement, allPadelMatches);
     });
 };

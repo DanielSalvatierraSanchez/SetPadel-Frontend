@@ -27,6 +27,7 @@ export const Header = () => {
         a.addEventListener("click", (e) => {
             e.preventDefault();
             navigate(e, route);
+            nav.classList.remove("visible");
         });
         li.append(a);
         ul.append(li);
