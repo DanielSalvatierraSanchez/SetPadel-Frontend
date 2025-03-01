@@ -2,6 +2,7 @@ import "./Modal.css";
 import { dateFormat } from "../../utils/DateFormatted";
 import { buttonJoin } from "./ButtonJoin";
 import { buttonClose } from "./ButtonClose";
+import { buttonDelete } from "./ButtonDelete";
 
 export const modal = (parentElement, data, user) => {
     const isCompleted = data.players.length === 4;
@@ -27,6 +28,7 @@ export const modal = (parentElement, data, user) => {
                 <p class="modal-place"><strong>Pista:</strong> ${data.place}</p>
                 <p class="modal-author"><strong>Creador:</strong> ${data.author?.name}</p>
                 </div>
+                <div class="modal-buttons">
                 <button class="join-btn" 
                 padelMatch-id="${data._id}">
                 ${
@@ -37,15 +39,23 @@ export const modal = (parentElement, data, user) => {
                         : `<img class="joined-btn-img" src="/assets/joinUser.webp" alt="join user">UNIRSE<img/>`
                 }
                 </button>
+                                ${
+                                    data.author === user._id || data.author._id === user._id
+                                        ? `<img class="img-delete-padel-match" src="/assets/delete.webp" alt="delete padel match" data-id=${data._id} ></img>`
+                                        : ""
+                                }
+                        </div>
                 <p class="modal-players" data-type="assistants"><img class="modal-players-img" src="/assets/assistants.webp" alt="assistants padel match"><strong>Asistentes ${
                     data.players.length
                 } / 4 :</strong></p>
                 <p class="modal-players-list" data-type="assistants">${playersList}</p>
                 <img class="close-btn" src="./assets/close.webp" alt="close modal"></img>
+
                 </div>
                 `;
-
+    console.log(data.author);
     parentElement.append(padelMatchModal);
     buttonJoin(padelMatchModal, data);
+    buttonDelete(padelMatchModal, data);
     buttonClose(padelMatchModal);
 };

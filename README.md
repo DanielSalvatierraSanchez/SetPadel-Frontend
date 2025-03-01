@@ -14,7 +14,8 @@ DONE _ Todos los procesos asíncronos le muestran un loading de alguna manera al
 DONE _ Mucho cariño a la componentización, no se repite código en ningún momento.
 DONE _ Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
-Continuar con funcionalidad de button, ya que solo deja pulsar una vez, poner onclick() o probar con change o submit u otros
-Poder eliminar partidos por el creador
+continuar funcionalidad buttonDelete
+Repasar codigo y todo el responsive (reducir tamaño de botones ya que se ve enorme)
+activar mouseover del modal
 
     ULTIMO PASO!!! ACTIVAR localStorage.clear() EN EL MAIN.js

@@ -22,7 +22,7 @@ export const Logout = () => {
             className: "btn-update-profile-logout"
         }),
         Button({
-            text: "Mis Partidos Creados",
+            text: "Mis Partidos",
             fnc: () => {
                 window.history.pushState("", "", "/delete_padel_match");
                 DeletePadelMatches();

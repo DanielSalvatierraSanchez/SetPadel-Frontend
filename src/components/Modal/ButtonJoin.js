@@ -12,11 +12,9 @@ export const buttonJoin = async (parentElement, data) => {
         const modal = parentElement.querySelector(".modal-container");
         const padelMatchId = e.target.getAttribute("padelMatch-id");
         const userData = JSON.parse(localStorage.getItem("user"));
-        console.log(data);
         if (data.players.length === 4) {
             data.isCompleted = true;
         }
-        
 
         try {
             const checkUserJoined = data.players.some((player) => player.userId === userData._id);

@@ -1,11 +1,9 @@
 import { createPage } from "../../functions/CreatePage";
-import { deletePadelMatch } from "../../utils/API/DeletePadelMatch";
 import { getPadelMatchesByAuthor } from "../../utils/API/GetPadelMatchesByAuthor";
 import { isAuth } from "../../utils/isAuth";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { CardOfPadelMatch } from "../CardOfPadelMatch/CardOfPadelMatch";
 import { Loader } from "../Loader/Loader";
-import { errorMessage } from "../Messages/Error/ErrorMessage";
 import "./DeletePadelMatches.css";
 
 export const DeletePadelMatches = async () => {
@@ -28,10 +26,8 @@ export const DeletePadelMatches = async () => {
         }
 
         CardOfPadelMatch(padelMatchContainer, padelMatches);
-        console.log("padelMatches => ", padelMatches);
+
         div.append(padelMatchContainer);
-        // const myDeletePadelMatches = await deletePadelMatch();
-        // console.log(myDeletePadelMatches);
     } catch (error) {
         console.log("Error en DELETE PADEL MATCHES del front: ", error.message);
     }

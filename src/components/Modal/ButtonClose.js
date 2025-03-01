@@ -6,9 +6,9 @@ export const buttonClose = (parentElement) => {
         // PadelMatches();
     });
 
-    parentElement.addEventListener("mouseleave", (e) => {
-        e.stopPropagation();
-        parentElement.remove();
-        // PadelMatches();
-    });
+    // parentElement.addEventListener("mouseleave", (e) => {
+    //     e.stopPropagation();
+    //     parentElement.remove();
+    //     // PadelMatches();
+    // });
 };
