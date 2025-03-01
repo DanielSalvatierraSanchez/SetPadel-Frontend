@@ -1,3 +1,5 @@
+import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
+import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 
@@ -9,7 +11,7 @@ export const deletePadelMatch = async (data) => {
 
         isAuth(container);
 
-        const res = await API({ endpoint: `/matches//delete/${matchId}`, method: "DELETE", token });
+        const res = await API({ endpoint: `/matches/delete/${matchId}`, method: "DELETE", token });
         !res ? errorMessage(container, res) : successMessage(container, res);
         return res;
     } catch (error) {

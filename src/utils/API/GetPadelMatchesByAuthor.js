@@ -10,7 +10,7 @@ export const getPadelMatchesByAuthor = async () => {
     isAuth(container);
 
     try {
-        const res = await API({ endpoint: `/getByAuthor/${userId}`, method: "GET", token });
+        const res = await API({ endpoint: `/matches/getByAuthor/${userId}`, method: "GET", token });
         return res;
     } catch (error) {
         console.log("Error en el GET PM BY AUTHOR desde el front: ", error.message);
