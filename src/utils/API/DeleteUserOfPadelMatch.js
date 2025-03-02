@@ -6,12 +6,12 @@ import { isAuth } from "../isAuth";
 import { API } from "./API";
 
 export const deleteUserOfPadelMatch = async (data) => {
+    isAuth(container);
+
     try {
         const matchId = data;
         const container = document.querySelector(".modal-container");
         const token = localStorage.getItem("token");
-
-        isAuth(container);
 
         const res = await API({ endpoint: `/matches/deleteUserOfPadelMatch/${matchId}`, method: "PUT", token });
         !res ? errorMessage(container, res) : successMessage(container, res);

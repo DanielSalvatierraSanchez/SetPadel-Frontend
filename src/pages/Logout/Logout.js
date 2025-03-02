@@ -3,8 +3,8 @@ import { createPage } from "../../functions/CreatePage";
 import { Button } from "../../components/Button/Button";
 import { Profile } from "../../components/Profile/Profile";
 import { buttonBack } from "../../components/ButtonBack/ButtonBack";
-import { UserLogout } from "../../components/UserLogout/UserLogout";
-import { DeletePadelMatches } from "../../components/DeletePadelMatches/DeletePadelMatches";
+import { ConfirmUserLogout } from "../../components/Confirmations/ConfirmUserLogout/ConfirmUserLogout";
+import { MyPadelMatches } from "../MyPadelMatches/MyPadelMatches";
 
 export const Logout = () => {
     const div = createPage("Logout");
@@ -24,15 +24,15 @@ export const Logout = () => {
         Button({
             text: "Mis Partidos",
             fnc: () => {
-                window.history.pushState("", "", "/delete_padel_match");
-                DeletePadelMatches();
+                window.history.pushState("", "", "/my_padel_matches");
+                MyPadelMatches();
             },
             className: "btn-my-padel-matches-logout"
         }),
         Button({
             text: "Cerrar Sesión",
             fnc: () => {
-                UserLogout({
+                ConfirmUserLogout({
                     parentElement: profileContainer,
                     message: "cerrar sesión"
                 });

@@ -53,9 +53,11 @@ export const modal = (parentElement, data, user) => {
 
                 </div>
                 `;
-    console.log(data.author);
     parentElement.append(padelMatchModal);
+
     buttonJoin(padelMatchModal, data);
-    buttonDelete(padelMatchModal, data);
+    if (data.author === user._id || data.author._id === user._id) {
+        buttonDelete(padelMatchModal, data);
+    }
     buttonClose(padelMatchModal);
 };

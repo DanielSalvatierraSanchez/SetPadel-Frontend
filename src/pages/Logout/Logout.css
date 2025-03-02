@@ -39,6 +39,7 @@
 }
 
 .btn-update-profile-logout,
+.btn-my-padel-matches-logout,
 .btn-logout-logout {
     width: 175px;
     height: 60px;
@@ -58,6 +59,7 @@
     }
 
     .btn-update-profile-logout,
+    .btn-my-padel-matches-logout,
     .btn-logout-logout {
         width: 250px;
         height: 70px;

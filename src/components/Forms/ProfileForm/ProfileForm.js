@@ -3,7 +3,7 @@ import { FieldForm } from "../FieldForm/FieldForm";
 import { updateProfileUser } from "../../../utils/API/UpdateProfileUser";
 import { showPassword } from "../../../utils/showPassword";
 import { Logout } from "../../../pages/Logout/Logout";
-import { UserDelete } from "../../UserDelete/UserDelete";
+import { ConfirmUserDelete } from "../../Confirmations/ConfirmUserDelete/ConfirmUserDelete";
 
 export const ProfileForm = (form) => {
     form.className = "profile-form";
@@ -55,7 +55,7 @@ export const ProfileForm = (form) => {
     form.addEventListener("submit", updateProfileUser);
     form.querySelector(".btn-delete-profile").addEventListener("click", () => {
         form.classList.add("confirm-delete-user"),
-            UserDelete({
+            ConfirmUserDelete({
                 parentElement: form,
                 message: "eliminar tu cuenta"
             });

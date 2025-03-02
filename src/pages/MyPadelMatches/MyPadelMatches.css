@@ -1,4 +1,4 @@
-#DeletePadelMatches {
+#MyPadelMatches {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -11,7 +11,7 @@
     min-height: 92svh;
 }
 
-#DeletePadelMatches > h1 {
+#MyPadelMatches > h1 {
     color: var(--app-bgcolor-secondary);
     text-align: center;
     text-shadow: var(--app-color-letterB) 3px 3px 3px;
@@ -35,23 +35,23 @@
 } */
 
 @media (width >= 425px) {
-    #DeletePadelMatches > h1 {
+    #MyPadelMatches > h1 {
         padding: var(--app-padding-s);
     }
 
-    .padel-match-container {
+    /* .padel-match-container {
         padding: var(--app-padding-s);
-    }
+    } */
 }
 
-@media (width >= 650px) {
+/* @media (width >= 650px) {
     .padel-match-container {
         max-width: 1200px;
     }
-}
+} */
 
 @media (width >= 768px) {
-    #DeletePadelMatches > h1 {
+    #MyPadelMatches > h1 {
         padding: var(--app-padding-s);
         font-size: 35px;
     }

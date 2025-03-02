@@ -8,6 +8,8 @@ import { API } from "./API";
 
 export const postPadelMatch = async (e) => {
     e.preventDefault();
+    const container = document.querySelector(".postPadelMatch-form");
+
     const [title, location, date, place, image] = e.target;
 
     const formData = new FormData();
@@ -23,11 +25,10 @@ export const postPadelMatch = async (e) => {
         return;
     }
 
-    try {
-        const container = document.querySelector(".postPadelMatch-form");
-        const token = localStorage.getItem("token");
+    isAuth(container);
 
-        isAuth(container);
+    try {
+        const token = localStorage.getItem("token");
 
         const res = await API({ endpoint: "/matches/register", method: "POST", isJSON: false, body: formData, token });
         !res ? errorMessage(container, res) : successMessage(container, res);

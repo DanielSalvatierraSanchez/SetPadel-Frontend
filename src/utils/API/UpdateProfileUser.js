@@ -9,6 +9,7 @@ import { API } from "./API";
 export const updateProfileUser = async (e) => {
     e.preventDefault();
     const container = document.querySelector("form");
+
     const [name, password, phone, image] = e.target;
     const formData = new FormData();
     if (name.value.trim()) {
@@ -24,12 +25,12 @@ export const updateProfileUser = async (e) => {
         formData.append("image", image.files[0]);
     }
 
+    isAuth(container);
+
     try {
         const user = JSON.parse(localStorage.getItem("user"));
         const userId = user._id;
         const token = localStorage.getItem("token");
-
-        isAuth(container);
 
         const res = await API({ endpoint: `/users/update/${userId}`, method: "PUT", body: formData, isJSON: false, token });
         !res ? errorMessage(container, res) : successMessage(container, res);

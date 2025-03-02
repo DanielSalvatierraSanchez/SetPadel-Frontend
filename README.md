@@ -14,7 +14,8 @@ DONE _ Todos los procesos asíncronos le muestran un loading de alguna manera al
 DONE _ Mucho cariño a la componentización, no se repite código en ningún momento.
 DONE _ Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
-continuar funcionalidad buttonDelete
+continuar confirmpadelmatchdelete intentar meterlo en un contenedor para maquetarlo mejor
+repasar params en funciones xxx=( yyy )=>{} o xxx=({ yyy })=>{}
 Repasar codigo y todo el responsive (reducir tamaño de botones ya que se ve enorme)
 activar mouseover del modal
 
