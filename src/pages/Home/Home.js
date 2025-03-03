@@ -1,5 +1,5 @@
 import "./Home.css";
-import { createPage } from "../../functions/CreatePage/createPage.js";
+import { createPage } from "../../functions/CreatePage/CreatePage.js";
 import { Button } from "../../components/Button/Button";
 import { Login } from "../Login/Login";
 import { Register } from "../Register/Register";
