@@ -1,8 +1,7 @@
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 
-export const getPadelMatchesByAuthor = async () => {
-    const container = document.querySelector("#DeletePadelMatches");
+export const getPadelMatchesByAuthor = async (container) => {
     const token = localStorage.getItem("token");
     const user = JSON.parse(localStorage.getItem("user"));
     const userId = user._id;

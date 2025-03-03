@@ -3,8 +3,7 @@ import { successMessage } from "../../components/Messages/Success/SuccessMessage
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 
-export const joinPadelMatch = async (padelMatchId) => {
-    const container = document.querySelector(".modal-container");
+export const joinPadelMatch = async (container, padelMatchId) => {
     const token = localStorage.getItem("token");
 
     isAuth(container);

@@ -9,8 +9,6 @@ export const API = async ({ endpoint, method, body, isJSON = true, token }) => {
         method,
         headers
     });
-    console.log("1️⃣ * res de API desde el front =>", res);
     const response = await res.json();
-    console.log("2️⃣ * response de API desde el front =>", response);
     return response;
 };

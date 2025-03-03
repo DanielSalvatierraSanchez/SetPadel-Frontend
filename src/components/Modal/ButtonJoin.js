@@ -2,7 +2,6 @@ import { successMessage } from "../Messages/Success/SuccessMessage";
 import { deleteUserOfPadelMatch } from "../../utils/API/DeleteUserOfPadelMatch";
 import { joinPadelMatch } from "../../utils/API/JoinPadelMatch";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
-import { getPadelMatches } from "../../utils/API/GetPadelMatches";
 
 export const buttonJoin = async (parentElement, data) => {
     const joinBtn = parentElement.querySelector(".join-btn");
@@ -22,7 +21,7 @@ export const buttonJoin = async (parentElement, data) => {
             const padelMatchId = e.target.getAttribute("padelMatch-id");
 
             if (!checkUserJoined) {
-                const joinUserInPadelMatch = await joinPadelMatch(padelMatchId);
+                const joinUserInPadelMatch = await joinPadelMatch(modal, padelMatchId);
                 if (data.players.length === 4) {
                     joinBtn.disabled = true;
                     data.isCompleted = true;
@@ -32,7 +31,7 @@ export const buttonJoin = async (parentElement, data) => {
                     PadelMatches();
                 }, 1500);
             } else if (checkUserJoined) {
-                const removeUserFromPadelMatch = await deleteUserOfPadelMatch(padelMatchId);
+                const removeUserFromPadelMatch = await deleteUserOfPadelMatch(modal, padelMatchId);
                 successMessage(modal, removeUserFromPadelMatch);
                 setTimeout(() => {
                     PadelMatches();

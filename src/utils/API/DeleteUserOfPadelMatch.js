@@ -3,8 +3,7 @@ import { successMessage } from "../../components/Messages/Success/SuccessMessage
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 
-export const deleteUserOfPadelMatch = async (data) => {
-    const container = document.querySelector(".modal-container");
+export const deleteUserOfPadelMatch = async (container, data) => {
     const matchId = data;
     const token = localStorage.getItem("token");
 

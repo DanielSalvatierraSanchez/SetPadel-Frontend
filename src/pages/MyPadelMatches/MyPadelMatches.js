@@ -14,7 +14,7 @@ export const MyPadelMatches = async () => {
     isAuth(div);
 
     try {
-        const padelMatchesByAuthor = await getPadelMatchesByAuthor();
+        const padelMatchesByAuthor = await getPadelMatchesByAuthor(div);
         const { padelMatches } = padelMatchesByAuthor;
 
         const padelMatchContainer = document.createElement("div");

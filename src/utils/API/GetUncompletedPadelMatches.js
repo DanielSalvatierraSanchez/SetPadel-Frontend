@@ -1,8 +1,7 @@
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 
-export const getUncompletedPadelMatches = async () => {
-    const container = document.querySelector("#PadelMatches");
+export const getUncompletedPadelMatches = async (container) => {
     const token = localStorage.getItem("token");
 
     isAuth(container);

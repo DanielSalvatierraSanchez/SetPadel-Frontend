@@ -44,21 +44,21 @@
         padding: var(--app-padding-l);
         gap: var(--app-gap-m);
         width: 375px;
-        max-width: 425px;
+        max-width: 275px;
         max-height: 550px;
-        font-size: x-large;
+        font-size: large;
     }
 
     .btn-delete-padel-match-yes,
     .btn-delete-padel-match-no {
-        width: 175px;
-        height: 90px;
-        font-size: x-large;
+        width: 140px;
+        height: 70px;
+        font-size: large;
     }
 
     .img-btn-delete-padel-match-yes,
     .img-btn-delete-padel-match-no {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
 }

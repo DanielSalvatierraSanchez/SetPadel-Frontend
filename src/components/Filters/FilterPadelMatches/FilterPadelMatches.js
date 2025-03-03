@@ -23,7 +23,7 @@ export const FilterPadelMatches = (container, parentElement) => {
             showAllButton.disabled = false;
         }, 2000);
 
-        const uncompletedPadelMatches = await getUncompletedPadelMatches();
+        const uncompletedPadelMatches = await getUncompletedPadelMatches(container);
         FilterOfUncompletedPadelMatches(parentElement, uncompletedPadelMatches.uncompletedPadelMatches);
     });
 
