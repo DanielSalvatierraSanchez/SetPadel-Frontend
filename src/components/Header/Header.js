@@ -1,7 +1,7 @@
 import "./Header.css";
-import { navigate } from "../../functions/navigate";
 import { routes } from "../../routes/routes";
 import { MenuBurger } from "../MenuBurguer/MenuBurguer";
+import { navigate } from "../../functions/navigate";
 
 export const Header = () => {
     const duplicateHeader = document.querySelector("header");
