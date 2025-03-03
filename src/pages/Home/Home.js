@@ -1,7 +1,7 @@
 import "./Home.css";
 import { Login } from "../Login/Login";
 import { Register } from "../Register/Register";
-import { createPage } from "../../functions/createPage";
+import { createPage } from "../../functions/CreatePage";
 
 export const Home = () => {
     const div = createPage("Home");

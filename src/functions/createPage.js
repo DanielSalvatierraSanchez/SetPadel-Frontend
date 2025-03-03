@@ -8,4 +8,3 @@ export const createPage = (id) => {
     main.append(div);
     return div;
 };
-s;
