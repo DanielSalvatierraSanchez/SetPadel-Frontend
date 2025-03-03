@@ -74,8 +74,12 @@
         position: absolute;
         width: 15px;
         height: 15px;
-        transform: translate(85px, -250%);
+        transform: translate(90px, -250%);
         cursor: pointer;
+    }
+
+    .email-container-login, .password-container-login > label {
+        font-size: large;
     }
 
     .input-email-login,
@@ -85,9 +89,9 @@
 
     .btn-access-login,
     .btn-back-login {
-        width: 175px;
-        height: 60px;
-        font-size: x-large;
+        width: 150px;
+        height: 50px;
+        font-size: large;
     }
 
     .img-btn-back-login {

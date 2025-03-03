@@ -5,12 +5,12 @@ export const buttonClose = (parentElement) => {
     closeBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         parentElement.remove();
-        PadelMatches();
+        // PadelMatches();
     });
 
     parentElement.addEventListener("mouseleave", (e) => {
         e.stopPropagation();
         parentElement.remove();
-        PadelMatches();
+        // PadelMatches();
     });
 };

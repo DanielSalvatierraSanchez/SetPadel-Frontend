@@ -56,13 +56,13 @@
     }
 
     .title-logout {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .btn-update-profile-logout,
     .btn-my-padel-matches-logout,
     .btn-logout-logout {
-        width: 250px;
-        height: 70px;
+        width: 180px;
+        height: 60px;
     }
 }

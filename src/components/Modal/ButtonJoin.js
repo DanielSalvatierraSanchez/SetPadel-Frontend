@@ -2,35 +2,37 @@ import { successMessage } from "../Messages/Success/SuccessMessage";
 import { deleteUserOfPadelMatch } from "../../utils/API/DeleteUserOfPadelMatch";
 import { joinPadelMatch } from "../../utils/API/JoinPadelMatch";
 import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
+import { getPadelMatches } from "../../utils/API/GetPadelMatches";
 
 export const buttonJoin = async (parentElement, data) => {
     const joinBtn = parentElement.querySelector(".join-btn");
+    const modal = parentElement.querySelector(".modal-container");
+    const userData = JSON.parse(localStorage.getItem("user"));
+
+    const checkUserJoined = data.players.some((player) => player.userId === userData._id);
+    if ((data.isCompleted && data.players.length === 4 && !checkUserJoined)) {
+        joinBtn.disabled = true;
+        return;
+    }
     joinBtn.addEventListener("click", async (e) => {
         e.preventDefault();
         e.stopPropagation();
 
-        const modal = parentElement.querySelector(".modal-container");
-        const padelMatchId = e.target.getAttribute("padelMatch-id");
-        const userData = JSON.parse(localStorage.getItem("user"));
-        if (data.players.length === 4) {
-            data.isCompleted = true;
-        }
-
         try {
-            const checkUserJoined = data.players.some((player) => player.userId === userData._id);
+            const padelMatchId = e.target.getAttribute("padelMatch-id");
+
             if (!checkUserJoined) {
                 const joinUserInPadelMatch = await joinPadelMatch(padelMatchId);
-                joinBtn.disabled = true;
-                successMessage(modal, joinUserInPadelMatch);
                 if (data.players.length === 4) {
+                    joinBtn.disabled = true;
                     data.isCompleted = true;
                 }
+                successMessage(modal, joinUserInPadelMatch);
                 setTimeout(() => {
                     PadelMatches();
                 }, 1500);
             } else if (checkUserJoined) {
                 const removeUserFromPadelMatch = await deleteUserOfPadelMatch(padelMatchId);
-                joinBtn.disabled = true;
                 successMessage(modal, removeUserFromPadelMatch);
                 setTimeout(() => {
                     PadelMatches();

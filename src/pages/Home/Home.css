@@ -42,6 +42,7 @@
 
 @media (width >= 425px) {
     .text-home {
+        font-size: 20px;
         max-width: 350px;
     }
 
@@ -56,23 +57,17 @@
         font-size: xx-large;
     }
 
+    .text-home {
+        font-size: 25px;
+        max-width: 650px;
+    }
+
     .button {
-        font-size: x-large;
+        font-size: large;
     }
 
     .btn-home-login,
     .btn-home-register {
         padding: var(--app-padding-s);
-    }
-}
-
-@media (width >= 1024px) {
-    .text-home {
-        max-width: 650px;
-    }
-
-    .home-container > img {
-        width: 150px;
-        height: 100px;
     }
 }
