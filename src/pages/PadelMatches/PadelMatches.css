@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 0px 10px 10px 10px;
+    padding: 0px var(--app-padding-xs) var(--app-padding-xs) var(--app-padding-xs);
     background-image: url("assets/matchMadrid.webp");
     background-position: center;
     background-size: cover;

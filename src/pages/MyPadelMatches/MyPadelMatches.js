@@ -1,10 +1,10 @@
+import "./MyPadelMatches.css";
 import { createPage } from "../../functions/CreatePage";
 import { getPadelMatchesByAuthor } from "../../utils/API/GetPadelMatchesByAuthor";
 import { isAuth } from "../../utils/isAuth";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { CardOfPadelMatch } from "../../components/CardOfPadelMatch/CardOfPadelMatch";
 import { Loader } from "../../components/Loader/Loader";
-import "./MyPadelMatches.css";
 
 export const MyPadelMatches = async () => {
     const div = createPage("MyPadelMatches");
@@ -12,6 +12,7 @@ export const MyPadelMatches = async () => {
     div.innerHTML = `<h1>Mis Partidos</h1>`;
 
     isAuth(div);
+
     try {
         const padelMatchesByAuthor = await getPadelMatchesByAuthor();
         const { padelMatches } = padelMatchesByAuthor;

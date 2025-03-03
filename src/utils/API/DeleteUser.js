@@ -4,14 +4,13 @@ import { successMessage } from "../../components/Messages/Success/SuccessMessage
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 
-export const deleteUser = async () => {
-    const container = document.querySelector(".profile-form");
+export const deleteUser = async (container) => {
     const token = localStorage.getItem("token");
     const user = JSON.parse(localStorage.getItem("user"));
     const userId = user._id;
 
     isAuth(container);
-    
+
     try {
         const res = await API({ endpoint: `/users/delete/${userId}`, method: "DELETE", token });
         !res ? errorMessage(container, res) : successMessage(container, res);

@@ -1,13 +1,11 @@
 import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
-import { MyPadelMatches } from "../../pages/MyPadelMatches/MyPadelMatches";
+import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 import { isAuth } from "../isAuth";
 import { API } from "./API";
 
-export const deletePadelMatch = async (padelMatch) => {
-    const container = document.querySelector(".modal");
-
+export const deletePadelMatch = async (container, padelMatch) => {
     isAuth(container);
 
     try {
@@ -19,7 +17,8 @@ export const deletePadelMatch = async (padelMatch) => {
 
         Loader(container);
         setTimeout(() => {
-            MyPadelMatches();
+            window.history.pushState("", "", "/padel_matches");
+            PadelMatches();
         }, 2000);
         return res;
     } catch (error) {

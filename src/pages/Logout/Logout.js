@@ -1,10 +1,10 @@
 import "./Logout.css";
 import { createPage } from "../../functions/CreatePage";
 import { Button } from "../../components/Button/Button";
-import { Profile } from "../../components/Profile/Profile";
 import { buttonBack } from "../../components/ButtonBack/ButtonBack";
 import { ConfirmUserLogout } from "../../components/Confirmations/ConfirmUserLogout/ConfirmUserLogout";
 import { MyPadelMatches } from "../MyPadelMatches/MyPadelMatches";
+import { Profile } from "../Profile/Profile";
 
 export const Logout = () => {
     const div = createPage("Logout");

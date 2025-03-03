@@ -38,6 +38,7 @@
     width: 25px;
     height: 25px;
 }
+
 @media (width >= 768px) {
     .confirm-delete-padel-match {
         padding: var(--app-padding-l);

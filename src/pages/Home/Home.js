@@ -1,8 +1,8 @@
+import "./Home.css";
 import { Button } from "../../components/Button/Button";
 import { createPage } from "../../functions/CreatePage";
 import { Login } from "../Login/Login";
 import { Register } from "../Register/Register";
-import "./Home.css";
 
 export const Home = () => {
     const div = createPage("Home");

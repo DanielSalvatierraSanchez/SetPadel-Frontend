@@ -1,5 +1,5 @@
 .error-message {
-    padding: 10px;
+    padding: var(--app-padding-s);
     color: var(--app-color-messageError);
     font-size: medium;
     font-weight: bolder;
@@ -8,7 +8,7 @@
 }
 
 @media (width >= 768px) {
-.error-message {
-    font-size: x-large;
-}
+    .error-message {
+        font-size: x-large;
+    }
 }

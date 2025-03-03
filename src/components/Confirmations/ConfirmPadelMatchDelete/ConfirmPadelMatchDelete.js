@@ -1,7 +1,8 @@
-import { MyPadelMatches } from "../../../pages/MyPadelMatches/MyPadelMatches";
+import "./ConfirmPadelMatchDelete.css";
 import { PadelMatches } from "../../../pages/PadelMatches/PadelMatches";
 import { deletePadelMatch } from "../../../utils/API/DeletePadelMatch";
-import "./ConfirmPadelMatchDelete.css";
+import { randomMessageError } from "../../../utils/RandomMessageError";
+import { Loader } from "../../Loader/Loader";
 
 export const ConfirmPadelMatchDelete = (parentElement, padelMatch, message) => {
     parentElement.innerHTML = `
@@ -13,10 +14,15 @@ export const ConfirmPadelMatchDelete = (parentElement, padelMatch, message) => {
     const no = parentElement.querySelector(".btn-delete-padel-match-no");
 
     yes.addEventListener("click", () => {
-        deletePadelMatch(padelMatch);
+        deletePadelMatch(parentElement, padelMatch);
     });
 
     no.addEventListener("click", () => {
-        MyPadelMatches();
+        randomMessageError(parentElement, "Cargando partidos...");
+        Loader(parentElement);
+        setTimeout(() => {
+            window.history.pushState("", "", "/padel_matches");
+            PadelMatches();
+        }, 1500);
     });
 };

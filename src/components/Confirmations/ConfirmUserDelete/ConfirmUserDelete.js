@@ -2,7 +2,7 @@ import "./ConfirmUserDelete.css";
 import { Logout } from "../../../pages/Logout/Logout";
 import { deleteUser } from "../../../utils/API/DeleteUser";
 
-export const ConfirmUserDelete = ({ parentElement, message }) => {
+export const ConfirmUserDelete = (parentElement, message) => {
     parentElement.innerHTML = `
             <h2 class"title-user-delete">¿Seguro que quieres ${message}?</h2>
             <button class='btn-delete-yes'><img class="img-btn-delete-yes" src="/assets/delete.webp" alt="yes delete user">Sí<img/></button>
@@ -12,7 +12,7 @@ export const ConfirmUserDelete = ({ parentElement, message }) => {
     const no = parentElement.querySelector(".btn-delete-no");
 
     yes.addEventListener("click", () => {
-        deleteUser();
+        deleteUser(parentElement);
     });
 
     no.addEventListener("click", () => {

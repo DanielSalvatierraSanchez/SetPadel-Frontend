@@ -13,6 +13,7 @@ export const PadelMatches = async () => {
     div.innerHTML = `<h1>Partidos de Padel</h1>`;
 
     isAuth(div);
+
     try {
         const allPadelMatch = await getPadelMatches();
         const { allPadelMatches } = allPadelMatch;

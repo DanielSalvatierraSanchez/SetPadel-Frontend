@@ -1,5 +1,5 @@
-import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 import "./ButtonBack.css";
+import { PadelMatches } from "../../pages/PadelMatches/PadelMatches";
 
 export const buttonBack = (parentElement) => {
     const buttonBack = document.createElement("div");

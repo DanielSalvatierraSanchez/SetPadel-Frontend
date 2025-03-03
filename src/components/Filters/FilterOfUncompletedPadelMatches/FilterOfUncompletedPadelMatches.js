@@ -1,6 +1,6 @@
+import "./FilterOfUncompletedPadelMatches.css";
 import { randomMessageError } from "../../../utils/RandomMessageError";
 import { CardOfPadelMatch } from "../../CardOfPadelMatch/CardOfPadelMatch";
-import "./FilterOfUncompletedPadelMatches.css";
 
 export const FilterOfUncompletedPadelMatches = async (parentElement, uncompletedPadelMatches) => {
     const uncompletedPadelMatchContainer = document.createElement("div");

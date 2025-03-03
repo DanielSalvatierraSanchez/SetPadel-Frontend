@@ -1,3 +1,4 @@
+import "./CardOfPadelMatch.css"
 import { dateFormat } from "../../utils/DateFormatted";
 import { modal } from "../Modal/Modal";
 
@@ -17,10 +18,11 @@ export const CardOfPadelMatch = (parentElement, padelMatches) => {
         }</p>`;
 
         parentElement.append(padelMatchCard);
-
+        
         padelMatchCard.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
+            window.scrollTo(0, 0);
             const existingModal = document.querySelector(".modal");
             if (existingModal) {
                 existingModal.remove();

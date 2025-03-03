@@ -54,11 +54,7 @@ export const ProfileForm = (form) => {
     });
     form.addEventListener("submit", updateProfileUser);
     form.querySelector(".btn-delete-profile").addEventListener("click", () => {
-        form.classList.add("confirm-delete-user"),
-            ConfirmUserDelete({
-                parentElement: form,
-                message: "eliminar tu cuenta"
-            });
+        form.classList.add("confirm-delete-user"), ConfirmUserDelete(form, "eliminar tu cuenta");
     });
     form.querySelector(".btn-back-profile").addEventListener("click", () => Logout());
 };

@@ -9,14 +9,14 @@ export const RegisterForm = (form) => {
     form.innerHTML = `
     <h2>Registro de Usuarios</h2>
     <div class="data-container-register">
-    ${FieldForm({ inputLabel: "Nombre de Usuario", inputType: "text", inputClass: "input-name-register", inputPlaceholder: "Nombre de usuario" })}
-    ${FieldForm({ inputLabel: "Email", inputType: "email", inputClass: "input-email-register", inputPlaceholder: "user@appadel.es" })}
+    ${FieldForm({ inputLabel: "Nombre de Usuario", imgSrc:"", inputType: "text", inputClass: "input-name-register", inputPlaceholder: "Nombre de usuario" })}
+    ${FieldForm({ inputLabel: "Email", imgSrc:"", inputType: "email", inputClass: "input-email-register", inputPlaceholder: "user@appadel.es" })}
     <div class="password-container">
-        ${FieldForm({ inputLabel: "Contraseña", inputType: "password", inputClass: "input-password", inputPlaceholder: "********" })}
+        ${FieldForm({ inputLabel: "Contraseña", imgSrc:"", inputType: "password", inputClass: "input-password", inputPlaceholder: "********" })}
     <i class='i-register bx bx-show'></i>
     </div>
-    ${FieldForm({ inputLabel: "Teléfono", inputType: "text", inputClass: "input-phone-register", inputPlaceholder: "123456789" })}
-    ${FieldForm({ divClass: "input-file-container", inputClass: "input-file", inputLabel: "Añadir imagen...", inputType: "file" })}
+    ${FieldForm({ inputLabel: "Teléfono", imgSrc:"", inputType: "text", inputClass: "input-phone-register", inputPlaceholder: "123456789" })}
+    ${FieldForm({ divClass: "input-file-container", imgClass:"img-file-register", imgSrc:"/assets/picture.webp", inputClass: "input-file", inputLabel: "Añadir imagen...", inputType: "file" })}
     <h4 class="name-file"></h4>
     </div>
     <div class="button-container-register">

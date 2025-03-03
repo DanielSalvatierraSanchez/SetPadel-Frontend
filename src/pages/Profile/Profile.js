@@ -1,6 +1,6 @@
-import { createPage } from "../../functions/CreatePage";
-import { ProfileForm } from "../Forms/ProfileForm/ProfileForm";
 import "./Profile.css";
+import { createPage } from "../../functions/CreatePage";
+import { ProfileForm } from "../../components/Forms/ProfileForm/ProfileForm";
 
 export const Profile = () => {
     const div = createPage("Profile");
