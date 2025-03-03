@@ -2,7 +2,7 @@ import "./CreatePadelMatch.css";
 import { PostPadelMatchForm } from "../../components/Forms/PostPadelMatchForm/PostPadelMatchForm";
 import { createPage } from "../../functions/CreatePage";
 import { Loader, LoaderOff } from "../../components/Loader/Loader";
-import { getToken, isAuth } from "../../utils/isAuth";
+import { getToken, isAuth } from "../../utils/IsAuth";
 
 export const CreatePadelMatch = async () => {
     const div = createPage("CreatePadelMatch");

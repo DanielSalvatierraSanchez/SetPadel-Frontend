@@ -1,4 +1,4 @@
-import { isAuth } from "../isAuth";
+import { isAuth } from "../IsAuth";
 import { API } from "./API";
 
 export const getPadelMatches = async () => {

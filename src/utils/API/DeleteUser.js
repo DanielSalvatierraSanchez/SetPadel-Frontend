@@ -1,7 +1,7 @@
 import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
-import { isAuth } from "../isAuth";
+import { isAuth } from "../IsAuth";
 import { API } from "./API";
 
 export const deleteUser = async (container) => {

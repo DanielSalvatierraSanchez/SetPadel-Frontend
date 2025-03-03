@@ -1,7 +1,7 @@
 import "./MyPadelMatches.css";
 import { createPage } from "../../functions/CreatePage";
 import { getPadelMatchesByAuthor } from "../../utils/API/GetPadelMatchesByAuthor";
-import { isAuth } from "../../utils/isAuth";
+import { isAuth } from "../../utils/IsAuth";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { CardOfPadelMatch } from "../../components/CardOfPadelMatch/CardOfPadelMatch";
 import { Loader } from "../../components/Loader/Loader";

@@ -2,7 +2,7 @@ import { Loader } from "../../components/Loader/Loader";
 import { errorMessage } from "../../components/Messages/Error/ErrorMessage";
 import { successMessage } from "../../components/Messages/Success/SuccessMessage";
 import { Logout } from "../../pages/Logout/Logout";
-import { isAuth } from "../isAuth";
+import { isAuth } from "../IsAuth";
 import { updateUserDataInLocalStorage } from "../SetUserData";
 import { API } from "./API";
 
