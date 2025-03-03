@@ -1,5 +1,5 @@
 import "./PadelMatches.css";
-import { createPage } from "../../functions/CreatePage";
+import { createPage } from "../../functions/createPage";
 import { getPadelMatches } from "../../utils/API/GetPadelMatches";
 import { isAuth } from "../../utils/isAuth";
 import { Loader } from "../../components/Loader/Loader";
