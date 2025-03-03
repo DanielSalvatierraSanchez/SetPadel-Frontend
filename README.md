@@ -13,10 +13,3 @@ DONE _ Todos los formularios del frontend tienen control de errores que pase lo 
 DONE _ Todos los procesos asíncronos le muestran un loading de alguna manera al usuario, para que este tenga una respuesta inmediata ante su acción.
 DONE _ Mucho cariño a la componentización, no se repite código en ningún momento.
 DONE _ Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
-
-continuar por profile form reduciendo tamaño letras y buttons
-
-    ULTIMO PASO!!!
-    ACTIVAR localStorage.clear() EN EL MAIN.js
-    actival recarga PM en => API/ DeleteUserOfPadelMatch - JoinPadelMatch
-    activar mouseover del modal

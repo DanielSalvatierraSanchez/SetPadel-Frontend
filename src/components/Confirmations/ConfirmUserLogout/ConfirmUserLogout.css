@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 150px;
+    width: 120px;
     height: 60px;
     font-size: medium;
 }
@@ -20,19 +20,19 @@
 
 @media (width >= 768px) {
     .logout-container > h2 {
-        font-size: xx-large;
+        font-size: x-large;
     }
 
     .btn-logout-yes,
     .btn-logout-no {
-        width: 175px;
-        height: 90px;
-        font-size: x-large;
+        width: 140px;
+        height: 70px;
+        font-size: large;
     }
 
     .img-btn-logout-yes,
     .img-btn-logout-no {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
 }

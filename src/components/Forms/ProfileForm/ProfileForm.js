@@ -11,6 +11,7 @@ export const ProfileForm = (form) => {
     <h2 class="title-profile">Actualizar Usuario</h2>
     <div class="data-container-profile">
     ${FieldForm({
+        divClass: "name-container-profile",
         inputLabel: "Nuevo nombre de usuario",
         inputType: "text",
         inputClass: "input-name-profile",
@@ -18,6 +19,7 @@ export const ProfileForm = (form) => {
     })}
     <div class="password-container">
         ${FieldForm({
+            divClass: "password-container-profile",
             inputLabel: "Nueva contraseña",
             inputType: "password",
             inputClass: "input-password",
@@ -26,6 +28,7 @@ export const ProfileForm = (form) => {
         <i class="i-profile bx bx-show"></i>
     </div>
     ${FieldForm({
+        divClass: "phone-container-profile",
         inputLabel: "Nuevo teléfono",
         inputType: "text",
         inputClass: "input-phone-profile",
@@ -52,6 +55,7 @@ export const ProfileForm = (form) => {
     nameFile.addEventListener("change", () => {
         form.querySelector(".name-file").innerText = nameFile.files[0].name;
     });
+
     form.addEventListener("submit", updateProfileUser);
     form.querySelector(".btn-delete-profile").addEventListener("click", () => {
         form.classList.add("confirm-delete-user"), ConfirmUserDelete(form, "eliminar tu cuenta");

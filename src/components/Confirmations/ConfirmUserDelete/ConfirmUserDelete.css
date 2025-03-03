@@ -19,13 +19,12 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 150px;
+    width: 120px;
     height: 60px;
     font-size: medium;
 }
 
-.btn-delete-yes:hover,
-.btn-logout-yes:hover {
+.btn-delete-yes:hover {
     background-color: var(--app-bgcolor-buttonOff);
 }
 
@@ -42,19 +41,19 @@
         width: 375px;
         max-width: 425px;
         max-height: 550px;
-        font-size: x-large;
+        font-size: large;
     }
 
     .btn-delete-yes,
     .btn-delete-no {
-        width: 175px;
-        height: 90px;
-        font-size: x-large;
+        width: 140px;
+        height: 70px;
+        font-size: large;
     }
 
     .img-btn-delete-yes,
     .img-btn-delete-no {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
 }
