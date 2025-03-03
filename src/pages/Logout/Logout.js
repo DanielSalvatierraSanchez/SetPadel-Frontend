@@ -1,5 +1,5 @@
 import "./Logout.css";
-import { createPage } from "../../functions/CreatePage";
+import { createPage } from "../../functions/createPage";
 import { Button } from "../../components/Button/Button";
 import { buttonBack } from "../../components/ButtonBack/ButtonBack";
 import { ConfirmUserLogout } from "../../components/Confirmations/ConfirmUserLogout/ConfirmUserLogout";
