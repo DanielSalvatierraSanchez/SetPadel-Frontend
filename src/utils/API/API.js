@@ -1,4 +1,4 @@
-export const URL = "https://setpadelbackend.vercel.app/";
+export const URL = "https://setpadelbackend.vercel.app/api/v1/setpadel";
 // export const URL = "http://localhost:3000/api/v1/setpadel";
 
 export const API = async ({ endpoint, method, body, isJSON = true, token }) => {
