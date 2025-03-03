@@ -1,5 +1,5 @@
 import "./Register.css";
-import { createPage } from "../../functions/CreatePage";
+import { createPage } from "../../functions/createPage";
 import { RegisterForm } from "../../components/Forms/RegisterForm/RegisterForm";
 
 export const Register = () => {

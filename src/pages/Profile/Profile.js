@@ -1,5 +1,5 @@
 import "./Profile.css";
-import { createPage } from "../../functions/CreatePage";
+import { createPage } from "../../functions/createPage";
 import { ProfileForm } from "../../components/Forms/ProfileForm/ProfileForm";
 
 export const Profile = () => {
