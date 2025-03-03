@@ -1,6 +1,6 @@
 import "./Register.css";
-import { createPage } from "../../functions/createPage";
 import { RegisterForm } from "../../components/Forms/RegisterForm/RegisterForm";
+import { createPage } from "../../functions/CreatePage";
 
 export const Register = () => {
     const div = createPage("Register");
