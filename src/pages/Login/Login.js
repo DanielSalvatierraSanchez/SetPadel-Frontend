@@ -1,6 +1,6 @@
 import "./Login.css";
 import { LoginForm } from "../../components/Forms/LoginForm/LoginForm";
-import { createPage } from "../../functions/CreatePage";
+import { createPage } from "../../functions/createPage";
 
 export const Login = () => {
     const div = createPage("Login");
