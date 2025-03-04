@@ -5,7 +5,7 @@
     align-items: center;
     padding: var(--app-padding-l);
     gap: var(--app-gap-m);
-    background-image: url("assets/match.webp");
+    background-image: url("match.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;

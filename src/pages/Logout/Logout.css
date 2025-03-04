@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: var(--app-padding-m);
-    background-image: url("assets/screenPlayerServiceBW.webp");
+    background-image: url("screenPlayerServiceBW.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;

@@ -5,7 +5,7 @@
     align-items: center;
     padding: var(--app-padding-l);
     gap: var(--app-gap-m);
-    background-image: url("assets/screenPlayerService.webp");
+    background-image: url("screenPlayerService.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;

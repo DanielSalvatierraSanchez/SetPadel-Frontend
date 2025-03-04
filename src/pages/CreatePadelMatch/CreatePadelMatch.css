@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: var(--app-padding-s);
-    background-image: url("assets/match.webp");
+    background-image: url("match.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;

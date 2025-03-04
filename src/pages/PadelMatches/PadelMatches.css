@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 0px var(--app-padding-xs) var(--app-padding-xs) var(--app-padding-xs);
-    background-image: url("assets/matchMadrid.webp");
+    background-image: url("matchMadrid.webp");
     background-position: center;
     background-size: cover;
     min-height: 92svh;
