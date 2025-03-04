@@ -5,7 +5,6 @@ import { Loader } from "../../components/Loader/Loader";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { FilterPadelMatches } from "../../components/Filters/FilterPadelMatches/FilterPadelMatches";
 import { CardOfPadelMatch } from "../../components/CardOfPadelMatch/CardOfPadelMatch";
-import { createPage } from "../../functions/CreatePage";
 
 export const PadelMatches = async () => {
     const div = createPage("PadelMatches");

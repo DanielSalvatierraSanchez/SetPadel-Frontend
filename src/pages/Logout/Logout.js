@@ -4,7 +4,6 @@ import { buttonBack } from "../../components/ButtonBack/ButtonBack";
 import { ConfirmUserLogout } from "../../components/Confirmations/ConfirmUserLogout/ConfirmUserLogout";
 import { MyPadelMatches } from "../MyPadelMatches/MyPadelMatches";
 import { Profile } from "../Profile/Profile";
-import { createPage } from "../../functions/CreatePage";
 
 export const Logout = () => {
     const div = createPage("Logout");

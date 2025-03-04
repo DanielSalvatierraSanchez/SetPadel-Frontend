@@ -1,7 +1,6 @@
 import "./Home.css";
 import { Login } from "../Login/Login";
 import { Register } from "../Register/Register";
-import { createPage } from "../../functions/CreatePage";
 import { Button } from "../../components/Button/Button";
 
 export const Home = () => {

@@ -4,7 +4,6 @@ import { isAuth } from "../../utils/IsAuth";
 import { randomMessageError } from "../../utils/RandomMessageError";
 import { CardOfPadelMatch } from "../../components/CardOfPadelMatch/CardOfPadelMatch";
 import { Loader } from "../../components/Loader/Loader";
-import { createPage } from "../../functions/CreatePage";
 
 export const MyPadelMatches = async () => {
     const div = createPage("MyPadelMatches");
