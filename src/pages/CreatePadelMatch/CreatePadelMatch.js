@@ -1,6 +1,5 @@
 import "./CreatePadelMatch.css";
 import { PostPadelMatchForm } from "../../components/Forms/PostPadelMatchForm/PostPadelMatchForm";
-import { createPage } from "../../functions/CreatePage";
 import { Loader, LoaderOff } from "../../components/Loader/Loader";
 import { getToken, isAuth } from "../../utils/IsAuth";
 
