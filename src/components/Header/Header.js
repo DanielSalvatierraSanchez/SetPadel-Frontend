@@ -4,7 +4,6 @@ import { MenuBurger } from "../MenuBurguer/MenuBurguer";
 import { navigate } from "../../functions/Navigate";
 
 export const Header = () => {
-    console.log("Hola desde Header");
     const duplicateHeader = document.querySelector("header");
     if (duplicateHeader) {
         duplicateHeader.remove();

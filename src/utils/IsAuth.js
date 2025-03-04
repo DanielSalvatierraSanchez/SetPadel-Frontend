@@ -8,7 +8,6 @@ export const isAuth = (parentElement) => {
         randomMessageError(parentElement, "❌ No tienes permisos.");
         return;
     }
-    console.log("Hola desde IsAuth");
 
     setTimeout(() => {
         LoaderOff();
