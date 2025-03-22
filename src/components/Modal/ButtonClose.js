@@ -7,10 +7,4 @@ export const buttonClose = (parentElement) => {
         parentElement.remove();
         // PadelMatches();
     });
-
-    parentElement.addEventListener("mouseleave", (e) => {
-        e.stopPropagation();
-        parentElement.remove();
-        // PadelMatches();
-    });
 };
