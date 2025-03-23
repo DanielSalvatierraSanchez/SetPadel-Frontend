@@ -52,6 +52,15 @@ header {
     font-weight: 900;
     font-size: large;
     list-style: none;
+    text-align: center;
+}
+
+.user-profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+    vertical-align: middle;
 }
 
 @media (width >= 425px) {

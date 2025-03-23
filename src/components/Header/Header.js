@@ -16,13 +16,23 @@ export const Header = () => {
     ul.className = "ul";
 
     const isAuth = !!localStorage.getItem("token");
+    const user = JSON.parse(localStorage.getItem("user"));
 
     const filterRoutes = isAuth ? routes.filter((route) => route.id !== "home") : routes.filter((route) => route.id === "home");
 
     for (const route of filterRoutes) {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.textContent = route.title;
+
+        if (route.id === "logout" && user.image) {
+            const userImage = document.createElement("img");
+            userImage.src = user.image;
+            userImage.alt = "Perfíl / Cerrar Sesión";
+            userImage.className = "user-profile-image";
+            a.append(userImage);
+        } else {
+            a.textContent = route.title;
+        }
         a.href = route.path;
         a.addEventListener("click", (e) => {
             e.preventDefault();

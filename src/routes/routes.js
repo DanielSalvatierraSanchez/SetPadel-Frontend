@@ -3,13 +3,6 @@ import { CreatePadelMatch } from "../pages/CreatePadelMatch/CreatePadelMatch";
 import { Home } from "../pages/Home/Home";
 import { PadelMatches } from "../pages/PadelMatches/PadelMatches";
 
-const user = JSON.parse(localStorage.getItem("user"));
-// const userImage = document.createElement("img");
-// userImage.src = user.image;
-// userImage.alt = "Imagen del Usuario";
-// console.log(user);
-// console.log(user.image);
-
 export const routes = [
     {
         path: "/home",
@@ -31,7 +24,7 @@ export const routes = [
     },
     {
         path: "/logout",
-        title: "userImage",
+        title: "Perfíl / Cerrar Sesión",
         page: Logout,
         id: "logout"
     }
