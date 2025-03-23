@@ -4,7 +4,6 @@
     align-items: center;
     flex-wrap: wrap;
     width: 90%;
-    max-width: 400px;
     margin: var(--app-margin-s);
     margin-top: 0;
     padding: var(--app-padding-xs);

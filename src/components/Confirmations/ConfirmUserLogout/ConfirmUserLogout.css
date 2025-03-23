@@ -1,3 +1,24 @@
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    padding: var(--app-padding-m);
+    gap: var(--app-gap-m);
+    background-color: var(--app-bgcolor-body);
+    color: var(--app-color-letterB);
+    width: 275px;
+    max-width: 275px;
+    max-height: 550px;
+    border-radius: var(--app-border-m);
+    text-align: center;
+}
+
 .btn-logout-yes,
 .btn-logout-no {
     display: flex;
@@ -19,9 +40,17 @@
 }
 
 @media (width >= 768px) {
-    .logout-container > h2 {
-        font-size: x-large;
+    .logout-container {
+        padding: var(--app-padding-l);
+        gap: var(--app-gap-m);
+        width: 375px;
+        max-width: 425px;
+        max-height: 550px;
     }
+
+    /* .logout-container > h2 {
+        font-size: xx-large;
+    } */
 
     .btn-logout-yes,
     .btn-logout-no {

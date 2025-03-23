@@ -48,7 +48,9 @@ export const modal = (parentElement, data, user) => {
                 <p class="modal-players" data-type="assistants"><img class="modal-players-img" src="/assets/assistants.webp" alt="assistants padel match"><strong>Asistentes ${
                     data.players.length
                 } / 4 :</strong></p>
+                <div class="assistants-container">
                 <p class="modal-players-list" data-type="assistants">${playersList}</p>
+                </div>
                 <img class="close-btn" src="./assets/close.webp" alt="close modal"></img>
 
                 </div>
@@ -61,3 +63,5 @@ export const modal = (parentElement, data, user) => {
     }
     buttonClose(padelMatchModal);
 };
+
+/* <img class="modal-players-image" src=${user.image}> */

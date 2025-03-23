@@ -98,12 +98,19 @@
     height: 20px;
 }
 
-.modal-players-list {
+.assistants-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--app-gap-s);
+}
+
+.modal-players-list {
+    /* display: flex;
     justify-content: center;
     width: 245px;
     line-height: 10px;
-    text-align: center;
+    text-align: center; */
 }
 
 .close-btn {

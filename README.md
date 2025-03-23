@@ -15,11 +15,12 @@ DONE _ Mucho cariño a la componentización, no se repite código en ningún mom
 DONE _ Los fetchs están reutilizados a través de una única función que me permita hacer todos mediante el uso de la misma.
 
 EXTRA:
-- Aparte de comprobar que el token está en el local, estaría bien hacer una petición al back para comprobar que es válido y que es de un usuario con una cuenta.
-Te recomiendo implementar esta funcionalidad, podrías hacerlo en la misma función "isAuth" que tienes en el front. En caso de que el Token no sea válido, elimínalo del local y llévalo a la sección de registro/login.
+
+-   Aparte de comprobar que el token está en el local, estaría bien hacer una petición al back para comprobar que es válido y que es de un usuario con una cuenta.
+    Te recomiendo implementar esta funcionalidad, podrías hacerlo en la misma función "isAuth" que tienes en el front. En caso de que el Token no sea válido, elimínalo del local y llévalo a la sección de registro/login.
 
 DONE - Eliminar el evento mouseleave del modal.
 
-- Cuando elimino un partido, el modal que me pide confirmación se queda en pantalla después de confirmar, y se mantiene durante la carga y el mensaje de confirmación de que ha sido borrado correctamente. Una vez confirmada la acción, deberías quitar el modal para evitar ese pequeño error en el diseño.
+DONE - Cuando elimino un partido, el modal que me pide confirmación se queda en pantalla después de confirmar, y se mantiene durante la carga y el mensaje de confirmación de que ha sido borrado correctamente. Una vez confirmada la acción, deberías quitar el modal para evitar ese pequeño error en el diseño.
 
-- Por último, no veo mi foto de perfil en ningún sitio, cuál es la utilidad de tenerla? Mi recomendación es que en el header, te deshagas del texto "perfil/cerrar sesión" y pongas la imagen de perfil. Creo que el diseño mejoraría y así le damos un uso a esa imagen. Otra opción es mostrarla también en pequeño en la lista de participantes de los partidos.
+-   Por último, no veo mi foto de perfil en ningún sitio, cuál es la utilidad de tenerla? Mi recomendación es que en el header, te deshagas del texto "perfil/cerrar sesión" y pongas la imagen de perfil. Creo que el diseño mejoraría y así le damos un uso a esa imagen. Otra opción es mostrarla también en pequeño en la lista de participantes de los partidos.

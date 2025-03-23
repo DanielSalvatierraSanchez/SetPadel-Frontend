@@ -7,6 +7,7 @@ export const buttonDelete = (parentElement, data) => {
     deleteBtn.addEventListener("click", async (e) => {
         e.preventDefault();
         e.stopPropagation();
+        container.classList.add("confirm-delete-padel-match");
 
         ConfirmPadelMatchDelete(container, data, "eliminar el partido");
     });

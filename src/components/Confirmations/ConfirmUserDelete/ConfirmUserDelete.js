@@ -1,6 +1,6 @@
 import "./ConfirmUserDelete.css";
-import { Logout } from "../../../pages/Logout/Logout";
 import { deleteUser } from "../../../utils/API/DeleteUser";
+import { ProfileForm } from "../../Forms/ProfileForm/ProfileForm";
 
 export const ConfirmUserDelete = (parentElement, message) => {
     parentElement.innerHTML = `
@@ -12,10 +12,12 @@ export const ConfirmUserDelete = (parentElement, message) => {
     const no = parentElement.querySelector(".btn-delete-no");
 
     yes.addEventListener("click", () => {
+        yes.disabled = true;
+        no.disabled = true;
         deleteUser(parentElement);
     });
 
     no.addEventListener("click", () => {
-        Logout();
+        ProfileForm(parentElement);
     });
 };
