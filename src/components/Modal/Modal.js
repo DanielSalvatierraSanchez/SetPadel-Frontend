@@ -52,7 +52,6 @@ export const modal = (parentElement, data, user) => {
                 <p class="modal-players-list" data-type="assistants">${playersList}</p>
                 </div>
                 <img class="close-btn" src="./assets/close.webp" alt="close modal"></img>
-
                 </div>
                 `;
     parentElement.append(padelMatchModal);

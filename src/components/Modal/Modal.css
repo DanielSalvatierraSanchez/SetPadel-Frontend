@@ -113,6 +113,12 @@
     text-align: center; */
 }
 
+.modal-players-image {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
 .close-btn {
     width: 30px;
     height: 30px;

@@ -23,5 +23,6 @@ EXTRAS PTES:
 
 -   Aparte de comprobar que el token está en el local, estaría bien hacer una petición al back para comprobar que es válido y que es de un usuario con una cuenta.
     Te recomiendo implementar esta funcionalidad, podrías hacerlo en la misma función "isAuth" que tienes en el front. En caso de que el Token no sea válido, elimínalo del local y llévalo a la sección de registro/login.
+-   Manejo del isAuth en el resto de paginas ya que funciona en PM pero en el resto no, puedo usar todas las demas paginas
 
 -   Otra opción es mostrarla también en pequeño en la lista de participantes de los partidos.
