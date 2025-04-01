@@ -26,3 +26,4 @@ EXTRAS PTES:
 -   Manejo del isAuth en el resto de paginas ya que funciona en PM pero en el resto no, puedo usar todas las demas paginas
 
 -   Otra opción es mostrarla también en pequeño en la lista de participantes de los partidos.
+-   createPM revisar lo del getToken()
