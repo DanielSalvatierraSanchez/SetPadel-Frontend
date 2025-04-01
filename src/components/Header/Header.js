@@ -27,7 +27,7 @@ export const Header = () => {
         if (route.id === "logout" && user.image) {
             const userImage = document.createElement("img");
             userImage.src = user.image;
-            userImage.alt = "Perfíl / Cerrar Sesión";
+            userImage.alt = "User Image";
             userImage.className = "user-profile-image";
             a.append(userImage);
         } else {
