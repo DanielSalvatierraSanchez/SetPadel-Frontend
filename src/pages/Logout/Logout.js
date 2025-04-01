@@ -5,12 +5,15 @@ import { ConfirmUserLogout } from "../../components/Confirmations/ConfirmUserLog
 import { MyPadelMatches } from "../MyPadelMatches/MyPadelMatches";
 import { Profile } from "../Profile/Profile";
 import { createPage } from "../../functions/CreatePage";
+import { isAuth } from "../../utils/IsAuth";
 
 export const Logout = () => {
     const div = createPage("Logout");
     const profileContainer = document.createElement("div");
     profileContainer.classList.add("logout-container");
     profileContainer.innerHTML = `<h1 class="title-logout">Perfíl de Usuario</h1>`;
+
+    isAuth();
 
     profileContainer.append(
         Button({

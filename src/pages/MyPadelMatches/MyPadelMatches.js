@@ -11,7 +11,7 @@ export const MyPadelMatches = async () => {
     div.classList.add("my-padel-matches");
     div.innerHTML = `<h1>Mis Partidos</h1>`;
 
-    isAuth(div);
+    isAuth();
 
     try {
         const padelMatchesByAuthor = await getPadelMatchesByAuthor(div);
